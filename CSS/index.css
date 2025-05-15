@@ -1,4 +1,26 @@
-.background{
-    background-color: #100F0F;
+.fundo{
+    background-color: #1e1e23;
+}
 
+.textcolor{
+    color: white !important;
+}
+
+.hover-caixa {
+    display: inline-block; 
+    padding: 5px 10px;
+}
+  
+.hover-caixa:hover {
+    border: 1px solid #323c46;
+    border-radius: 10px;
+}
+
+.caixa {
+    border: 2px solid white; 
+}
+
+
+section{
+    grid: 1px;
 }
