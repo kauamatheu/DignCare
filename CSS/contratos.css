@@ -9,9 +9,30 @@
     color: #2D8FFF;
     text-align: center;
 }
+
+.textcolor{
+    color: rgb(255, 255, 255) !important;
+}
+.textcolorPDF{
+    color: black;
+}
+.margem{
+    margin-top: 50px;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.fundodiv{
+    background-color: white;
+    border-radius: 20px;
+}
 .centro{
     text-align: center;
 }
-.textcolor{
-    color: white !important;
+.iconscss{
+    color:white;
 }
