@@ -1,0 +1,17 @@
+.fundo {
+    background-color: rgba(16, 15, 15, 1) !important;
+}
+.borda{
+    border-bottom: 4px solid black;
+    
+}
+.titulo{
+    color: #2D8FFF;
+    text-align: center;
+}
+.centro{
+    text-align: center;
+}
+.textcolor{
+    color: white !important;
+}
