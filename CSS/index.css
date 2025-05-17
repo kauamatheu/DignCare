@@ -1,5 +1,10 @@
 .fundo {
-    background-color: #1e1e23;
+    background-color: rgba(16, 15, 15, 1) !important;
+}
+
+.borda{
+    border-bottom: 4px solid black;
+    
 }
 
 .grid {
@@ -15,11 +20,13 @@
 
 .textcolor {
     color: white !important;
+    font-size: 18px !important;
 }
 
-.textsize {
+h1 {
     font-size: 55px !important;
 }
+
 
 .hover-caixa {
     display: inline-block;
@@ -39,4 +46,8 @@
 
 .full-row {
     grid-column: span 2;
+}
+
+footer{
+   margin-top: 30vh 
 }
