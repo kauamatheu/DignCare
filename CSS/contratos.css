@@ -11,12 +11,15 @@
 }
 
 .textcolor{
-    color: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255) !important;
+}
+.textcolorPDF{
+    color: black;
 }
 .margem{
     margin-top: 50px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 500px;
+    margin-right: 500px;
     margin-bottom: 100px;
     padding-left: 50px;
     padding-right: 50px;
@@ -30,6 +33,6 @@
 .centro{
     text-align: center;
 }
-.area{
-    margin: 0px;
+.iconscss{
+    color:white;
 }
