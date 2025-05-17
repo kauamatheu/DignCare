@@ -19,6 +19,10 @@
 .caixa {
     border: 2px solid white; 
 }
-body{
-    
+
+.iconscss{
+    color:white;
+}
+.espaçamento{
+    justify-content: space-between;
 }
