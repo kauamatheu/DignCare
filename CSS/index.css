@@ -1,26 +1,42 @@
-.fundo{
+.fundo {
     background-color: #1e1e23;
 }
 
-.textcolor{
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5%;
+}
+
+.grid>div {
+    padding-top: 10%;
+    text-align: center;
+}
+
+.textcolor {
     color: white !important;
 }
 
+.textsize {
+    font-size: 55px !important;
+}
+
 .hover-caixa {
-    display: inline-block; 
+    display: inline-block;
     padding: 5px 10px;
 }
-  
+
 .hover-caixa:hover {
     border: 1px solid #323c46;
     border-radius: 10px;
 }
 
-.caixa {
-    border: 2px solid white; 
+.sombra {
+    box-shadow: 15px 15px;
+    color: #2D8FFF;
+    border-radius: 20px;
 }
 
-
-section{
-    grid: 1px;
+.full-row {
+    grid-column: span 2;
 }
