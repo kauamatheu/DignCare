@@ -7,94 +7,109 @@
   <title>DignCare</title>
   <link rel="icon" type="imagem/png" href="/img/icon.png">
   <link rel="stylesheet" href="/CSS/home.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 </head>
 
 <body class="fundo">
   <header>
-    <nav class="navbar bg-dark mx-1">
-      <div class="nav">
-        <a href="index.html"><img src="/img/logo_horizontal.png" alt="logo" width="200"></a>
+    <nav class="navbar borda">
+      <div class="nav justify-content-start">
+        <a href="/index.html"><img class="imgsombra" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
       </div>
 
-
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-list">  <i class="bi bi-person-circle"></i></i>
+      
+      <div class="dropdown justify-content-end">
+        <button class="btn btn-black dropdown " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-list fs-3 iconscss"> <i class="bi bi-person-circle i fs-3"></i></i>
         </button>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <ul class="dropdown-menu dropdown-menu-end fundo textcolor">
+          <li><a class="dropdown-item textcolor" href="#">Perfil</a></li>
+          <li><a class="dropdown-item textcolor" href="#">avaliações</a></li>
+          <li><a class="dropdown-item textcolor" href="#">Configurações</a></li>
+          <li><a class="dropdown-item textcolor" href="#">FAQ/Dúvidas Frequêntes</a></li>
+          <li><a class="dropdown-item textcolor" href="#">Suporte</a></li>
+          <li><a class="dropdown-item textcolor" href="#">Depoimenotos</a></li>
+          <li><a class="dropdown-item textcolor" href="#">Sobre Nós</a></li>
+          <li><a class="dropdown-item textcolor" href="#">Sair da Conta</a></li>
         </ul>
       </div>
-    </nav>
 
+    </nav>
   </header>
 
-  <br>
-  <div class="textcolor">
-    <h3>Home</h3>
-    <p>DignCare, Sua solução</p>
-  </div>
+  <div style="margin: 50px;">
+    <div class="textcolor" style="margin-bottom: 30px;">
+      <h3>Home</h3>
+      <p>DignCare, Sua solução</p>
+    </div>
 
-  <!--Cards-->
-  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <!--Cards-->
+    <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;">
 
-    <!--Card 1-->
-    <div class="col">
-      <div class="card h">
-        <img src="/img/jardinagem.jpg" class="card-img-top" alt="jardinagem">
-        <div class="card-body">
-          <h5 class="card-title">Jardinagem</h5>
-          <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar do seu jardim, com a
-            qualidade do serviço DignCare.</p>
-          <p></p>
-          <a href="#" class="btn btn-primary">Confira</a>
+      <!--Card 1-->
+      <div class="col">
+        <div class="card">
+          <img src="/img/Jardinagem.png" class="card-img-top" alt="jardinagem">
+          <div class="card-body">
+            <h5 class="card-title">Jardinagem</h5>
+            <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar do seu jardim.</p>
+            <p></p>
+            <a href="#" class="btn btn-primary">Confira</a>
+          </div>
+        </div>
+      </div>
+
+      <!--Card 2-->
+      <div class="col">
+        <div class="card ">
+          <img src="/img/babá.png" class="card-img-top" alt="babá">
+          <div class="card-body">
+            <h5 class="card-title">Babá</h5>
+            <p class="card-text">Ache uma pessoa responsável e qualificada, e deixe seu filho em boas mãos.</p>
+            <a href="#" class="btn btn-primary">Confira</a>
+          </div>
+        </div>
+      </div>
+
+      <!--Card 3-->
+      <div class="col">
+        <div class="card">
+          <img src="/img/Limpeza.png" class="card-img-top" alt="limpeza">
+          <div class="card-body">
+            <h5 class="card-title">Diáristas</h5>
+            <p class="card-text">Encontre o profissionais qualificados para deixar sua casa um brinco.</p>
+            <a href="#" class="btn btn-primary">Confira</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <img src="/img/cozinheiro.png" class="card-img-top" alt="cozinehiro">
+          <div class="card-body">
+            <h5 class="card-title">Jardinagem</h5>
+            <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar do seu jardim.</p>
+            <p></p>
+            <a href="#" class="btn btn-primary">Confira</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!--Card 2-->
-    <div class="col">
-      <div class="card">
-        <img src="/img/babá.jpg" class="card-img-top" alt="babá">
-        <div class="card-body">
-          <h5 class="card-title">Babá</h5>
-          <p class="card-text">Ache uma pessoa responsável e qualificada, e deixe seu filho em boas mãos.</p>
-          <a href="#" class="btn btn-primary">Confira</a>
-        </div>
-      </div>
-    </div>
 
-    <!--Card 3-->
-    <div class="col">
-      <div class="card">
-        <img src="/img/limpeza.jpg" class="card-img-top" alt="limpeza">
-        <div class="card-body">
-          <h5 class="card-title">Diáristas</h5>
-          <p class="card-text">Encontre o profissionais qualificados para deixar sua casa um brinco, com a qualidade do
-            serviço DignCare.</p>
-          <a href="#" class="btn btn-primary">Confira</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
 
-  <br>
+    <!--Cards Group 2-->
+    <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;"">
 
-  <!--Cards Group 2-->
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-
-    <!--Card 4-->
-    <div class="col">
+      <!--Card 4-->
+      <div class=" col">
       <div class="card h-100">
-        <img src="/img/jardinagem.jpg" class="card-img-top" alt="jardinagem">
+        <img src="/img/cuidadora.png" class="card-img-top" alt="cuidadora">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Cuidadora</h5>
           <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar do seu jardim. </p>
           <a href="#" class="btn btn-primary">Confira</a>
         </div>
@@ -104,9 +119,9 @@
     <!--Card 5-->
     <div class="col">
       <div class="card h-100">
-        <img src="/img/babá.jpg" class="card-img-top" alt="babá">
+        <img src="/img/manutencao.png" class="card-img-top" alt="manutenção">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Serviços Gerais</h5>
           <p class="card-text">Ache uma pessoa responsável e qualificada, e deixe seu filho em boas mãos.</p>
           <a href="#" class="btn btn-primary">Confira</a>
         </div>
@@ -116,20 +131,33 @@
     <!--Card 6-->
     <div class="col">
       <div class="card h-100">
-        <img src="/img/limpeza.jpg" class="card-img-top" alt="limpeza">
+        <img src="/img/pets.png" class="card-img-top" alt="limpeza">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <h5 class="card-title">Cuidador de Pets</h5>
           <p class="card-text">Encontre o profissionais qualificados para deixar sua casa um brinco.</p>
           <a href="#" class="btn btn-primary">Confira</a>
         </div>
       </div>
     </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="/img/tutora.png" class="card-img-top" alt="jardinagem">
+        <div class="card-body">
+          <h5 class="card-title">Tutora Educaional</h5>
+          <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar do seu jardim. </p>
+          <a href="#" class="btn btn-primary">Confira</a>
+        </div>
+      </div>
+    </div>
   </div>
+
   </div>
 
   <!--Scripts-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+  </div>
 
 </body>
 
