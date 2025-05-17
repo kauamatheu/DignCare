@@ -5,7 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="icon" type="imagem/png" href="img/icon.png">
-</head>
+</head><link rel="stylesheet" href="/CSS/style.css">
+<style>
+ * {
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #111;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  width: 320px;
+  text-align: center;
+}
+
+.logo {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.radio-group label {
+  font-size: 14px;
+  color: #333;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.login-link {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.login-link a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+
+
+  </style>
+
 <body>
     <form action="" method="post">
         <fieldset>
