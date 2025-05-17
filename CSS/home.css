@@ -19,13 +19,3 @@
 .caixa {
     border: 2px solid white; 
 }
-
-
-section{
-    grid: 1px;
-}
-
-.imgcss {
-    height: 150px; 
-    object-fit: cover;
-  }
