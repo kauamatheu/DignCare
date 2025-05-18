@@ -19,6 +19,15 @@
     border-radius: 10px;
 }
 
+.mexe {
+  transition: transform 0.3s ease; 
+}
+
+.mexe:hover {
+  transform: scale(1.05); 
+  z-index: 5;
+}
+
 .caixa {
     border: 2px solid white; 
 }
@@ -31,4 +40,14 @@
 }
 .dropdown-item:hover {
   color: #000000 !important;
+}
+
+footer{
+    color: #fff;
+   margin-top: 15%;
+}
+
+footer > a, a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: lightgray !important;
 }

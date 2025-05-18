@@ -7,6 +7,7 @@
     <link rel="icon" type="imagem/png" href="/img/icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="/CSS/exemplos.css">
+    <script src="/JS/exemplos.js" defer></script>
 </head>
 <body class="fundo">
     <header>
@@ -15,7 +16,7 @@
             
             <!--Logo do site com link, para clicar e ir para a tela Inicial-->
             <div class="nav ">
-                <a href="/index.html"><img src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+                <a href="/index.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
             </div>
 
             <!--Div para separar os links da página e centralizar-->
@@ -38,30 +39,60 @@
         </nav>
     </header>
 
-    <section class="container">
+    <h1>Exemplos</h1>
+    
+    <section class="container px-5">
+        
+        <div class="container mx-5 px-5">
+            <label class="px-5 py-2" for="seletor">Escolha uma opção:</label>
+            <select class="form-select" id="seletor" onchange="mudarConteudo()">
+                <option value="cliente">Sou Cliente</option>
+                <option value="prestador">Sou Prestador</option>
+            </select>
+        </div>
 
-        <h1>Exemplos</h1>
-        <ol type= 1>
-            <li>Você escolhe o serviço:</li>
-            <p>Acesse a plataforma e selecione o tipo de serviço que precisa, como limpeza, manutenção, estética, entre outros.</p><br>
-            
-            <li>Encontre profissionais disponíveis:</li>
-            <p> Veja os prestadores mais próximos, com perfis completos, fotos, avaliações de outros clientes e formas de contato.</p><br>
-            
-            <li>Entre em contato e combine os detalhes:</li>
-            <p>Converse direto com o profissional, combine horário, valor e tudo que for necessário. Simples e sem burocracia.</p><br>
-            
-            <li>Serviço realizado com confiança:</li>
-            <p> O prestador realiza o serviço e, ao final, você avalia a experiência com notas e comentários.</p><br>
-            
-            <li>Avaliações que ajudam todos:</li>
-            <p>As avaliações são públicas e ajudam outros usuários a escolher os melhores profissionais. Quanto melhor o serviço, maior a visibilidade do prestador na plataforma.</p><br>
-            
-        </ol>
+        <div id="cliente" class="conteudo ativo my-5 py-5">
+            <ol type= 1>
+                <li>Você escolhe o serviço:</li>
+                <p>Acesse a plataforma e selecione o tipo de serviço que você precisa, como limpeza, manutenção, tutoria, entre outros.</p><br>
+                
+                <li>Encontre profissionais disponíveis para você:</li>
+                <p> Veja os prestadores mais próximos, com perfis completos, fotos, avaliações de outros clientes e opções de contato.</p><br>
+                
+                <li>Entre em contato e alinhe os detalhes.</li>
+                <p>Converse diretamente com o profissional, combine horário, valor e tudo o que for necessário. Simples e sem burocracia.</p><br>
+                
+                <li>Serviço realizado com confiança:</li>
+                <p> O prestador realiza o serviço e, ao final, você avalia a experiência com notas e comentários.</p><br>
+                
+                <li>Avaliações que beneficiam a todos:</li>
+                <p>As avaliações são públicas e ajudam outros usuários a escolher os melhores profissionais. Quanto melhor o serviço, maior será a visibilidade do prestador na plataforma.</p><br>
+            </ol>
+        </div>
+
+        <div id="prestador" class="conteudo my-5 py-5">
+            <ol type= 1>
+                <li>Você cadastra um anúncio  do seu serviço:</li>
+                <p>Acesse a plataforma e escolha a categoria de serviço que você oferece, como limpeza, manutenção, estética, entre outros.</p><br>
+                
+                <li>Seu anúncio vai aparecer para todos os usuários cadastrados no site:</li>
+                <p> Veja os clientes mais próximos, com perfis completos, avaliações de outros prestadores e formas de contato.</p><br>
+                
+                <li>Entre em contato e alinhe os detalhes.:</li>
+                <p>Converse diretamente com o cliente, combine horário, valor e tudo o que for necessário. Simples e sem burocracia.</p><br>
+                
+                <li>Realize seu serviço com confiança:</li>
+                <p> Você realiza o serviço e, ao final, avalia sua experiência com o cliente por meio de notas e comentários.</p><br>
+                
+                <li>Avaliações que beneficiam a todos:</li>
+                <p>As avaliações são públicas e ajudam outros prestadores a escolher os melhores clientes.</p><br>
+                
+            </ol>
+        </div>
     </section>
         
     <footer>
-        <div class="fs-6">
+        <div class="fs-6 texto">
             <p>&copy; Direitos Autorais Reservados Por DignCare.</p>
             <p>📍 Localização: <a href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">Nossa sede</a></p>
             <p>✉️ Email: <a href="mailto:digncare@gmail.com">digncare@gmail.com</a></p>

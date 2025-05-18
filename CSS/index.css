@@ -36,7 +36,7 @@
 
 .textcolor {
     color: white !important;
-    font-size: 18px !important;
+    font-size: 20px !important;
 }
 
 h1 {
@@ -45,13 +45,6 @@ h1 {
 
 h4{
     text-align: start !important;
-}
-
-.p-format {
-    font-style: italic;
-    font-size: 16px !important;
-    text-align: start;
-    color: lightgray;
 }
 
 .sombra {
