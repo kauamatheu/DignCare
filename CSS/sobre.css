@@ -15,27 +15,6 @@
   z-index: 5;
 }
 
-label{
-
-    color: #007AFF;
-    font-size: 20px;
-}
-
-select{
-    background-color: lightgray !important ; 
-    color: rgba(16, 15, 15, 1) !important ; 
-    text-align: center !important ;
-    font-size: 20px !important ;
-}
-
-.conteudo {
-    display: none;
-}
-
-.ativo {
-    display: block;
-}
-
 h1{
     padding: 3%;
     text-align: center;
@@ -47,7 +26,6 @@ h1{
     color: white;
     font-size: 20px;
 }
-
 
 
 footer{

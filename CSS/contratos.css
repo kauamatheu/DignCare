@@ -5,6 +5,16 @@
     border-bottom: 4px solid black;
     
 }
+
+.mexe {
+  transition: transform 0.3s ease; 
+}
+
+.mexe:hover {
+  transform: scale(1.05); 
+  z-index: 5;
+}
+
 .titulo{
     color: #2D8FFF;
     text-align: center;
