@@ -28,3 +28,14 @@
     background-color: white;
     border-radius: 20px;
 }
+.centro{
+    text-align: center;
+}
+.centroitem{
+    display: flex;
+    justify-content: center;
+}
+.titulo{
+    color: #2D8FFF;
+    text-align: center;
+}
