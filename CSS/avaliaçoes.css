@@ -1,3 +1,12 @@
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
 .fundo {
     background-color: rgba(16, 15, 15, 1) !important;
 }
@@ -5,6 +14,16 @@
     border-bottom: 4px solid black;
     
 }
+
+.mexe {
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.mexe:hover {
+  transform: scale(1.1); /* cresce 10% */
+  z-index: 5;
+}
+
 .textcolor{
     color: rgb(255, 255, 255) !important;
 }

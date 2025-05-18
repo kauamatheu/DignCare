@@ -1,19 +1,18 @@
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
 .fundo {
     background-color: rgba(16, 15, 15, 1) !important;
 }
 
 .borda{
     border-bottom: 4px solid black;
-}
-
-.hover-caixa {
-    display: inline-block;
-    padding: 5px 10px;
-}
-
-.hover-caixa:hover {
-    border: 1px solid #323c46;
-    border-radius: 10px;
 }
 
 .mexe {
@@ -23,6 +22,7 @@
 .mexe:hover {
   transform: scale(1.05); 
   z-index: 5;
+  color: #2D8FFF !important;
 }
 
 .grid {
@@ -42,7 +42,7 @@
 }
 
 
-.textcolor {
+.texto {
     color: white !important;
     font-size: 20px !important;
 }
@@ -62,11 +62,10 @@ h4{
 }
 
 footer{
-   margin-top: 10vh 
+   margin-top: 15%;
 }
 
-
-a, a:link, a:visited, a:hover, a:active{
+footer > a, a:link, a:visited, a:hover, a:active{
     text-decoration: none;
     color: lightgray !important;
 }

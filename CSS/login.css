@@ -1,5 +1,14 @@
 /* Corpo da página */
 body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+body {
   margin: 0;
   padding: 0;
   background-color: #111;
@@ -95,16 +104,4 @@ fieldset {
   accent-color: #007bff;
   width: 16px;
   height: 16px;
-}
-
-/* Cabeçalho */
-header {
-  padding: 20px;
-  width: 100%;
-  text-align: center;
-}
-
-.logo {
-  width: 160px;
-  height: auto;
 }
