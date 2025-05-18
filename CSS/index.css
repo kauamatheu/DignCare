@@ -4,33 +4,8 @@
 
 .borda{
     border-bottom: 4px solid black;
-    
 }
 
-
-.grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 5%;
-}
-
-.grid>div {
-    padding-top: 10%;
-    text-align: center;
-}
-
-.full-row {
-    grid-column: span 2;
-}
-
-.textcolor {
-    color: white !important;
-    font-size: 18px !important;
-}
-
-h1 {
-    font-size: 55px !important;
-}
 .hover-caixa {
     display: inline-block;
     padding: 5px 10px;
@@ -41,6 +16,44 @@ h1 {
     border-radius: 10px;
 }
 
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5%;
+}
+
+.grid>div {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    text-align: center;
+}
+
+.full-row {
+    grid-column: span 2;
+}
+
+
+.textcolor {
+    color: white !important;
+    font-size: 18px !important;
+}
+
+h1 {
+    font-size: 55px !important;
+}
+
+h4{
+    text-align: start !important;
+}
+
+.p-format {
+    font-style: italic;
+    font-size: 16px !important;
+    text-align: start;
+    color: lightgray;
+}
+
 .sombra {
     box-shadow: 15px 15px;
     color: #2D8FFF;
@@ -48,5 +61,11 @@ h1 {
 }
 
 footer{
-   margin-top: 30vh 
+   margin-top: 10vh 
+}
+
+
+a, a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: lightgray !important;
 }
