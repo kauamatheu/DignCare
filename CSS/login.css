@@ -1,0 +1,110 @@
+/* Corpo da página */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Formulário */
+form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 350px;
+  margin-top: 20px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  margin: 0 auto;
+  width: 95%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-type {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.user-type label {
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.user-type input[type="radio"] {
+  accent-color: #007bff;
+  width: 16px;
+  height: 16px;
+}
+
+/* Cabeçalho */
+header {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.logo {
+  width: 160px;
+  height: auto;
+}
