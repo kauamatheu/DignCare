@@ -1,0 +1,59 @@
+.fundo {
+    background-color: rgba(16, 15, 15, 1) !important;
+}
+.borda{
+    border-bottom: 4px solid black;
+    
+}
+.iconscss{
+    color:white;
+}
+.textcolor{
+    color: rgb(255, 255, 255) !important;
+}
+.dropdown-item:hover {
+  color: #000000 !important;
+}
+.fundodiv{
+    background-color: rgb(207, 205, 205);
+    border-radius: 20px;
+}
+.margem{
+    margin-top: 50px;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.mensagem{
+    background-color: rgb(177, 172, 172);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    margin-right: 610px;
+    border: 2px solid #2D8FFF;
+}
+.mensagem2{
+    background-color: #2D8FFF;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    margin-left: 610px;
+    margin-bottom: 5px;
+    border: 2px solid #2D8FFF;
+}
+.send{
+    margin-top: 400px;;
+    display: flex;
+    gap: 5px; 
+}
+.titulo{
+    color: #2D8FFF;
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid black;
+}
