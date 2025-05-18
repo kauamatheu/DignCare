@@ -2,6 +2,15 @@
     background-color: rgba(16, 15, 15, 1) !important;
 }
 
+.mexe {
+  transition: transform 0.3s ease; 
+}
+
+.mexe:hover {
+  transform: scale(1.05); 
+  z-index: 5;
+}
+
 .borda{
     border-bottom: 4px solid black;
 }

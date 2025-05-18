@@ -16,6 +16,14 @@
     border-radius: 10px;
 }
 
+.mexe {
+  transition: transform 0.3s ease; 
+}
+
+.mexe:hover {
+  transform: scale(1.05); 
+  z-index: 5;
+}
 
 .grid {
     display: grid;
