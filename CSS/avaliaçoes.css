@@ -1,3 +1,12 @@
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
 .fundo {
     background-color: rgba(16, 15, 15, 1) !important;
 }

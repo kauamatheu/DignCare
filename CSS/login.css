@@ -1,5 +1,14 @@
 /* Corpo da página */
 body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+body {
   margin: 0;
   padding: 0;
   background-color: #111;
