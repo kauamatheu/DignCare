@@ -5,21 +5,19 @@
     border-bottom: 4px solid black;
     
 }
-.titulo{
-    color: #2D8FFF;
-    text-align: center;
-}
-
 .textcolor{
     color: rgb(255, 255, 255) !important;
 }
-.textcolorPDF{
-    color: black;
+.iconscss{
+    color:white;
+}
+.dropdown-item:hover {
+  color: #000000 !important;
 }
 .margem{
     margin-top: 50px;
-    margin-left: 500px;
-    margin-right: 500px;
+    margin-left: 300px;
+    margin-right: 300px;
     margin-bottom: 100px;
     padding-left: 50px;
     padding-right: 50px;
@@ -29,10 +27,4 @@
 .fundodiv{
     background-color: white;
     border-radius: 20px;
-}
-.centro{
-    text-align: center;
-}
-.iconscss{
-    color:white;
 }
