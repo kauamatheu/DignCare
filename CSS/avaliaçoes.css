@@ -1,15 +1,30 @@
-    .stars {
-      display: flex;
-      flex-direction: row;
-      font-size: 40px;
-      cursor: pointer;
-    }
-
-    .star {
-      color: gray;
-      transition: color 0.2s;
-    }
-
-    .star.selected {
-      color: gold;
-    }
+.fundo {
+    background-color: rgba(16, 15, 15, 1) !important;
+}
+.borda{
+    border-bottom: 4px solid black;
+    
+}
+.textcolor{
+    color: rgb(255, 255, 255) !important;
+}
+.iconscss{
+    color:white;
+}
+.dropdown-item:hover {
+  color: #000000 !important;
+}
+.margem{
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.fundodiv{
+    background-color: white;
+    border-radius: 20px;
+}
