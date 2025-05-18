@@ -16,26 +16,13 @@ body.loaded {
 }
 
 .mexe {
-  transition: transform 0.3s ease; /* animação suave */
+  transition: transform 0.3s ease; 
 }
 
 .mexe:hover {
   transform: scale(1.05); 
   z-index: 5;
   color: #2D8FFF !important;
-}
-
-label{
-
-    color: #007AFF;
-    font-size: 20px;
-}
-
-select{
-    background-color: lightgray !important ; 
-    color: rgba(16, 15, 15, 1) !important ; 
-    text-align: center !important ;
-    font-size: 20px !important ;
 }
 
 .conteudo {
@@ -46,19 +33,16 @@ select{
     display: block;
 }
 
-h1{
-    padding: 3%;
-    text-align: center;
+h2{
+    padding: 5%;
     color: #007AFF;
-    font-size: 80px;
+    font-size: 40px;
 }
 
 .texto{
     color: white;
     font-size: 20px;
 }
-
-
 
 footer{
    margin-top: 15%;

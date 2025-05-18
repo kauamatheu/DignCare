@@ -22,6 +22,7 @@ body.loaded {
 .mexe:hover {
   transform: scale(1.05); 
   z-index: 5;
+  color: #2D8FFF !important;
 }
 
 .conteudo {
