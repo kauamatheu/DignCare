@@ -6,6 +6,28 @@
     border-bottom: 4px solid black;
 }
 
+.mexe {
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.mexe:hover {
+  transform: scale(1.1); /* cresce 10% */
+  z-index: 5;
+}
+
+label{
+
+    color: #007AFF;
+    font-size: 20px;
+}
+
+select{
+    background-color: lightgray !important ; 
+    color: rgba(16, 15, 15, 1) !important ; 
+    text-align: center !important ;
+    font-size: 20px !important ;
+}
+
 .conteudo {
     display: none;
 }
@@ -21,6 +43,11 @@ h1{
     font-size: 80px;
 }
 
+.texto{
+    color: white;
+    font-size: 20px;
+}
+
 ol, li{
     color: white;
     font-size: 20px;
@@ -33,4 +60,9 @@ a, a:link, a:visited, a:hover, a:active{
 
 footer{
    margin-top: 15%;
+}
+
+footer > a, a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: lightgray !important;
 }

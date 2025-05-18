@@ -12,17 +12,18 @@
 .ativo {
     display: block;
 }
+
 label{
 
     color: #007AFF;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 select{
-    background-color: transparent !important ; 
-    color: white !important ; 
+    background-color: lightgray !important ; 
+    color: rgba(16, 15, 15, 1) !important ; 
     text-align: center !important ;
-    font-size: 15px !important ;
+    font-size: 20px !important ;
 }
 
 h1{
@@ -39,7 +40,7 @@ h2{
     font-size: 40px;
 }
 
-p{
+.texto{
     color: white;
     font-size: 20px;
 }
