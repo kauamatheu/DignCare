@@ -6,6 +6,15 @@
     border-bottom: 4px solid black;
 }
 
+.mexe {
+  transition: transform 0.3s ease; /* animação suave */
+}
+
+.mexe:hover {
+  transform: scale(1.1); /* cresce 10% */
+  z-index: 5;
+}
+
 label{
 
     color: #007AFF;
@@ -39,15 +48,7 @@ h1{
     font-size: 20px;
 }
 
-ol, li{
-    color: white;
-    font-size: 20px;
-}
 
-a, a:link, a:visited, a:hover, a:active{
-    text-decoration: none;
-    color: lightgray !important;
-}
 
 footer{
    margin-top: 15%;
