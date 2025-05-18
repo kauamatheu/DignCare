@@ -96,15 +96,3 @@ fieldset {
   width: 16px;
   height: 16px;
 }
-
-/* Cabeçalho */
-header {
-  padding: 20px;
-  width: 100%;
-  text-align: center;
-}
-
-.logo {
-  width: 160px;
-  height: auto;
-}
