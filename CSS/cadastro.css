@@ -1,0 +1,117 @@
+/* Reseta margens, paddings e define box-sizing para border-box */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estiliza o body: fonte, cor de fundo, layout centralizado e espaçamento */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Seção principal com layout flex vertical e centralizado */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Formulário com fundo branco, padding, borda arredondada e sombra */
+form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 350px;
+  margin-top: 20px;
+}
+
+/* Título do formulário com tamanho e espaçamento definidos */
+h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Inputs de texto e senha com largura quase total, padding e bordas arredondadas */
+input[type="text"],
+input[type="password"] {
+  width: 95%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+/* Grupo de radios alinhados horizontalmente com espaçamento */
+.radio-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Radios com cor personalizada e margem à direita */
+input[type="radio"] {
+  accent-color: #007bff;
+  margin-right: 5px;
+}
+
+/* Labels com fonte pequena, margem direita e cursor pointer */
+label {
+  font-size: 14px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Botão azul com largura total, padding, bordas arredondadas e cursor pointer */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* Hover do botão com tom mais escuro */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Parágrafos com margem superior e fonte pequena */
+p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Links azuis, sem sublinhado, com fonte em negrito */
+p a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sublinhado no hover do link */
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Esconde divs filhas diretas da section */
+section > div {
+  display: none;
+}

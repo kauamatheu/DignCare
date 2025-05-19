@@ -3,25 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informações Pessoais</title>
-    <link rel="icon" type="imagem/png" href="/img/icon.png">
-    <script src="/JS/transicao.js" defer></script>
+    <title>Document</title>
+    <link rel="icon" type="imagem/png" href="img/icon.png">
 </head>
-<body>
-    <form action="" method="post">
-        <fieldset>
-            <legend>Informações Pessoais</legend>
-            <input type="text" id="cpf" name="cpftxt" placeholder= "CPF"><br><br>
-            <input type="text" id="datanasc" name="datanasctxt" placeholder="Data de Nasciemnto"><br><br>
-            <input type="text" name="profissaotxt" id="profissao" placeholder="Profissão"><br><br>
-            <input type="text" name="ceptxt" id="cep" placeholder="CEP"><br><br>
-            <input type="text" name="ruatxt" id="rua" placeholder="Rua"><br><br>
-            <input type="text" name="nacasatxt" id="ncasa" placeholder="N° da Casa">
-        </fieldset>
-        <br>
-        <button>Criar Conta</button>
+<style>/* reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    </form>
+body {
+  background-color: #111;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* passos com círculo e linha */
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+}
+
+/* círculo base */
+.circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  z-index: 2;
+}
+
+/* passo concluído */
+.circle.done {
+  background-color: #0056b3;
+}
+
+/* passo atual */
+.circle.active {
+  background-color: #007bff;
+}
+
+/* trilho da linha (linha de fundo) */
+.line-track {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 105px; /*ñ é o mesmo valor do gap */
+  height: 5px;
+  background-color: #444; /* linha "vazia" */
+  transform: translateX(-50%);
+  border-radius: 3px;
+  z-index: 1;
+}
+
+/* parte preenchida (progresso) */
+.line-fill {
+  width: 60px;
+  height: 5px;
+  background-color: #007bff;
+  border-radius: 3px;
+}
+
+/* formulário */
+form {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  width: 300px;
+  text-align: center;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* inputs */
+input[type="text"] {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* botão */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* barra completa */
+.line-fill.full {
+  width: 101%; /* enche tudo */
+}
+
+</style>
+<body>
+
+  <div class="container">
+  
+  <!-- Círculos e barra de progresso -->
+  <div class="steps">
+    <div class="circle done">1</div>
+    <div class="line-track">
+      <div class="line-fill full"></div> <!-- barra completa -->
+    </div>
+    <div class="circle done">2</div> <!-- passo 2 também concluído -->
+  </div>
+
+  <!-- Formulário abaixo -->
+  <form action="" method="post">
+    <fieldset>
+      <legend>Informações Pessoais</legend>
+      <input type="text" id="cpf" name="cpftxt" placeholder="CPF"><br><br>
+      <input type="text" id="datanasc" name="datanasctxt" placeholder="Data de Nascimento"><br><br>
+      <input type="text" name="profissaotxt" id="profissao" placeholder="Profissão"><br><br>
+      <input type="text" name="ceptxt" id="cep" placeholder="CEP"><br><br>
+      <input type="text" name="ruatxt" id="rua" placeholder="Rua"><br><br>
+      <input type="text" name="nacasatxt" id="ncasa" placeholder="N° da Casa">
+    </fieldset>
+    <br>
+    <button type="submit">Criar Conta</button>
+  </form>
+
+</div>
+
 
 </body>
 </html>
