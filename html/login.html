@@ -4,22 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
-  <link rel="icon" type="image/png" href="../img/icon.png" />
+  <link rel="icon" type="image/png" href="img/icon.png" />
   <link rel="stylesheet" href="../CSS/login.css" />
-  <script src="/JS/transicao.js" defer></script>
+  <script src="JS/transicao.js" defer></script>
 </head>
 <body>
-  <header class="">
-    <!--Barra de navegação do site-->
-    <nav class="navbar px-1">       
-      <!--Logo do site com link, para clicar e ir para a tela Inicial-->
-      <div class="nav justify-content-center">
-        <a href="/index.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
-      </div>
-    </nav>
-  </header>
+  <!-- caixa principal centralizado -->
+  <div class="main-container">
 
-    <!-- Formulário -->
+    <!-- ...cabeçalho... -->
+
+<body>
+  <!-- Logo clicável centralizada -->
+  <div class="logo-container">
+    <a href="../JS/index.html">
+      <img class="logo-img" src="../img/logo_horizontal.png" alt="logo">
+    </a>
+  </div>
+
+  <!-- Linha abaixo da logo -->
+  <div class="linha-divisora"></div>
+
+  <!-- Formulário de login -->
+  <div class="form-wrapper">
     <form action="" method="post">
       <fieldset>
         <legend>Encontre o profissional ideal pra sua casa com poucos cliques!</legend>
@@ -46,6 +53,5 @@
         <a href="cadastro.html">Criar</a>
       </p>
     </form>
-  </body>
-
-</html>
+  </div>
+</body>
