@@ -25,6 +25,15 @@ body.loaded {
   color: #2D8FFF !important;
 }
 
+.mexecard {
+  transition: transform 0.3s ease; 
+}
+
+.mexecard:hover {
+  transform: scale(1.05); 
+  z-index: 5;
+}
+
 .conteudo {
     display: none;
 }

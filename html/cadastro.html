@@ -1,70 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="icon" type="imagem/png" href="img/icon.png">
-    <script src="/JS/transicao.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - DignCare</title>
+  <link rel="stylesheet" href="../CSS/cadastro.css" />
 </head>
 <body>
-    <header>
-        <!--Barra de navegação do site-->
-        <nav class="navbar borda px-1"> 
-            
-            <!--Logo do site com link, para clicar e ir para a tela Inicial-->
-            <div class="nav ">
-                <a href="/index.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
-            </div>
+  <div class="container">
+   <a href="home.html">
+  <img src="../img/logo_horizontal.png" alt="Logo DignCare" class="logo" />
+</a>
 
-            <!--Div para separar os links da página e centralizar-->
-            <div class="nav justify-content-center">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link textcolor hover-caixa" href="html/como_trabalhamos.html">Como trabalhamos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link textcolor hover-caixa" href="html/depoimentos.html">Depoimentos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link textcolor hover-caixa" href="html/exemplos.html">Exemplos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link textcolor hover-caixa" href="html/sobre.html">Sobre nós</a>
-                    </li>
-                </ul>
-            </div>
+    <div class="divisor"></div>
 
-            <!--Div para separar os botões de login e cadastro-->
-            <div class="nav justify-content-end mx-4">
-                <a href="html/login.html"><button type="button" class="btn btn-dark mx-1">Entrar</button></a>
-                <a href="html/cadastro.html"><button type="button" class="btn btn-primary mx-1">Criar Conta</button></a>
-            </div>
-        </nav>
-    </header>
+    <div class="steps">
+      <span class="step active">1</span>
+      <div class="progress-line">
+        <div class="progress"></div>
+      </div>
+      <span class="step">2</span>
+    </div>
 
-    <section>
-        <div>
-            <p>1</p>
-            <p>2</p>
-        </div>
-        <form>
-            <h1>Do que você precisa?</h1>
-            <input type="radio" name="radio" id="rad_prest_serv" value="prest_serv"><label for="prest_serv">Prestar serviço</label>
-            <input type="radio" name="radio" id="rad_contrat" value="contrat"><label for="contrat">Contratar</label><b>
-            <input type="text" name = "form_nome" id="txt_nome_comp" placeholder="Digite seu nome">
-            <input type="text" name = "form_email" id="txt_email" placeholder="Digite seu email">
-            <input type="password" name = "form_senha" id="txt_password" placeholder="Digite sua senha">
-            <input type="password" name = "form_senha" id="txt_conf_password" placeholder="Confirme sua senha">
-
-            <button>Proximo</button>
-
-            <p>Já possui uma conta? <a href="login.html">Entrar</a></p>
+    <form action="info_pessoais.html" method="get" class="form-box">
+      <h2>Encontre o profissional ideal<br>pra sua casa com poucos cliques!</h2>
 
 
+      <input type="text" name="nome" placeholder="Digite seu nome" required />
+      <input type="email" name="email" placeholder="Digite seu email" required />
+      <input type="password" name="senha" placeholder="Digite sua senha" required />
+      <input type="password" name="confirmaSenha" placeholder="Confirme sua senha" required />
 
-        </form>
-    </section>
-
+      <button type="submit">Próximo</button>
+      <p>Já possui uma conta? <a href="login.html">Entrar</a></p>
+    </form>
+  </div>
 </body>
 </html>
+

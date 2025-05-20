@@ -55,3 +55,6 @@ body.loaded {
 .iconscss{
     color:white;
 }
+.dropdown-item:hover {
+    color: #000000 !important;
+  }

@@ -1,14 +1,5 @@
 /* Corpo da página */
 body {
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-
-body.loaded {
-  opacity: 1;
-}
-
-body {
   margin: 0;
   padding: 0;
   background-color: #111;
@@ -17,6 +8,37 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+/* Container da logo */
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo ajustada */
+.logo-img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+/* Linha divisora escura, ocupando toda a largura */
+.linha-divisora {
+  width: 100vw;
+  height: 4px;
+  background-color: #222;
+  margin: 0;
+  padding: 0;
 }
 
 /* Formulário */
@@ -27,7 +49,7 @@ form {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   text-align: center;
   width: 350px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 legend {
@@ -104,4 +126,27 @@ fieldset {
   accent-color: #007bff;
   width: 16px;
   height: 16px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  height: calc(100vh - 140px); /* Altura da tela - altura da logo e linha */
 }
