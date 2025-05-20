@@ -4,39 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Informações Pessoais</title>
-  <link rel="stylesheet" href="../CSS/cadastro.css" />
+  <link rel="stylesheet" href="../CSS/info_pessoais.css" />
 </head>
+
 <body>
   <div class="container">
-    <!-- logo da empresa -->
-    <img src="../img/logo_horizontal.png" alt="Logo DignCare" class="logo" />
-
-    <!-- linha separadora abaixo da logo -->
-    <div class="divisor"></div>
-
-    <!-- barra de progresso dos passos -->
-    <div class="steps">
-      <div class="step active">1</div>
-
-      <!-- barra cinza com preenchimento azul -->
-      <div class="progress-line">
-        <div class="progress"></div>
-      </div>
-
-      <div class="step active">2</div>
+    <div class="logo-wrapper">
+      <a href="home.html">
+        <img src="../img/logo_horizontal.png" alt="Logo DignCare" class="logo" />
+      </a>
+      <hr class="divider" />
     </div>
 
-    <!-- formulário de cadastro -->
-    <form class="form-box">
-      <h2>Informações Pessoais</h2>
-      <input type="text" name="cpf" placeholder="CPF" required />
-      <input type="date" name="nascimento" placeholder="Data de Nascimento" required />
-      <input type="text" name="profissao" placeholder="Profissão" required />
-      <input type="text" name="cep" placeholder="CEP" required />
-      <input type="text" name="rua" placeholder="Rua" required />
-      <input type="text" name="numero" placeholder="Nº da Casa" required />
-      <button type="submit">Criar Conta</button>
-    </form>
+    <div class="wrapper">
+      <div class="steps">
+        <div class="step active">1</div>
+        <div class="progress-line"></div>
+        <div class="step active">2</div>
+      </div>
+
+      <form class="form-box">
+        <h2>Informações Pessoais</h2>
+
+        <div class="role-selection">
+          <label class="radio-wrapper">
+            <input type="radio" name="role" value="cliente" id="cliente-radio" />
+            <span class="custom-radio"></span>
+            Sou Cliente
+          </label>
+
+          <label class="radio-wrapper">
+            <input type="radio" name="role" value="prestador" id="prestador-radio" />
+            <span class="custom-radio"></span>
+            Sou Prestador
+          </label>
+        </div>
+
+        <input type="text" name="cpf" placeholder="CPF" required />
+        <input
+          type="date"
+          name="nascimento"
+          placeholder="Data de Nascimento"
+          required
+          onfocus="this.style.color='black'"
+          onblur="if(!this.value) this.style.color='#888'"
+          style="color: #888;"
+        />
+
+        <div id="profissao-group">
+          <select name="profissao" required>
+            <option value="">Selecione a profissão</option>
+            <option value="1">Jardinagem</option>
+            <option value="2">Babá</option>
+            <option value="3">Diáristas</option>
+            <option value="4">Cozinheiros</option>
+            <option value="5">Cuidadora de idosos</option>
+            <option value="6">Serviços Gerais</option>
+            <option value="7">Cuidador de Pets</option>
+            <option value="8">Tutores Educacional</option>
+          </select>
+        </div>
+
+        <input type="text" name="cep" placeholder="CEP" required />
+        <input type="text" name="rua" placeholder="Rua" required />
+        <input type="text" name="numero" placeholder="Nº da Casa" required />
+
+        <button type="button" onclick="window.location.href='home.html'">Criar Conta</button>
+      </form>
+    </div>
   </div>
+
+  <script src="../JS/info_pessoais.js"></script>
 </body>
 </html>
