@@ -1,13 +1,242 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" type="imagem/png" href="img/icon.png">
+    <title>DignCare</title>
+    <link rel="icon" type="imagem/png" href="/img/icon.png">
+    <link rel="stylesheet" href="/CSS/serviços_abertos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="/JS/transicao.js" defer></script>
+
 </head>
-<body>
+
+<body class="fundo">
+    <header>
+        <nav class="navbar borda">
+            <div class="nav justify-content-start">
+                <a href="/index.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+            </div>
+
+
+            <div class="dropdown justify-content-end">
+                <button class="btn btn-black dropdown " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-list fs-3 iconscss"> <i class="bi bi-person-circle i fs-3"></i></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end fundo textcolor">
+                    <li><a class="dropdown-item textcolor" href="#">Perfil</a></li>
+                    <li><a class="dropdown-item textcolor" href="#">avaliações</a></li>
+                    <li><a class="dropdown-item textcolor" href="#">Configurações</a></li>
+                    <li><a class="dropdown-item textcolor" href="#">FAQ/Dúvidas Frequêntes</a></li>
+                    <li><a class="dropdown-item textcolor" href="#">Suporte</a></li>
+                    <li><a class="dropdown-item textcolor" href="#">Depoimenotos</a></li>
+                    <li><a class="dropdown-item textcolor" href="#">Sobre Nós</a></li>
+                    <li><a class="dropdown-item textcolor" href="#">Sair da Conta</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <div style="margin: 50px;">
+        <div class="textcolor" style="margin-bottom: 30px;">
+            <h3>Serviços em aberto!</h3>
+            <p>DignCare, Sua solução</p>
+        </div>
+
+        <!--Cards-->
+        <div class="row row-cols-1 row-cols-md-6 g-4 espaçamento" style="margin-bottom: 80px;">
+
+            <!--Card 1-->
+            <div class="col">
+                <div class="card mexe">
+                    <img src="/img/Jardinagem.png" class="card-img-top" alt="jardinagem">
+                    <div class="card-body">
+                        <h5 class="card-title">Jardinagem</h5>
+                        <p class="card-text">Cuidar de algumas plantas do meu jardim.</p>
+                        <p><i class="bi bi-person-circle"></i> Joana d'Arc</p>
+                        <p>⭐⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Confira</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 2-->
+            <div class="col">
+                <div class="card mexe ">
+                    <img src="/img/babá.png" class="card-img-top" alt="babá">
+                    <div class="card-body">
+                        <h5 class="card-title">Babá</h5>
+                        <p class="card-text">Cuidar do meu filho Cristiano Ronaldo.
+                        </p>
+                        <p><i class="bi bi-person-circle"></i> Lionel Messi</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Confira</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Card 3-->
+            <div class="col">
+                <div class="card mexe">
+                    <img src="/img/Limpeza.png" class="card-img-top" alt="limpeza">
+                    <div class="card-body">
+                        <h5 class="card-title">Diáristas</h5>
+                        <p class="card-text">Limpeza Domiciliar, tamanho médio.</p>
+                        <p><i class="bi bi-person-circle"></i> Caetano Veloso</p>
+                        <p>⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Confira</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card mexe">
+                    <img src="/img/cozinheiro.png" class="card-img-top" alt="cozinehiro">
+                    <div class="card-body">
+                        <h5 class="card-title">Cozinha</h5>
+                        <p class="card-text">Alguém para preparar apenas almoço.</p>
+                        <p><i class="bi bi-person-circle"></i> Érick Jacquin</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Confira</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mexe">
+                    <img src="/img/Jardinagem.png" class="card-img-top" alt="jardinagem">
+                    <div class="card-body">
+                        <h5 class="card-title">Jardinagem</h5>
+                        <p class="card-text">Meu jardim ta vei podi, precisa de reparos.</p>
+                        <p><i class="bi bi-person-circle"></i> Mc Gorila</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Confira</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mexe">
+                    <img src="/img/manutencao.png" class="card-img-top" alt="manutenção">
+                    <div class="card-body">
+                        <h5 class="card-title">Serviços Gerais</h5>
+                        <p class="card-text">Trocar algumas lampadas de casa.</p>
+                        <p><i class="bi bi-person-circle"></i> Thomas Edison</p>
+                        <p>⭐⭐</p>
+                        <a href="#" class="btn btn-primary">Confira</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Cards Group 2-->
+        <div class="row row-cols-1 row-cols-md-6 g-6 espaçamento" style="margin-bottom: 80px;"">
+
+      <!--Card 7-->
+      <div class=" col">
+            <div class="card mexe">
+                <img src="/img/cuidadora.png" class="card-img-top" alt="cuidadora">
+                <div class="card-body">
+                    <h5 class="card-title">Cuidadora</h5>
+                    <p class="card-text">Cuidar de um idoso, por algums horas.</p>
+                    <p><i class="bi bi-person-circle"></i> Frank Sinatra</p>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Confira</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Card 8-->
+        <div class="col">
+            <div class="card mexe ">
+                <img src="/img/manutencao.png" class="card-img-top" alt="manutenção">
+                <div class="card-body">
+                    <h5 class="card-title">Serviços Gerais</h5>
+                    <p class="card-text">Limpeza e tratamento de água de piscina grande.</p>
+                    <p><i class="bi bi-person-circle"></i> Heráclito</p>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Confira</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Card 9-->
+        <div class="col">
+            <div class="card mexe">
+                <img src="/img/pets.png" class="card-img-top" alt="limpeza">
+                <div class="card-body">
+                    <h5 class="card-title">Cuidador de Pets</h5>
+                    <p class="card-text">Cuidar de cachorro de baixo porte.</p>
+                    <p><i class="bi bi-person-circle"></i> Tintim</p>
+                    <p>⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Confira</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Card 10-->
+        <div class="col">
+            <div class="card mexe h-100">
+                <img src="/img/tutora.png" class="card-img-top" alt="jardinagem">
+                <div class="card-body">
+                    <h5 class="card-title">Tutora Educacional</h5>
+                    <p class="card-text">Professora de matemática para materias 7° ano. </p>
+                    <p><i class="bi bi-person-circle"></i> Tintim</p>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Confira</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Card 11-->
+        <div class="col">
+            <div class="card mexe ">
+                <img src="/img/manutencao.png" class="card-img-top" alt="manutenção">
+                <div class="card-body">
+                    <h5 class="card-title">Serviços Gerais</h5>
+                    <p class="card-text">Invadir terras brasileiras e explorar sua flora.</p>
+                    <p><i class="bi bi-person-circle"></i> Pedro Alvares</p>
+                    <p>⭐</p>
+                    <a href="#" class="btn btn-primary">Confira</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Card 12-->
+        <div class="col">
+            <div class="card mexe">
+                <img src="/img/pets.png" class="card-img-top" alt="limpeza">
+                <div class="card-body">
+                    <h5 class="card-title">Cuidador de Pets</h5>
+                    <p class="card-text">Cuidar de gato durante viagem particular.</p>
+                    <p><i class="bi bi-person-circle"></i> Magali</p>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <a href="#" class="btn btn-primary">Confira</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+
+    <footer>
+        <div class="fs-6 texto">
+            <p>&copy; Direitos Autorais Reservados Por DignCare.</p>
+            <p>📍 Localização: <a href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">Nossa sede</a></p>
+            <p>✉️ Email: <a href="mailto:digncare@gmail.com">digncare@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    </div>
 
 </body>
+
 </html>
