@@ -7,52 +7,73 @@
     <title>avaliações - DignCare</title>
     <link rel="stylesheet" href="/CSS/avaliaçoes.css">
     <link rel="icon" type="imagem/png" href="img/icon.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/starability/starability-minified/starability-all.min.css">
     <script src="/JS/transicao.js" defer></script>
 </head>
 
 <body class="fundo">
-    <header class=" borda">
-        <nav class="navbar ">
-            <div class=" justify-content-start">
-                <a href="/index.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+    <!-- Início do cabeçalho da página com barra de navegação -->
+    <header class="borda">
+        <nav class="navbar">
+
+            <!-- Logo do site com link para a página inicial -->
+            <div class="justify-content-start">
+                <a href="/index.html">
+                    <img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225">
+                </a>
             </div>
 
-            <div class=" justify-content-center ">
-                <a href="/html/home.html"><button type="button" class="btn btn-primary mx-1">Voltar para o Inicio</button></a>
+            <!-- Botão centralizado para voltar à página inicial -->
+            <div class="justify-content-center">
+                <a href="/html/home.html">
+                    <button type="button" class="btn btn-primary mx-1">Voltar para o Início</button>
+                </a>
             </div>
 
-            <div class="  dropdown justify-content-end">
-                <button class="btn btn-black dropdown " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-list fs-3 iconscss"> <i class="bi bi-person-circle i fs-3"></i></i>
+            <!-- Menu dropdown no canto direito com opções de navegação -->
+            <div class="dropdown justify-content-end">
+                <button class="btn btn-black dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-list fs-3 iconscss">
+                        <i class="bi bi-person-circle i fs-3"></i>
+                    </i>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end fundo textcolor">
                     <li><a class="dropdown-item textcolor" href="#">Perfil</a></li>
-                    <li><a class="dropdown-item textcolor" href="/html/avaliacoes.html">avaliações</a></li>
+                    <li><a class="dropdown-item textcolor" href="/html/avaliacoes.html">Avaliações</a></li>
                     <li><a class="dropdown-item textcolor" href="#">Configurações</a></li>
-                    <li><a class="dropdown-item textcolor" href="#">FAQ/Dúvidas Frequêntes</a></li>
+                    <li><a class="dropdown-item textcolor" href="#">FAQ/Dúvidas Frequentes</a></li>
                     <li><a class="dropdown-item textcolor" href="#">Suporte</a></li>
                     <li><a class="dropdown-item textcolor" href="/html/depoimentos.html">Depoimentos</a></li>
                     <li><a class="dropdown-item textcolor" href="/html/sobre.html">Sobre Nós</a></li>
                     <li><a class="dropdown-item textcolor" href="/index.html">Sair da Conta</a></li>
                 </ul>
             </div>
+
         </nav>
     </header>
-    
+    <!-- Fim do cabeçalho -->
+
+    <!-- Início da seção principal de avaliação -->
     <section class="fundodiv margem">
+
+        <!-- Título da seção -->
         <div class="titulo">
             <h1>Avalie:</h1>
         </div>
+
+        <!-- Avatar do prestador de serviço -->
         <div class="centro">
             <img src="/img/avatar.webp" alt="avatar">
         </div>
+
+        <!-- Nome do prestador -->
         <div class="centro" style="margin-bottom: 20px;">
             <h1>Daniel Rodrigues</h1>
         </div>
+
+        <!-- Formulário com estrelas para avaliação -->
         <div class="centroitem">
             <form>
                 <fieldset class="starability-basic">
@@ -71,15 +92,20 @@
 
                     <input type="radio" id="rate1" name="rating" value="5" />
                     <label for="rate1" title="1 estrela">1 estrela</label>
+
                 </fieldset>
             </form>
         </div>
-        <div class="centro">
-        </div>
+
+        <!-- Botão de envio da avaliação -->
         <div class="centro">
             <button id="btn" class="btn btn-primary">Enviar</button>
         </div>
+
     </section>
+    <!-- Fim da seção principal -->
+
+    <!-- Importação do Bootstrap -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"

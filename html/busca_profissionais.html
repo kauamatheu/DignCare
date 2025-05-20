@@ -36,11 +36,20 @@
         </nav>
     </header>
     
+    <!-- Início da seção principal de avaliação -->
+
     <section class="container mx-5 px-5">
         
+        <!-- Titulo da página -->
         <h2 class="mx-1">Escolha o prestador mais adequado para você!</h2>
+
+        <!-- Menu suspenso para escolher o tipo de prestador de serviço -->
         <select id="seletor" class="form-select form-select-lg mb-3" aria-label="Large select example" onchange="mudarConteudo()">
+
+            <!-- Opção padrão (sem valor útil) -->
             <option value="0">Abra este menu para escolher um prestador</option>
+
+            <!-- Cada opção representa uma categoria de prestador -->
             <option value="1">Jardinagem</option>
             <option value="2">Babá</option>
             <option value="3">Diáristas</option>
@@ -51,6 +60,7 @@
             <option value="8">Tutores Educacional</option>
         </select>
         
+        <!--Tela limpa-->
         <div id="0" class="conteudo ativo">
             <p class="texto mx-5 my-5">Escolha um filtro para exibir os profissionais</p>
         </div>
@@ -565,6 +575,10 @@
 
     </section>
 
+    <!-- Fim da seção principal -->
+
+    <!-- Início do footer -->
+
     <footer>
         <div class="fs-6 texto">
             <p>&copy; Direitos Autorais Reservados Por DignCare.</p>
@@ -573,5 +587,6 @@
         </div>
     </footer>
 
+    <!-- Fim do footer -->
 </body>
 </html>
