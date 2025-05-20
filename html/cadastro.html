@@ -4,62 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro - DignCare</title>
-  <link rel="icon" type="imagem/png" href="/img/icon.png">  
+  <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="stylesheet" href="../CSS/cadastro.css" />
-   <script src="JS/transicao.js" defer></script>
+  <script src="JS/transicao.js" defer></script>
 </head>
 
 <body>
 
-
-  <div class="container">
-
-
-    <a href="/index.html"><img src="/img/logo_horizontal.png" alt="Logo DignCare" class="logo" /></a>
-
+  <!-- Cabeçalho com logo -->
+  <header>
+    <a href="/index.html">
+      <img src="/img/logo_horizontal.png" alt="Logo DignCare" class="logo" />
+    </a>
     <div class="divisor"></div>
-    <!-- Linha divisória horizontal -->
+  </header>
 
-    <div class="steps">
-    <!-- Barra de progresso mostrando os passos do formulário -->
+  <!-- Conteúdo principal -->
+  <main class="container">
 
+    <!-- Barra de progresso -->
+    <section class="steps">
       <span class="step active">1</span>
-      <!-- Indicador do passo 1, ativo -->
-
       <div class="progress-line">
         <div class="progress"></div>
-        <!-- Linha de progresso preenchida -->
       </div>
-
       <span class="step">2</span>
-      <!-- Indicador do passo 2 -->
-    </div>
+    </section>
 
-    <form action="info_pessoais.html" method="get" class="form-box">
-    <!-- Formulário que envia os dados via método GET para a página info_pessoais.html -->
+    <!-- Formulário de cadastro -->
+    <section>
+      <form action="info_pessoais.html" method="get" class="form-box">
+        <h2>Encontre o profissional ideal<br>pra sua casa com poucos cliques!</h2>
 
-      <h2>Encontre o profissional ideal<br>pra sua casa com poucos cliques!</h2>
-      <!-- Título do formulário com quebra de linha -->
+        <input type="text" name="nome" placeholder="Digite seu nome" required />
+        <input type="email" name="email" placeholder="Digite seu email" required />
+        <input type="password" name="senha" placeholder="Digite sua senha" required />
+        <input type="password" name="confirmaSenha" placeholder="Confirme sua senha" required />
 
-      <input type="text" name="nome" placeholder="Digite seu nome" required />
-      <!-- Campo para inserir o nome, obrigatório -->
+        <button type="submit">Próximo</button>
 
-      <input type="email" name="email" placeholder="Digite seu email" required />
-      <!-- Campo para inserir o email, obrigatório -->
+        <p>Já possui uma conta? <a href="login.html">Entrar</a></p>
+      </form>
+    </section>
 
-      <input type="password" name="senha" placeholder="Digite sua senha" required />
-      <!-- Campo para inserir a senha, obrigatório -->
+  </main>
 
-      <input type="password" name="confirmaSenha" placeholder="Confirme sua senha" required />
-      <!-- Campo para confirmar a senha, obrigatório -->
-
-      <button type="submit">Próximo</button>
-      <!-- Botão para enviar o formulário -->
-
-      <p>Já possui uma conta? <a href="login.html">Entrar</a></p>
-      <!-- Texto com link para a página de login -->
-    </form>
-  </div>
 </body>
-
 </html>
