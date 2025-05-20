@@ -6,7 +6,7 @@
   <title>Informações Pessoais - DignCare</title>
   <link rel="icon" type="imagem/png" href="/img/icon.png">
   <link rel="stylesheet" href="../CSS/info_pessoais.css" />
-   <script src="JS/transicao.js" defer></script>
+  <script src="JS/transicao.js" defer></script>
 </head>
 
 <body>
@@ -15,24 +15,22 @@
   <div class="container">
     <!-- Container principal que engloba todo o conteúdo -->
 
-    <div class="logo-wrapper">
+    <header class="logo-wrapper">
       <!-- Área da logo com alinhamento e espaçamento -->
 
-      <a href="/index.html">
-        <!-- Link que leva para a página inicial -->
+     <a href="../html/home.html">
+  <img src="../img/logo_horizontal.png" alt="Logo DignCare" class="logo" />
+</a>
 
-        <img src="/img/logo_horizontal.png" alt="Logo DignCare" class="logo" />
-        <!-- Imagem da logo -->
-      </a>
 
       <hr class="divider" />
       <!-- Linha divisória horizontal -->
-    </div>
+    </header>
 
-    <div class="wrapper">
+    <section class="wrapper">
       <!-- Wrapper que agrupa o conteúdo principal da página -->
 
-      <div class="steps">
+      <nav class="steps">
         <!-- Barra de passos do processo -->
 
         <div class="step active">1</div>
@@ -43,7 +41,7 @@
 
         <div class="step active">2</div>
         <!-- Passo 2 ativo -->
-      </div>
+      </nav>
 
       <form class="form-box">
         <!-- Formulário para preenchimento das informações pessoais -->
@@ -119,7 +117,7 @@
         <button type="button" onclick="window.location.href='home.html'">Criar Conta</button>
         <!-- Botão para criar conta que redireciona para home -->
       </form>
-    </div>
+    </section>
   </div>
 
   <script src="../JS/info_pessoais.js"></script>
@@ -127,3 +125,4 @@
 </body>
 
 </html>
+
