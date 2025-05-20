@@ -11,6 +11,7 @@
     <script src="/JS/transicao.js" defer></script>
 </head>
 <body class="fundo">
+    <!-- Início do cabeçado da página -->
     <header>
         <!--Barra de navegação do site-->
         <nav class="navbar borda px-1"> 
@@ -39,11 +40,15 @@
             </div>
         </nav>
     </header>
+    <!-- Fim do cabeçado da página -->
 
+    <!-- Título da página-->
     <h1>Exemplos</h1>
     
+    <!-- Início da seção principal de avaliação -->
     <section class="container px-5">
         
+        <!-- Menu de seleção para escolher entre cliente e prestador-->
         <div class="container mx-5 px-5">
             <label class="px-5 py-2" for="seletor">Escolha uma opção:</label>
             <select class="form-select" id="seletor" onchange="mudarConteudo()">
@@ -52,6 +57,7 @@
             </select>
         </div>
 
+        <!-- Div cliente -->
         <div id="cliente" class="conteudo ativo my-5 py-5 texto">
             <ol type= 1>
                 <li>Você escolhe o serviço:</li>
@@ -70,7 +76,8 @@
                 <p>As avaliações são públicas e ajudam outros usuários a escolher os melhores profissionais. Quanto melhor o serviço, maior será a visibilidade do prestador na plataforma.</p><br>
             </ol>
         </div>
-        
+
+        <!-- Div prestador -->
         <div id="prestador" class="conteudo my-5 py-5 texto">
             <ol type= 1>
                 <li>Você cadastra um anúncio  do seu serviço:</li>
@@ -91,6 +98,7 @@
             </ol>
         </div>
     </section>
+    <!-- Fim da seção principal -->
         
     <footer>
         <div class="fs-6 texto">
