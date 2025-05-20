@@ -2,29 +2,62 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <!-- Define a codificação dos caracteres como UTF-8 -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
+
     <title>Abrir Solicitação de Serviço - DignCare</title>
+    <!-- Título da página que aparece na aba do navegador -->
+
     <link rel="stylesheet" href="../CSS/cadastro_servicos.css">
+    <!-- Link para o arquivo CSS que estiliza esta página -->
+
     <script src="/JS/transicao.js" defer></script>
+    <!-- Script JavaScript externo que será carregado de forma assíncrona após o HTML -->
 </head>
 
 <body>
+    <!-- Corpo da página -->
+
     <header class="top-header">
+        <!-- Cabeçalho com classe para estilo -->
+
         <a href="home.html">
+            <!-- Link que leva para a página inicial -->
+
             <img src="../img/logo_horizontal.png" alt="Logo DignCare" class="logo">
+            <!-- Imagem da logo da empresa -->
         </a>
+
         <hr class="divider">
+        <!-- Linha horizontal divisória -->
     </header>
     
     <div class="container">
+        <!-- Container principal para o conteúdo da página -->
+
         <div class="form-box">
+            <!-- Caixa branca que contém o formulário -->
+
             <legend>Abra uma solicitação de Serviço</legend>
+            <!-- Título do formulário -->
+
             <form action="" method="post">
+                <!-- Formulário que envia dados via método POST -->
+
                 <label for="servico">Serviço</label><br>
+                <!-- Label para o campo de serviço -->
+
                 <input type="text" name="servicotxt" id="servico" placeholder="Título do Serviço"><br><br>
-                
+                <!-- Campo de texto para o título do serviço -->
+
                 <label for="categoria">Categoria</label><br>
+                <!-- Label para o campo de categoria -->
+
                 <select name="categorias" id="categoria">
+                    <!-- Menu suspenso para selecionar categoria -->
+
                     <option value="1">Jardinagem</option>
                     <option value="2">Babá</option>
                     <option value="3">Diáristas</option>
@@ -36,15 +69,25 @@
                 </select><br><br>
                 
                 <label for="valor">Valor</label><br>
+                <!-- Label para o campo de valor -->
+
                 <input type="text" name="valortxt" id="valor" placeholder="Digite o valor do serviço"><br><br>
-                
+                <!-- Campo para digitar o valor do serviço -->
+
                 <label for="descricao">Descrição</label><br>
+                <!-- Label para o campo de descrição -->
+
                 <textarea name="descricaotxt" id="descricao" placeholder="Faça uma breve descrição."></textarea><br><br>
+                <!-- Área para descrição detalhada do serviço -->
 
                 <a href="home.html" class="btn">Criar Solicitação</a>
+                <!-- Botão/link para criar a solicitação, leva para home -->
+
                 <a href="home.html" class="btn">Voltar</a>
+                <!-- Botão/link para voltar para a home -->
             </form>
         </div>
     </div>
 </body>
+
 </html>

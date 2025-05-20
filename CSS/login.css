@@ -1,152 +1,159 @@
 /* Corpo da página */
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #111;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  transition: opacity 0.5s ease-in;
+  margin: 0; /* Tira a margem padrão */
+  padding: 0; /* Tira o padding padrão */
+  background-color: #111; /* Fundo quase preto */
+  font-family: Arial, sans-serif; /* Fonte Arial */
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Organiza em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  min-height: 100vh; /* Ocupa a altura total da tela */
+  transition: opacity 0.5s ease-in; /* Transição suave na opacidade */
 }
 
+/* Quando o body tem a classe 'loaded' */
 body.loaded {
-  opacity: 1;
+  opacity: 1; /* Torna totalmente visível */
 }
 
 /* Container da logo */
 .logo-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-  padding-top: 20px;
-  flex-direction: column;
-  align-items: center;
+  width: 100%; /* Ocupa toda largura */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centraliza conteúdo horizontalmente */
+  margin-top: 0; /* Sem margem em cima */
+  padding-top: 20px; /* Espaço interno em cima */
+  flex-direction: column; /* Organiza em coluna */
+  align-items: center; /* Centraliza itens horizontalmente */
 }
 
 /* Logo ajustada */
 .logo-img {
-  width: 200px;
-  margin-bottom: 10px;
+  width: 200px; /* Largura fixa */
+  margin-bottom: 10px; /* Espaço embaixo */
 }
 
-/* Linha divisora escura, ocupando toda a largura */
+/* Linha divisória escura */
 .linha-divisora {
-  width: 100vw;
-  height: 4px;
-  background-color: #222;
-  margin: 0;
-  padding: 0;
+  width: 100vw; /* Ocupa toda largura da janela */
+  height: 4px; /* Altura da linha */
+  background-color: #222; /* Cor bem escura */
+  margin: 0; /* Sem margem */
+  padding: 0; /* Sem padding */
 }
 
 /* Formulário */
 form {
-  background-color: white;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  width: 350px;
-  margin-top: 30px;
+  background-color: white; /* Fundo branco */
+  padding: 40px; /* Espaço interno generoso */
+  border-radius: 12px; /* Cantos arredondados */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra leve */
+  text-align: center; /* Texto centralizado */
+  width: 350px; /* Largura fixa */
+  margin-top: 30px; /* Espaço acima do form */
 }
 
+/* Título legend dentro do form */
 legend {
-  font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-weight: bold; /* Negrito */
+  font-size: 16px; /* Tamanho médio */
+  margin-bottom: 20px; /* Espaço abaixo */
 }
 
+/* Inputs texto e senha */
 input[type="text"],
 input[type="password"] {
-  display: block;
-  margin: 0 auto;
-  width: 95%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  box-sizing: border-box;
+  display: block; /* Ocupa linha inteira */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  width: 95%; /* Quase toda largura do form */
+  padding: 10px; /* Espaço interno */
+  border-radius: 8px; /* Bordas arredondadas */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  font-size: 14px; /* Fonte legível */
+  box-sizing: border-box; /* Considera padding dentro da largura */
 }
 
+/* Botão principal */
 button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 15px;
+  width: 100%; /* Ocupa toda largura */
+  padding: 10px; /* Espaço interno */
+  background-color: #007bff; /* Azul padrão */
+  color: white; /* Texto branco */
+  border: none; /* Sem borda */
+  border-radius: 8px; /* Bordas arredondadas */
+  font-size: 16px; /* Fonte maior */
+  cursor: pointer; /* Cursor de mãozinha */
+  margin-top: 15px; /* Espaço acima */
 }
 
+/* Botão quando o mouse passa em cima */
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Azul mais escuro */
 }
 
+/* Parágrafos */
 p {
-  margin-top: 15px;
-  font-size: 14px;
+  margin-top: 15px; /* Espaço em cima */
+  font-size: 14px; /* Tamanho da fonte */
 }
 
+/* Links dentro de parágrafos */
 p a {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
+  color: #007bff; /* Azul */
+  text-decoration: none; /* Sem sublinhado */
+  font-weight: bold; /* Negrito */
 }
 
+/* Link ao passar mouse */
 p a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Sublinhado */
 }
 
+/* Fieldset sem bordas e sem espaçamento */
 fieldset {
   border: none;
   padding: 0;
   margin: 0;
 }
 
+/* Container para tipo de usuário */
 .user-type {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 20px; /* Espaço entre os radios */
+  margin-bottom: 20px; /* Espaço embaixo */
 }
 
+/* Label dos radios */
 .user-type label {
-  font-size: 14px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  font-size: 14px; /* Fonte pequena */
+  cursor: pointer; /* Cursor de mãozinha */
+  display: flex; /* Flexbox pra alinhar */
+  align-items: center; /* Alinha vertical */
+  gap: 5px; /* Espaço entre radio e texto */
 }
 
+/* Radio buttons */
 .user-type input[type="radio"] {
-  accent-color: #007bff;
-  width: 16px;
-  height: 16px;
+  accent-color: #007bff; /* Cor azul quando selecionado */
+  width: 16px; /* Largura do radio */
+  height: 16px; /* Altura do radio */
 }
 
+/* Container principal */
 .main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Coluna */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  min-height: 100vh; /* Ocupa a tela toda */
 }
 
-.main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
+/* Wrapper do form para centralizar */
 .form-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  height: calc(100vh - 140px); /* Altura da tela - altura da logo e linha */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  flex-grow: 1; /* Ocupa o máximo possível */
+  height: calc(100vh - 140px); /* Altura da tela menos altura da logo e linha */
 }
