@@ -3,34 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" type="imagem/png" href="img/icon.png">
+    <title>Abrir Solicitação de Serviço</title>
+    <link rel="stylesheet" href="../CSS/cadastro_servicos.css">
+
     <script src="/JS/transicao.js" defer></script>
 </head>
-<body>
-    <form action="" method="post">
-        <fieldset>
-            <legend>Abra uma solicitção de Serviço</legend>
-            <label for="servico">Serviço</label><br>
-            <input type="text" name="servicotxt" id="servico" placeholder="Título do Serviço"></textarea><br><br>
-            <label for="categoria">Categoria</label><br>
-            <select name="categorias" id="categoria">
-                <option value="jardinagem">Jardinagem</option>
-                <option value="baba">Babá</option>
-                <option value="diarista">Diarista</option>
-                <option value="cuidadora">Cuidadora de idosos</option>
-            </select><br><br>
-            <label for="data">Data</label><br>
-            <input type="date" name="datadt" id="data"><br><br>
-            <label for="endereco">Endereço</label><br>
-            <input type="text" name="enderecotxt" id="endereco" placeholder="Endereço do Serviço"><br><br>
-            <label for="descricao">Descrição</label><br>
-            <textarea name="descricaotxt" id="descricao" placeholder="Faça uma breve descrição."></textarea><br><br>
 
-            <button>Criar Solicitação</button>
-        </fieldset>
-        <br>
-        <button>Voltar</button>
-    </form>
+<body>
+    <header class="top-header">
+        <img src="/img/logo_horizontal.png" alt="Logo DignCare" class="logo">
+        <hr class="divider">
+    </header>
+    
+    
+    <div class="container">
+        <div class="form-box">
+            <legend>Abra uma solicitação de Serviço</legend>
+            <form action="" method="post">
+                <label for="servico">Serviço</label><br>
+                <input type="text" name="servicotxt" id="servico" placeholder="Título do Serviço"><br><br>
+                <label for="categoria">Categoria</label><br>
+                <select name="categorias" id="categoria">
+                    <option value="jardinagem">Jardinagem</option>
+                    <option value="baba">Babá</option>
+                    <option value="diarista">Diarista</option>
+                    <option value="cuidadora">Cuidadora de idosos</option>
+                </select><br><br>
+                <label for="data">Data</label><br>
+                <input type="date" name="datadt" id="data"><br><br>
+                <label for="endereco">Endereço</label><br>
+                <input type="text" name="enderecotxt" id="endereco" placeholder="Endereço do Serviço"><br><br>
+                <label for="descricao">Descrição</label><br>
+                <textarea name="descricaotxt" id="descricao" placeholder="Faça uma breve descrição."></textarea><br><br>
+
+                <button type="submit">Criar Solicitação</button>
+                <br>
+                <button>Voltar</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
