@@ -2,39 +2,74 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
+  <!-- Define a codificação dos caracteres como UTF-8 -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Ajusta o layout para ficar responsivo em dispositivos móveis -->
+
   <title>Cadastro - DignCare</title>
+  <!-- Título da página, que aparece na aba do navegador -->
+
   <link rel="stylesheet" href="../CSS/cadastro.css" />
+  <!-- Link para o arquivo CSS que estiliza a página -->
 </head>
+
 <body>
+  <!-- Corpo da página -->
+
   <div class="container">
-   <a href="home.html">
-  <img src="../img/logo_horizontal.png" alt="Logo DignCare" class="logo" />
-</a>
+  <!-- Container principal que agrupa todo o conteúdo -->
+
+    <a href="home.html">
+    <!-- Link para a página inicial -->
+
+      <img src="../img/logo_horizontal.png" alt="Logo DignCare" class="logo" />
+      <!-- Imagem da logo da empresa com texto alternativo -->
+    </a>
 
     <div class="divisor"></div>
+    <!-- Linha divisória horizontal -->
 
     <div class="steps">
+    <!-- Barra de progresso mostrando os passos do formulário -->
+
       <span class="step active">1</span>
+      <!-- Indicador do passo 1, ativo -->
+
       <div class="progress-line">
         <div class="progress"></div>
+        <!-- Linha de progresso preenchida -->
       </div>
+
       <span class="step">2</span>
+      <!-- Indicador do passo 2 -->
     </div>
 
     <form action="info_pessoais.html" method="get" class="form-box">
-      <h2>Encontre o profissional ideal<br>pra sua casa com poucos cliques!</h2>
+    <!-- Formulário que envia os dados via método GET para a página info_pessoais.html -->
 
+      <h2>Encontre o profissional ideal<br>pra sua casa com poucos cliques!</h2>
+      <!-- Título do formulário com quebra de linha -->
 
       <input type="text" name="nome" placeholder="Digite seu nome" required />
+      <!-- Campo para inserir o nome, obrigatório -->
+
       <input type="email" name="email" placeholder="Digite seu email" required />
+      <!-- Campo para inserir o email, obrigatório -->
+
       <input type="password" name="senha" placeholder="Digite sua senha" required />
+      <!-- Campo para inserir a senha, obrigatório -->
+
       <input type="password" name="confirmaSenha" placeholder="Confirme sua senha" required />
+      <!-- Campo para confirmar a senha, obrigatório -->
 
       <button type="submit">Próximo</button>
+      <!-- Botão para enviar o formulário -->
+
       <p>Já possui uma conta? <a href="login.html">Entrar</a></p>
+      <!-- Texto com link para a página de login -->
     </form>
   </div>
 </body>
-</html>
 
+</html>
