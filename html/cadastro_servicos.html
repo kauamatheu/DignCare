@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abrir Solicitação de Serviço</title>
     <link rel="stylesheet" href="../CSS/cadastro_servicos.css">
-
     <script src="/JS/transicao.js" defer></script>
 </head>
 
 <body>
     <header class="top-header">
-        <img src="/img/logo_horizontal.png" alt="Logo DignCare" class="logo">
+        <a href="home.html">
+            <img src="../img/logo_horizontal.png" alt="Logo DignCare" class="logo">
+        </a>
         <hr class="divider">
     </header>
-    
     
     <div class="container">
         <div class="form-box">
@@ -22,23 +22,27 @@
             <form action="" method="post">
                 <label for="servico">Serviço</label><br>
                 <input type="text" name="servicotxt" id="servico" placeholder="Título do Serviço"><br><br>
+                
                 <label for="categoria">Categoria</label><br>
                 <select name="categorias" id="categoria">
-                    <option value="jardinagem">Jardinagem</option>
-                    <option value="baba">Babá</option>
-                    <option value="diarista">Diarista</option>
-                    <option value="cuidadora">Cuidadora de idosos</option>
+                    <option value="1">Jardinagem</option>
+                    <option value="2">Babá</option>
+                    <option value="3">Diáristas</option>
+                    <option value="4">Cozinheiros</option>
+                    <option value="5">Cuidadora de idosos</option>
+                    <option value="6">Serviços Gerais</option>
+                    <option value="7">Cuidador de Pets</option>
+                    <option value="8">Tutores Educacional</option>
                 </select><br><br>
-                <label for="data">Data</label><br>
-                <input type="date" name="datadt" id="data"><br><br>
-                <label for="endereco">Endereço</label><br>
-                <input type="text" name="enderecotxt" id="endereco" placeholder="Endereço do Serviço"><br><br>
+                
+                <label for="valor">Valor</label><br>
+                <input type="text" name="valortxt" id="valor" placeholder="Digite o valor do serviço"><br><br>
+                
                 <label for="descricao">Descrição</label><br>
                 <textarea name="descricaotxt" id="descricao" placeholder="Faça uma breve descrição."></textarea><br><br>
 
-                <button type="submit">Criar Solicitação</button>
-                <br>
-                <button>Voltar</button>
+                <a href="home.html" class="btn">Criar Solicitação</a>
+                <a href="home.html" class="btn">Voltar</a>
             </form>
         </div>
     </div>
