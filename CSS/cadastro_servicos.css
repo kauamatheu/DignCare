@@ -1,19 +1,19 @@
 /* Fundo escuro */
 body {
-    margin: 0; /* Zera a margem padrão do corpo */
-    font-family: Arial, sans-serif; /* Fonte padrão do texto */
-    background-color: #0f0f0f; /* Fundo bem escuro quase preto */
-    color: #ffffff; /* Texto branco pra dar contraste */
-    display: flex; /* Usa flexbox no body */
-    flex-direction: column; /* Alinha os elementos em coluna (de cima pra baixo) */
-    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    background-color: #0f0f0f; 
+    color: #ffffff; 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
 }
 
 .container {
-    flex: 1; /* Faz o container crescer e ocupar o espaço disponível */
-    display: flex; /* Flexbox dentro do container */
-    justify-content: center; /* Centraliza horizontalmente o conteúdo */
-    align-items: center; /* Centraliza verticalmente o conteúdo */
+    flex: 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 /* Header com logo centralizada */
@@ -24,11 +24,11 @@ body {
 
 /* Logo com tamanho proporcional */
 .logo {
-    max-height: 60px; /* Altura máxima da logo */
-    height: auto; /* Altura automática pra manter proporção */
-    width: auto; /* Largura automática pra manter proporção */
-    display: block; /* Faz a logo ser exibida como bloco (pra poder usar margin auto) */
-    margin: 0 auto; /* Centraliza a logo horizontalmente */
+    max-height: 60px; 
+    height: auto; 
+    width: auto; 
+    display: block; 
+    margin: 0 auto; 
 }
 
 /* Linha divisória de uma ponta à outra */
@@ -41,23 +41,23 @@ body {
 
 /* Caixa branca do formulário */
 .form-box {
-    background-color: #ffffff; /* Fundo branco pra destacar do fundo escuro */
-    color: #000000; /* Texto preto dentro do formulário */
-    padding: 30px; /* Espaço interno ao redor do conteúdo */
-    border-radius: 10px; /* Cantos arredondados */
-    width: 320px; /* Largura fixa do formulário */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave pra dar profundidade */
-    display: flex; /* Flexbox pra organizar conteúdo dentro */
-    flex-direction: column; /* Itens em coluna dentro do form */
-    align-items: center; /* Centraliza os itens horizontalmente */
+    background-color: #ffffff; 
+    color: #000000; 
+    padding: 30px; 
+    border-radius: 10px; 
+    width: 320px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
 }
 
 /* Título */
 legend {
-    font-size: 16px; /* Tamanho da fonte do título */
-    font-weight: bold; /* Texto em negrito */
-    margin-bottom: 20px; /* Espaço embaixo do título */
-    text-align: center; /* Centraliza o texto do título */
+    font-size: 16px; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    text-align: center; 
 }
 
 /* Labels */
@@ -71,13 +71,13 @@ input[type="text"],
 input[type="date"],
 select,
 textarea {
-    width: 100%; /* Ocupam toda a largura do pai */
-    padding: 10px; /* Espaço interno confortável para digitar */
-    margin-top: 5px; /* Espaço em cima de cada input */
-    font-size: 16px; /* Fonte maior para facilitar leitura */
-    border: 1px solid #ccc; /* Borda cinza clara */
-    border-radius: 6px; /* Bordas arredondadas */
-    box-sizing: border-box; /* Faz o padding e borda contarem no tamanho */
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 5px; 
+    font-size: 16px; 
+    border: 1px solid #ccc; 
+    border-radius: 6px; 
+    box-sizing: border-box; 
 }
 
 /* Textarea maior */
@@ -88,26 +88,26 @@ textarea {
 
 /* Botões */
 button {
-    width: 100%; /* Botão ocupa toda largura disponível */
-    padding: 10px; /* Espaço interno do botão */
-    background-color: #3179ff; /* Azul vibrante de fundo */
-    color: white; /* Texto branco */
-    border: none; /* Sem borda */
-    border-radius: 6px; /* Bordas arredondadas */
-    font-size: 14px; /* Fonte do texto do botão */
-    font-weight: bold; /* Texto em negrito */
-    cursor: pointer; /* Muda o cursor pra mãozinha quando passa por cima */
-    margin-top: 10px; /* Espaço acima do botão */
-    transition: background-color 0.3s ease; /* Animação suave na mudança da cor do fundo */
+    width: 100%; 
+    padding: 10px; 
+    background-color: #3179ff; 
+    color: white; 
+    border: none; 
+    border-radius: 6px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    margin-top: 10px; 
+    transition: background-color 0.3s ease; 
 }
 
 /* Botão "Voltar" com estilo diferente */
 button:last-of-type {
-    background-color: transparent; /* Fundo transparente */
-    color: #3179ff; /* Texto azul */
-    border: none; /* Sem borda */
-    margin-top: 10px; /* Espaço acima */
-    font-size: 14px; /* Tamanho da fonte igual aos outros */
+    background-color: transparent; 
+    color: #3179ff; 
+    border: none; 
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 /* Botão hover */
@@ -117,18 +117,18 @@ button:hover {
 
 /* Botões com classe btn (link estilizado) */
 .btn {
-    display: block; /* Exibe como bloco, ocupa linha inteira */
-    width: 100%; /* Largura total */
-    background-color: #4e6ef2; /* Fundo azul */
-    color: white; /* Texto branco */
-    padding: 10px; /* Espaço interno */
-    border: none; /* Sem borda */
-    border-radius: 8px; /* Bordas arredondadas */
-    text-align: center; /* Texto centralizado */
-    text-decoration: none; /* Remove underline dos links */
-    font-weight: bold; /* Texto em negrito */
-    margin-top: 10px; /* Espaço acima */
-    transition: background-color 0.3s; /* Animação suave na cor */
+    display: block; 
+    width: 100%; 
+    background-color: #4e6ef2; 
+    color: white;
+    padding: 10px; 
+    border: none; 
+    border-radius: 8px; 
+    text-align: center; 
+    text-decoration: none; 
+    font-weight: bold; 
+    margin-top: 10px; 
+    transition: background-color 0.3s; 
 }
 
 .btn:hover {
