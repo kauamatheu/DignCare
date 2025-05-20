@@ -1,193 +1,218 @@
+/* Aplica para tudo */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Faz padding e border contarem dentro da largura/altura */
+  margin: 0; /* Zera a margem padrão */
+  padding: 0; /* Zera o padding padrão */
+  font-family: Arial, sans-serif; /* Fonte padrão Arial */
 }
 
+/* Corpo da página */
 body {
-  background-color: #121212;
-  color: white;
-  min-height: 100vh;
+  background-color: #121212; /* Fundo quase preto */
+  color: white; /* Texto branco */
+  min-height: 100vh; /* Ocupa pelo menos toda a altura da tela */
 }
 
+/* Container principal */
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #111;
-  min-height: 100vh;
-  justify-content: flex-start;
-  padding: 0 20px;
+  display: flex; /* Flexbox pra organizar elementos */
+  flex-direction: column; /* Organiza tudo em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  background-color: #111; /* Fundo só um pouco diferente do body */
+  min-height: 100vh; /* Ocupa a altura total da tela */
+  justify-content: flex-start; /* Começa os elementos lá em cima */
+  padding: 0 20px; /* Espaço nas laterais */
 }
 
+/* Wrapper da logo */
 .logo-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Coluna */
+  align-items: center; /* Centralizado */
+  margin-top: 10px; /* Espaço em cima */
+  margin-bottom: 10px; /* Espaço embaixo */
 }
 
+/* Logo */
 .logo {
-  width: 130px;
-  height: auto;
-  margin-bottom: 4px;
+  width: 130px; /* Largura fixa */
+  height: auto; /* Altura automática pra manter proporção */
+  margin-bottom: 4px; /* Espaço embaixo */
 }
 
+/* Linha divisória */
 .divider {
-  width: 900%;
-  border: none;
-  border-top: 1px solid #444;
-  margin: 0;
+  width: 900%; /* Muito larga (provavelmente erro ou intencional pra efeito) */
+  border: none; /* Remove borda padrão */
+  border-top: 1px solid #444; /* Linha fina cinza */
+  margin: 0; /* Sem margem */
 }
 
+/* Wrapper geral de conteúdo */
 .wrapper {
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  width: 100%; /* Ocupa toda largura do pai */
+  max-width: 400px; /* Limita a 400px */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Coluna */
+  align-items: center; /* Centraliza itens */
+  gap: 20px; /* Espaço entre itens */
 }
 
+/* Container dos passos (etapas) */
 .steps {
-  position: relative;
-  width: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  position: relative; /* Pra poder posicionar linha dentro */
+  width: 120px; /* Largura fixa */
+  display: flex; /* Flexbox */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: space-between; /* Espaço entre as bolinhas */
+  margin-bottom: 20px; /* Espaço embaixo */
 }
 
+/* Cada bolinha (passo) */
 .step {
-  width: 30px;
+  width: 30px; /* Tamanho quadrado */
   height: 30px;
-  border-radius: 50%;
-  background-color: #444;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  z-index: 2;
+  border-radius: 50%; /* Deixa redondo */
+  background-color: #444; /* Cinza escuro */
+  color: white; /* Texto branco */
+  display: flex; /* Flexbox pra centralizar texto */
+  justify-content: center; /* Centraliza horizontal */
+  align-items: center; /* Centraliza vertical */
+  font-weight: bold; /* Texto em negrito */
+  z-index: 2; /* Fica na frente da linha */
 }
 
+/* Passo ativo */
 .step.active {
-  background-color: #007bff;
+  background-color: #007bff; /* Azul vivo */
 }
 
+/* Linha de progresso entre os passos */
 .progress-line {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  right: 15px;
-  height: 4px;
-  background-color: #007bff;
-  z-index: 1;
-  transform: translateY(-50%);
+  position: absolute; /* Posicionada em relação ao container steps */
+  top: 50%; /* Meio da altura do container */
+  left: 15px; /* Começa um pouco afastada da esquerda */
+  right: 15px; /* Termina um pouco antes da direita */
+  height: 4px; /* Altura da linha */
+  background-color: #007bff; /* Azul vivo */
+  z-index: 1; /* Fica atrás das bolinhas */
+  transform: translateY(-50%); /* Centraliza verticalmente certinho */
 }
 
+/* Caixa do formulário */
 .form-box {
-  background-color: #fff;
-  color: black;
-  padding: 30px 25px;
-  border-radius: 20px;
-  width: 100%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  text-align: center;
+  background-color: #fff; /* Fundo branco */
+  color: black; /* Texto preto */
+  padding: 30px 25px; /* Espaço interno */
+  border-radius: 20px; /* Cantos bem arredondados */
+  width: 100%; /* Largura total do container pai */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); /* Sombra ao redor */
+  text-align: center; /* Centraliza texto dentro da caixa */
 }
 
+/* Título dentro da form-box */
 .form-box h2 {
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 16px; /* Fonte menorzinha */
+  margin-bottom: 20px; /* Espaço embaixo */
 }
 
+/* Inputs e select do formulário */
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="date"],
 select {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  font-size: 14px;
-  outline: none;
-  background-color: white;
-  color: black;
+  width: 100%; /* Ocupa toda largura */
+  padding: 12px; /* Espaço interno confortável */
+  margin-bottom: 12px; /* Espaço embaixo de cada campo */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 20px; /* Bordas arredondadas */
+  font-size: 14px; /* Fonte padrão */
+  outline: none; /* Remove a borda azul ao focar */
+  background-color: white; /* Fundo branco */
+  color: black; /* Texto preto */
 }
 
+/* Data inválida fica cinza */
 input[type="date"]:invalid {
-  color: #888;
+  color: #888; /* Cinza meio apagado */
 }
 
+/* Data válida volta pro preto */
 input[type="date"]:valid {
   color: black;
 }
 
+/* Botão padrão */
 button {
-  width: 100%;
-  padding: 12px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 20px;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
+  width: 100%; /* Ocupa toda largura */
+  padding: 12px; /* Espaço interno */
+  background-color: #007bff; /* Azul */
+  border: none; /* Sem bordas */
+  border-radius: 20px; /* Bordas arredondadas */
+  color: white; /* Texto branco */
+  font-weight: bold; /* Negrito */
+  font-size: 16px; /* Fonte maior */
+  cursor: pointer; /* Muda cursor ao passar o mouse */
+  transition: background 0.3s; /* Transição suave da cor de fundo */
 }
 
+/* Botão ao passar o mouse */
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Azul mais escuro */
 }
 
+/* Container da seleção de cargo */
 .role-selection {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centraliza horizontal */
+  gap: 20px; /* Espaço entre opções */
+  margin-bottom: 20px; /* Espaço embaixo */
 }
 
+/* Cada wrapper do radio */
 .radio-wrapper {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  gap: 8px;
+  display: flex; /* Flexbox */
+  align-items: center; /* Centraliza verticalmente */
+  cursor: pointer; /* Muda cursor pra mãozinha */
+  gap: 8px; /* Espaço entre radio e label */
 }
 
+/* Esconde o input radio padrão */
 .radio-wrapper input[type="radio"] {
   display: none;
 }
 
+/* Radio personalizado (bolinha) */
 .custom-radio {
-  width: 18px;
+  width: 18px; /* Tamanho da bolinha */
   height: 18px;
-  border-radius: 50%;
-  border: 2px solid #007bff;
-  display: inline-block;
-  position: relative;
+  border-radius: 50%; /* Redondo */
+  border: 2px solid #007bff; /* Borda azul */
+  display: inline-block; /* Pra ficar inline */
+  position: relative; /* Para posicionar o pseudo-elemento */
 }
 
+/* Bolinha interna que aparece quando selecionado */
 .custom-radio::after {
-  content: "";
-  width: 10px;
+  content: ""; /* Elemento vazio */
+  width: 10px; /* Tamanho menor */
   height: 10px;
-  background-color: #007bff;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.2s ease-in-out;
+  background-color: #007bff; /* Azul */
+  border-radius: 50%; /* Redondo */
+  position: absolute; /* Posicionado dentro da bolinha */
+  top: 50%; /* Centraliza vertical */
+  left: 50%; /* Centraliza horizontal */
+  transform: translate(-50%, -50%) scale(0); /* Começa invisível (escala 0) */
+  transition: transform 0.2s ease-in-out; /* Animação suave */
 }
 
+/* Quando radio é selecionado, bolinha interna aparece */
 .radio-wrapper input[type="radio"]:checked + .custom-radio::after {
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1); /* Cresce e fica visível */
 }
 
+/* Grupo de profissão fica escondido */
 #profissao-group {
   display: none;
 }

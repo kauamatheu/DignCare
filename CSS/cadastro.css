@@ -1,153 +1,151 @@
 * 
-{box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}body 
-{
-  background-color: #121212;
-  color: white;
-  min-height: 100vh;
+{ 
+  box-sizing: border-box; /* Faz o tamanho de elementos considerar borda e padding junto, facilita o layout */
+  margin: 0; /* Zera a margem padrão de tudo */
+  padding: 0; /* Zera o padding padrão de tudo */
+  font-family: Arial, sans-serif; /* Define fonte padrão Arial ou similar, pra texto ficar legível */
+}
 
+body 
+{
+  background-color: #121212; /* Fundo escuro pra página toda, preto meio cinza */
+  color: white; /* Cor do texto branca pra contrastar no fundo escuro */
+  min-height: 100vh; /* Garante que o corpo da página ocupe toda a altura da tela */
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-top: 30px;
+  display: flex; /* Usa flexbox pra organizar o conteúdo dentro */
+  flex-direction: column; /* Alinha tudo em coluna (de cima pra baixo) */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  width: 100%; /* Largura total da tela (ou do pai) */
+  padding-top: 30px; /* Espaço em cima pra não colar no topo */
 }
 
 .logo {
-  width: 180px;
-  margin-bottom: 10px;
+  width: 180px; /* Largura fixa pra logo */
+  margin-bottom: 10px; /* Espaço embaixo da logo */
 }
 
 .divisor {
-  width: 100%;
-  height: 1px;
-  background-color: #2c2c2c;
-  margin-bottom: 30px;
+  width: 100%; /* Barra que ocupa toda a largura */
+  height: 1px; /* Altura bem fininha, tipo linha */
+  background-color: #2c2c2c; /* Cor cinza escuro pra linha */
+  margin-bottom: 30px; /* Espaço embaixo dessa linha antes do próximo elemento */
 }
 
 .steps {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0; /* sem espaçamento extra */
-  margin-bottom: 20px;
-  position: relative;
+  display: flex; /* Flexbox pra alinhar passos na horizontal */
+  align-items: center; /* Centraliza verticalmente os passos */
+  justify-content: center; /* Centraliza horizontalmente os passos */
+  gap: 0; /* Sem espaçamento extra entre os passos */
+  margin-bottom: 20px; /* Espaço embaixo do grupo de passos */
+  position: relative; /* Pra poder posicionar elementos filhos absoluto, se precisar */
 }
 
 .step {
-  background-color: #222;
-  color: white;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  z-index: 2;
+  background-color: #222; /* Fundo escuro pra cada bolinha do passo */
+  color: white; /* Texto branco dentro da bolinha */
+  width: 28px; /* Tamanho da bolinha - largura */
+  height: 28px; /* Tamanho da bolinha - altura */
+  border-radius: 50%; /* Faz a bolinha redonda */
+  display: flex; /* Flexbox pra centralizar o número dentro da bolinha */
+  align-items: center; /* Centraliza vertical */
+  justify-content: center; /* Centraliza horizontal */
+  font-weight: bold; /* Número fica em negrito */
+  z-index: 2; /* Garante que a bolinha fique na frente da linha de progresso */
 }
 
 .step.active {
-  background-color: #007bff;
+  background-color: #007bff; /* Bolinha do passo ativo fica azul, pra destacar */
 }
 
 .progress-line {
-  position: relative;
-  height: 4px;
-  width: 80px; /* ajusta a largura da linha entre as bolinhas */
-  background-color: #2c2c2c;
-  margin: 0 10px; /* espaço entre bolinhas */
-  border-radius: 2px;
-  z-index: 1;
+  position: relative; /* Pra colocar a barra azul dentro com posição absoluta */
+  height: 4px; /* Altura da linha entre as bolinhas */
+  width: 80px; /* Largura da linha entre as bolinhas */
+  background-color: #2c2c2c; /* Cor cinza escura da linha */
+  margin: 0 10px; /* Espaço lateral (esquerda e direita) pra separar das bolinhas */
+  border-radius: 2px; /* Borda arredondada na linha */
+  z-index: 1; /* Linha fica atrás das bolinhas */
 }
 
 .progress {
-  position: absolute;
-  height: 100%;
-  width: 50%; /* metade preenchida */
-  background-color: #007bff;
-  border-radius: 2px;
-  top: 0;
-  left: 0;
+  position: absolute; /* Barra de progresso azul fica posicionada dentro da linha */
+  height: 100%; /* Ocupa toda a altura da linha */
+  width: 50%; /* Metade preenchida (pode mudar dinamicamente) */
+  background-color: #007bff; /* Cor azul da barra de progresso */
+  border-radius: 2px; /* Borda arredondada da barra */
+  top: 0; /* Fica no topo da linha */
+  left: 0; /* Fica colada na esquerda da linha */
 }
 
 .form-box {
-  background-color: #fff;
-  color: black;
-  padding: 30px 25px;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 350px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  text-align: center;
+  background-color: #fff; /* Fundo branco do formulário pra destacar no fundo escuro */
+  color: black; /* Texto preto dentro do formulário */
+  padding: 30px 25px; /* Espaço interno do formulário em cima/baixo e laterais */
+  border-radius: 20px; /* Cantos arredondados do formulário */
+  width: 100%; /* Formulário ocupa 100% da largura do container pai */
+  max-width: 350px; /* Mas não passa de 350px pra não ficar gigante */
+  box-shadow: 0 0 15px rgba(0,0,0,0.4); /* Sombra leve ao redor pra dar profundidade */
+  text-align: center; /* Texto alinhado ao centro */
 }
 
 .form-box h2 {
-  font-size: 16px;
-  margin-bottom: 20px;
-}.radio-group {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 15px;
+  font-size: 16px; /* Tamanho da fonte do título dentro do form */
+  margin-bottom: 20px; /* Espaço embaixo do título */
+}
+
+.radio-group {
+  display: flex; /* Flexbox pra deixar opções de rádio alinhadas */
+  justify-content: space-around; /* Espaço igual entre elas */
+  margin-bottom: 15px; /* Espaço embaixo do grupo de opções */
 }
 
 .radio-group label {
-  font-size: 14px;
+  font-size: 14px; /* Tamanho da fonte dos labels das opções */
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="date"] {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  font-size: 14px;
-  outline: none;
+  width: 100%; /* Inputs ocupam toda a largura disponível */
+  padding: 12px; /* Espaço interno dentro do input pra digitar confortável */
+  margin-bottom: 12px; /* Espaço embaixo de cada input */
+  border: 1px solid #ccc; /* Borda cinza clara ao redor dos inputs */
+  border-radius: 20px; /* Bordas arredondadas nos inputs */
+  font-size: 14px; /* Tamanho da fonte dentro do input */
+  outline: none; /* Remove contorno azul padrão quando o input está focado */
 }
-
 
 button {
-  width: 100%;
-  padding: 12px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 20px;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
+  width: 100%; /* Botão ocupa toda a largura do container */
+  padding: 12px; /* Espaço interno do botão */
+  background-color: #007bff; /* Cor azul do botão */
+  border: none; /* Sem borda */
+  border-radius: 20px; /* Bordas arredondadas no botão */
+  color: white; /* Texto branco no botão */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 16px; /* Fonte um pouco maior pro botão */
+  cursor: pointer; /* Muda cursor pra mãozinha quando passar por cima */
+  transition: background 0.3s; /* Transição suave na cor do botão ao passar o mouse */
 }
-
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Cor azul mais escura quando passar o mouse */
 }
-
 
 p {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
+  text-align: center; /* Parágrafos centralizados */
+  margin-top: 10px; /* Espaço em cima do parágrafo */
+  font-size: 14px; /* Fonte menorzinha pra parágrafos */
 }
-
 
 p a {
-  color: #007bff;
-  text-decoration: none;
-
+  color: #007bff; /* Links azuis dentro do parágrafo */
+  text-decoration: none; /* Remove underline padrão dos links */
 }
 
-
 p a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Sublinha o link quando passar o mouse */
 }
