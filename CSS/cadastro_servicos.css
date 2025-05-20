@@ -4,7 +4,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #0f0f0f;
     color: #ffffff;
-    
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -17,115 +16,121 @@ body {
     align-items: center;
 }
 
-    
-    /* Caixa branca do formulário */
-    .form-box {
-        background-color: #ffffff;
-        color: #000000;
-        padding: 30px;
-        border-radius: 10px;
-        width: 320px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-    
-    /* Título */
-    legend {
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    
-    /* Labels */
-    label {
-        font-size: 14px;
-        font-weight: 500;
-    }
-    
-    /* Inputs, selects e textarea */
-    input[type="text"],
-    input[type="date"],
-    select,
-    textarea {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        font-size: 14px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        box-sizing: border-box;
-    }
-    
-    /* Textarea maior */
-    textarea {
-        resize: vertical;
-        height: 80px;
-    }
-    
-    /* Botões */
-    button {
-        width: 100%;
-        padding: 10px;
-        background-color: #3179ff;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        font-size: 14px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: 10px;
-        transition: background-color 0.3s ease;
-    }
-    
-    /* Botão "Voltar" com estilo diferente */
-    button:last-of-type {
-        background-color: transparent;
-        color: #3179ff;
-        border: none;
-        margin-top: 10px;
-        font-size: 14px;
-    }
-    
-    /* Botão hover */
-    button:hover {
-        background-color: #e0e5f1;
-    }
-
-    /* Header com logo centralizada */
-.top-header {
-    text-align: center;
-    padding: 20px 0 10px;
-}
-
-/* Logo */
-.logo {
-    max-height: 40px;
-}
-
-/* Linha divisória */
-.divider {
-    border: none;
-    border-top: 1px solid #444;
-    margin: 0 auto;
-    width: 90%;
-}
-
 /* Header com logo centralizada */
 .top-header {
     text-align: center;
     padding: 20px 0 10px;
 }
 
-/* Logo */
+/* Logo com tamanho proporcional */
 .logo {
     max-height: 60px;
+    height: auto;
     width: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Linha divisória */
+/* Linha divisória de uma ponta à outra */
 .divider {
     border: none;
     border-top: 1px solid #444;
-    margin: 10px auto 0;
-    width: 90%;
+    margin: 10px 0;
+    width: 100vw;
+}
+
+/* Caixa branca do formulário */
+.form-box {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 30px;
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título */
+legend {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Inputs, selects e textarea */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Textarea maior */
+textarea {
+    resize: vertical;
+    height: 75px;
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3179ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Botão "Voltar" com estilo diferente */
+button:last-of-type {
+    background-color: transparent;
+    color: #3179ff;
+    border: none;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Botão hover */
+button:hover {
+    background-color: #e0e5f1;
+}
+
+/* Botões com classe btn (link estilizado) */
+.btn {
+    display: block;
+    width: 100%;
+    background-color: #4e6ef2;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #3a52c1;
 }
