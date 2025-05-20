@@ -37,6 +37,14 @@ body.loaded {
   z-index: 5;
 }
 
+.conteudo {
+    display: none;
+}
+
+.ativo {
+    display: block;
+}
+
 .caixa {
     border: 2px solid white; 
 }
