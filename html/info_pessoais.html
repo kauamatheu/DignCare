@@ -2,45 +2,87 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
+  <!-- Codificação de caracteres UTF-8 -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Responsividade para dispositivos móveis -->
+
   <title>Informações Pessoais - DignCare</title>
+  <!-- Título da página -->
+
   <link rel="stylesheet" href="../CSS/info_pessoais.css" />
+  <!-- Link para o arquivo CSS que estiliza esta página -->
 </head>
 
 <body>
+  <!-- Corpo da página -->
+
   <div class="container">
+    <!-- Container principal que engloba todo o conteúdo -->
+
     <div class="logo-wrapper">
+      <!-- Área da logo com alinhamento e espaçamento -->
+
       <a href="home.html">
+        <!-- Link que leva para a página inicial -->
+
         <img src="../img/logo_horizontal.png" alt="Logo DignCare" class="logo" />
+        <!-- Imagem da logo -->
       </a>
+
       <hr class="divider" />
+      <!-- Linha divisória horizontal -->
     </div>
 
     <div class="wrapper">
+      <!-- Wrapper que agrupa o conteúdo principal da página -->
+
       <div class="steps">
+        <!-- Barra de passos do processo -->
+
         <div class="step active">1</div>
+        <!-- Passo 1 ativo -->
+
         <div class="progress-line"></div>
+        <!-- Linha de progresso entre os passos -->
+
         <div class="step active">2</div>
+        <!-- Passo 2 ativo -->
       </div>
 
       <form class="form-box">
+        <!-- Formulário para preenchimento das informações pessoais -->
+
         <h2>Informações Pessoais</h2>
+        <!-- Título do formulário -->
 
         <div class="role-selection">
+          <!-- Seleção do tipo de usuário (cliente ou prestador) -->
+
           <label class="radio-wrapper">
             <input type="radio" name="role" value="cliente" id="cliente-radio" />
+            <!-- Radio button para selecionar "Sou Cliente" -->
+
             <span class="custom-radio"></span>
+            <!-- Estilização customizada do rádio -->
+
             Sou Cliente
           </label>
 
           <label class="radio-wrapper">
             <input type="radio" name="role" value="prestador" id="prestador-radio" />
+            <!-- Radio button para selecionar "Sou Prestador" -->
+
             <span class="custom-radio"></span>
+            <!-- Estilização customizada do rádio -->
+
             Sou Prestador
           </label>
         </div>
 
         <input type="text" name="cpf" placeholder="CPF" required />
+        <!-- Campo para CPF -->
+
         <input
           type="date"
           name="nascimento"
@@ -50,9 +92,14 @@
           onblur="if(!this.value) this.style.color='#888'"
           style="color: #888;"
         />
+        <!-- Campo para data de nascimento com mudança de cor no foco -->
 
         <div id="profissao-group">
+          <!-- Grupo de seleção de profissão, inicialmente escondido via CSS -->
+
           <select name="profissao" required>
+            <!-- Dropdown para escolher profissão -->
+
             <option value="">Selecione a profissão</option>
             <option value="1">Jardinagem</option>
             <option value="2">Babá</option>
@@ -66,14 +113,22 @@
         </div>
 
         <input type="text" name="cep" placeholder="CEP" required />
+        <!-- Campo para CEP -->
+
         <input type="text" name="rua" placeholder="Rua" required />
+        <!-- Campo para Rua -->
+
         <input type="text" name="numero" placeholder="Nº da Casa" required />
+        <!-- Campo para número da casa -->
 
         <button type="button" onclick="window.location.href='home.html'">Criar Conta</button>
+        <!-- Botão para criar conta que redireciona para home -->
       </form>
     </div>
   </div>
 
   <script src="../JS/info_pessoais.js"></script>
+  <!-- Script JS que controla o comportamento da página -->
 </body>
+
 </html>
