@@ -35,8 +35,29 @@ body.loaded {
     text-align: center;
 }
 
-.fundo-perfil{
-    padding: 25%;
+/*Cria uma grid de 2 colunas com uma margem interna de 5% de tamanho*/
+.grid {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: auto auto;
     background-color: lightgray;
-    border-radius: 5%;
+    border-radius: 30px;
+    padding: 5%;
 }
+
+/*Define que toda div dentro da grid tem o texto alinhado no centro e uma margem no top e embaixo de 8% de tamanho*/
+.grid>div {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    text-align: center;
+}
+
+.full-row {
+    grid-column: span 2;
+}
+
+.redondo{
+    width: 150px;
+    height: 150px;
+    clip-path: circle(50% at center);
+  }
