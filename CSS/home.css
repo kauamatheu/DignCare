@@ -50,14 +50,14 @@ body.loaded {
 }
 
 .iconscss{
+    font-size: 30px;
     color:white;
+    margin-right: 20px;
 }
 .espaçamento{
     justify-content: space-between;
 }
-.dropdown-item:hover {
-  color: #000000 !important;
-}
+
 
 footer{
     color: #fff;
