@@ -31,10 +31,6 @@ body.loaded {
   color: #2D8FFF !important;
 }
 
-.centro{
-    text-align: center;
-}
-
 /*Cria uma grid de 2 colunas com uma margem interna de 5% de tamanho*/
 .grid {
     margin-top: 5%;
@@ -43,21 +39,83 @@ body.loaded {
     background-color: lightgray;
     border-radius: 30px;
     padding: 5%;
+
 }
 
 /*Define que toda div dentro da grid tem o texto alinhado no centro e uma margem no top e embaixo de 8% de tamanho*/
 .grid>div {
-    margin-top: 8%;
-    margin-bottom: 8%;
-    text-align: center;
+    margin-bottom: 4%; 
 }
 
 .full-row {
     grid-column: span 2;
 }
 
-.redondo{
-    width: 150px;
-    height: 150px;
-    clip-path: circle(50% at center);
-  }
+
+.centralizar{
+    text-align: center;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+  
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 30px;
+}
+  
+input {
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+input:focus{
+    border-color: gray;
+    transition: transform 0.3s ease;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.areapatexto{
+  border: 3px solid black; 
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+/* Scroll personalizado */
+.areapatexto::-webkit-scrollbar {
+  width: 8px;
+}
+.areapatexto::-webkit-scrollbar-track {
+  background: transparent;
+}
+.areapatexto::-webkit-scrollbar-thumb {
+  background-color: #2D8FFF;
+  border-radius: 10px;
+}
+.areapatexto::-webkit-scrollbar-thumb:hover {
+  background-color: #2D8FFF;
+}
