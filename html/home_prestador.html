@@ -11,6 +11,76 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <script src="/JS/transicao.js" defer></script>
 </head>
+<style>body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+.fundo {
+    background-color: rgba(16, 15, 15, 1) !important;
+}
+.borda{
+    border-bottom: 4px solid black;
+    
+}
+.textcolor{
+    color: white !important;
+}
+
+.hover-caixa {
+    display: inline-block; 
+    padding: 5px 10px;
+}
+  
+.hover-caixa:hover {
+    border: 1px solid #323c46;
+    border-radius: 10px;
+}
+
+.mexe {
+  transition: transform 0.3s ease; 
+}
+
+.mexe:hover {
+  transform: scale(1.05); 
+  z-index: 5;
+}
+
+.conteudo {
+    display: none;
+}
+
+.ativo {
+    display: block;
+}
+
+.caixa {
+    border: 2px solid white; 
+}
+
+.iconscss{
+    font-size: 30px;
+    color:white;
+    margin-right: 20px;
+}
+.espaçamento{
+    justify-content: space-between;
+}
+
+
+footer{
+    color: #fff;
+   margin-top: 40%;
+}
+
+footer > a, a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: lightgray !important;
+}</style>
 
 <body class="fundo loaded">
   <header>
@@ -45,7 +115,6 @@
       <!-- Card 1 -->
       <div class="col">
         <div class="card mexe h-100">
-          <img src="../img/agenda.png" class="card-img-top" alt="agenda">
           <div class="card-body">
             <h5 class="card-title">Agenda</h5>
             <p class="card-text">Veja seus horários e agendamentos futuros.</p>
@@ -57,7 +126,6 @@
       <!-- Card 2 -->
       <div class="col">
         <div class="card mexe h-100">
-          <img src="../img/avaliacoes.png" class="card-img-top" alt="avaliações">
           <div class="card-body">
             <h5 class="card-title">Avaliações</h5>
             <p class="card-text">Acompanhe o que os clientes estão dizendo sobre seu serviço.</p>
@@ -69,7 +137,6 @@
       <!-- Card 3 -->
       <div class="col">
         <div class="card mexe h-100">
-          <img src="/img/editar_servico.png" class="card-img-top" alt="editar serviço">
           <div class="card-body">
             <h5 class="card-title">Serviços</h5>
             <p class="card-text">Edite os serviços que você oferece e seus preços.</p>
@@ -81,7 +148,6 @@
       <!-- Card 4 -->
       <div class="col">
         <div class="card mexe h-100">
-          <img src="../img/mensagens.png" class="card-img-top" alt="mensagens">
           <div class="card-body">
             <h5 class="card-title">Mensagens</h5>
             <p class="card-text">Converse com seus clientes de forma fácil e rápida.</p>
