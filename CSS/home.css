@@ -17,15 +17,8 @@ body.loaded {
 .textcolor{
     color: white !important;
 }
-
-.hover-caixa {
-    display: inline-block; 
-    padding: 5px 10px;
-}
-  
-.hover-caixa:hover {
-    border: 1px solid #323c46;
-    border-radius: 10px;
+.azul:hover{
+    color: #2D8FFF !important;
 }
 
 .mexe {
@@ -35,6 +28,10 @@ body.loaded {
 .mexe:hover {
   transform: scale(1.05); 
   z-index: 5;
+}
+
+div > a, a:link, a:visited, a:hover, a:active{
+    color: #2D8FFF !important;
 }
 
 .conteudo {

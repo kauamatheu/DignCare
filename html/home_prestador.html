@@ -1,6 +1,7 @@
 <!-- home_prestador.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,96 +12,119 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   <script src="/JS/transicao.js" defer></script>
 </head>
-<style>body {
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
+<style>
+  body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
 
-body.loaded {
-  opacity: 1;
-}
+  body.loaded {
+    opacity: 1;
+  }
 
-.fundo {
+  .fundo {
     background-color: rgba(16, 15, 15, 1) !important;
-}
-.borda{
-    border-bottom: 4px solid black;
-    
-}
-.textcolor{
-    color: white !important;
-}
+  }
 
-.hover-caixa {
-    display: inline-block; 
+  .borda {
+    border-bottom: 4px solid black;
+
+  }
+
+  .textcolor {
+    color: white !important;
+  }
+
+  .hover-caixa {
+    display: inline-block;
     padding: 5px 10px;
-}
-  
-.hover-caixa:hover {
+  }
+
+  .hover-caixa:hover {
     border: 1px solid #323c46;
     border-radius: 10px;
-}
+  }
 
-.mexe {
-  transition: transform 0.3s ease; 
-}
+  .mexe {
+    transition: transform 0.3s ease;
+  }
 
-.mexe:hover {
-  transform: scale(1.05); 
-  z-index: 5;
-}
+  .mexe:hover {
+    transform: scale(1.05);
+    z-index: 5;
+  }
 
-.conteudo {
+  .conteudo {
     display: none;
-}
+  }
 
-.ativo {
+  .ativo {
     display: block;
-}
+  }
 
-.caixa {
-    border: 2px solid white; 
-}
+  .caixa {
+    border: 2px solid white;
+  }
 
-.iconscss{
+  .iconscss {
+    font-size: 30px;
+    color: white;
+    margin-right: 20px;
+  }
+
+  .espaçamento {
+    justify-content: space-between;
+  }
+
+
+  footer {
+    color: #fff;
+    margin-top: 40%;
+  }
+
+  footer>a,
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: lightgray !important;
+  }
+  .iconscss{
     font-size: 30px;
     color:white;
     margin-right: 20px;
 }
-.espaçamento{
-    justify-content: space-between;
-}
-
-
-footer{
-    color: #fff;
-   margin-top: 40%;
-}
-
-footer > a, a:link, a:visited, a:hover, a:active{
-    text-decoration: none;
-    color: lightgray !important;
-}</style>
+</style>
 
 <body class="fundo loaded">
   <header>
     <nav class="navbar borda">
       <div class="nav justify-content-start">
-        <a href="../CSS/home_prestador.css"><img class="mexe" src="../img/logo_horizontal.png" alt="logo" width="225" /></a>
+        <a href="../CSS/home_prestador.css"><img class="mexe" src="../img/logo_horizontal.png" alt="logo"
+            width="225" /></a>
       </div>
 
-      <div class="dropdown justify-content-end">
-        <button class="btn btn-black dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <i class="bi bi-list fs-3 iconscss"> <i class="bi bi-person-circle i fs-3"></i></i>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end fundo textcolor">
-          <li><a class="dropdown-item textcolor" href="#">Meu Perfil</a></li>
-          <li><a class="dropdown-item textcolor" href="#">Minhas Avaliações</a></li>
-          <li><a class="dropdown-item textcolor" href="#">Editar Serviços</a></li>
-          <li><a class="dropdown-item textcolor" href="#">Agenda</a></li>
-          <li><a class="dropdown-item textcolor" href="#">Mensagens</a></li>
-          <li><a class="dropdown-item textcolor" href="#">Sair</a></li>
-        </ul>
+      <div class="menu-icon" type="sidbar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight"><i class="bi bi-list fs-3 iconscss"></i></div>
+
+      <div class="offcanvas offcanvas-end fundo" tabindex="-1" id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title textcolor" id="offcanvasRightLabel">Daniel Rodrigues</h5>
+          <div type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+              class="bi bi-x-lg textcolor"></i></div>
+        </div>
+
+        <div class="offcanvas-body">
+          <a class="azul" href="/html/perfil.html">Perfil</a><br>
+          <a class="azul" href="/html/avaliacoes.html">Avaliações</a>
+          <p>______________________________________________________</p>
+          <a class="azul" href="/html/depoimentos.html">Depoimentos</a><br>
+          <a class="azul" href="/html/sobre.html">Sobre Nós</a>
+          <p>______________________________________________________</p>
+          <a class="azul" href="/index.html">Sair da Conta</a>
+        </div>
       </div>
     </nav>
   </header>
@@ -168,4 +192,5 @@ footer > a, a:link, a:visited, a:hover, a:active{
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
