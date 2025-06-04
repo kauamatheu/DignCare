@@ -31,21 +31,6 @@ body.loaded {
   color: #2D8FFF !important;
 }
 
-.sair{
-  background-color: red; !important
-}
-
-button{
-  text-align: center;
-  border-radius: 12px;
-  border: solid #4b4b4b 1px;
-  font-size: 18px;
-  padding: 6px 80px;
-  background-color: #ccc;
-  color: #4b4b4b;
-  
-}
-
 /*Cria uma grid de 2 colunas com uma margem interna de 5% de tamanho*/
 .grid {
     margin-top: 5%;
@@ -55,19 +40,40 @@ button{
     border-radius: 30px;
     padding: 5%;
     margin-bottom: 5%;
-    align-items: center;
+}
+
+section{
+    border-color: #ff2222;
+    box-shadow: 0 0 50px rgb(160, 7, 7);
+    outline: none;
+}
+
+ .voltar{
+    border: solid #d41515 1px;
+    background-color: #f07474;
+    color: #d41515;
+
+}
+
+ .sair{
+    border: solid #006e21 1px;
+    background-color: #15be48;
+    color: #006e21; 
+}
+
+button{
+    text-align: center;
+    border-radius: 12px;
+    font-size: 18px;
+    padding: 6px 80px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /*Define que toda div dentro da grid tem o texto alinhado no centro e uma margem no top e embaixo de 8% de tamanho*/
 .grid>div {
     margin-bottom: 4%; 
 }
-.grid>div>a{
-  display: block;
-  margin-top: 30px;
-}
-
-
 
 .full-row {
     grid-column: span 2;
