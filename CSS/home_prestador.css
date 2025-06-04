@@ -68,3 +68,11 @@ body {
       text-decoration: none;
       color: lightgray !important;
   }
+  .iconscss{
+    font-size: 30px;
+    color:white;
+    margin-right: 20px;
+}
+.azul:hover{
+    color: #2D8FFF !important;
+}
