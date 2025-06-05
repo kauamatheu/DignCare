@@ -216,3 +216,24 @@ button:hover {
 #profissao-group {
   display: none;
 }
+
+
+footer{
+   margin-top: 15%;
+   padding: 10%;
+   background-color: rgb(26, 24, 24) ;
+   text-align: center;
+   
+}
+
+footer>div>p{
+    padding-inline: 5%;
+    display: inline-flex;
+    font-size: 15px !important;
+}
+
+/*Define que todos os links dentro do rodapé não terão decorações (sublinhado) e a cor será cinza claro*/
+footer > a, a:link, a:visited, a:active{
+    text-decoration: none;    
+    color: white;
+}
