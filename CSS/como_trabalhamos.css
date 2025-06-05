@@ -74,14 +74,13 @@ li{
 }
 
 footer{
-   margin-top: 15%;
-   padding: 10%;
+   margin-top: 180px;
+   padding: 1%;
    background-color: rgb(26, 24, 24) ;
    text-align: center;
-   
 }
 
-footer>div>p{
+footer>p{
     padding-inline: 5%;
     display: inline-flex;
     font-size: 15px !important;
