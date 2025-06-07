@@ -7,92 +7,77 @@
   <link rel="icon" type="imagem/png" href="/img/icon.png">
   <link rel="stylesheet" href="../CSS/info_pessoais.css" />
   <script src="JS/transicao.js" defer></script>
+  <script src="JS/info_pessoais.js" defer></script>
 </head>
 
 <body>
+
   <!-- Corpo da página -->
-
-  <div class="container">
+  
+  <header class="logo-wrapper">  
+    
+    <!-- Área da logo com alinhamento e espaçamento -->
+    
+    <a href="../html/home.html">
+      <img src="../img/logo_horizontal.png" alt="Logo DignCare" class="logo" />
+    </a>
+    
+    
+    <hr class="divider" />
+    <!-- Linha divisória horizontal -->
+    
+  </header>
+  
+  <section class="container">
     <!-- Container principal que engloba todo o conteúdo -->
-
-    <header class="logo-wrapper">
-      <!-- Área da logo com alinhamento e espaçamento -->
-
-     <a href="../html/home.html">
-  <img src="../img/logo_horizontal.png" alt="Logo DignCare" class="logo" />
-</a>
-
-
-      <hr class="divider" />
-      <!-- Linha divisória horizontal -->
-    </header>
-
-    <section class="wrapper">
+    <div class="wrapper">
       <!-- Wrapper que agrupa o conteúdo principal da página -->
-
+      
       <nav class="steps">
         <!-- Barra de passos do processo -->
-
+        
         <div class="step active">1</div>
         <!-- Passo 1 ativo -->
-
+        
         <div class="progress-line"></div>
         <!-- Linha de progresso entre os passos -->
-
+        
         <div class="step active">2</div>
         <!-- Passo 2 ativo -->
       </nav>
-
-      <form class="form-box">
-        <!-- Formulário para preenchimento das informações pessoais -->
+      
+      <form class="form-box" action="home.html" method="post">
 
         <h2>Informações Pessoais</h2>
-        <!-- Título do formulário -->
-
+      
         <div class="role-selection">
-          <!-- Seleção do tipo de usuário (cliente ou prestador) -->
-
           <label class="radio-wrapper">
-            <input type="radio" name="role" value="cliente" id="cliente-radio" />
-            <!-- Radio button para selecionar "Sou Cliente" -->
-
+            <input type="radio" name="role" value="cliente" id="cliente-radio" required />
             <span class="custom-radio"></span>
-            <!-- Estilização customizada do rádio -->
-
             Sou Cliente
           </label>
-
+        
           <label class="radio-wrapper">
-            <input type="radio" name="role" value="prestador" id="prestador-radio" />
-            <!-- Radio button para selecionar "Sou Prestador" -->
-
+            <input type="radio" name="role" value="prestador" id="prestador-radio" required />
             <span class="custom-radio"></span>
-            <!-- Estilização customizada do rádio -->
-
             Sou Prestador
           </label>
         </div>
-
+      
         <input type="text" name="cpf" placeholder="CPF" required />
-        <!-- Campo para CPF -->
-
+      
         <input
-          type="date"
-          name="nascimento"
-          placeholder="Data de Nascimento"
-          required
-          onfocus="this.style.color='black'"
-          onblur="if(!this.value) this.style.color='#888'"
-          style="color: #888;"
+        type="date"
+        name="nascimento"
+        placeholder="Data de Nascimento"
+        required
+        onfocus="this.style.color='black'"
+        onblur="if(!this.value) this.style.color='#888'"
+        style="color: #888;"
         />
-        <!-- Campo para data de nascimento com mudança de cor no foco -->
-
+      
         <div id="profissao-group">
-          <!-- Grupo de seleção de profissão, inicialmente escondido via CSS -->
-
           <select name="profissao" required>
-            <!-- Dropdown para escolher profissão -->
-
             <option value="">Selecione a profissão</option>
             <option value="1">Jardinagem</option>
             <option value="2">Babá</option>
@@ -104,34 +89,25 @@
             <option value="8">Tutores Educacional</option>
           </select>
         </div>
-
+      
         <input type="text" name="cep" placeholder="CEP" required />
-        <!-- Campo para CEP -->
-
         <input type="text" name="rua" placeholder="Rua" required />
-        <!-- Campo para Rua -->
-
         <input type="text" name="numero" placeholder="Nº da Casa" required />
-        <!-- Campo para número da casa -->
-
-        <button type="button" onclick="window.location.href='home.html'">Criar Conta</button>
-        <!-- Botão para criar conta que redireciona para home -->
+        
+        <button type="submit">Criar Conta</button>
       </form>
-    </section>
-  </div>
+    </div>
+  </section>
+  
+  <footer class="py-4 mt-auto texto">
+    <div class="fs-6">
+      <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
+      <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
+      <p ><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
+      <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
+    </div>
+  </footer>
 
-    <footer class="py-4 mt-auto texto">
-        <div class="fs-6">
-            <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
-            <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p ><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
-            <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
-        </div>
-    </footer>
-
-  <script src="../JS/info_pessoais.js"></script>
-  <!-- Script JS que controla o comportamento da página -->
 </body>
-
 </html>
 
