@@ -18,11 +18,11 @@
     <header class=" borda">
         <nav class="navbar ">
             <div class=" justify-content-start">
-                <a href="/html/home.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+                <a href="/html/home.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
             </div>
 
             <div class=" justify-content-center ">
-                <a href="/html/avaliacoes.html"><button type="button" class="btn btn-primary mx-1">Avaliar</button></a>
+                <a href="/html/avaliacoes.php"><button type="button" class="btn btn-primary mx-1">Avaliar</button></a>
             </div>
 
             <div class="  dropdown justify-content-end">
@@ -111,7 +111,7 @@
         <div class="fs-6">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
             <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p ><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
+            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
             <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
         </div>
     </footer>

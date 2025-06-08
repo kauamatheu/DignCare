@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informações Pessoais - DignCare</title>
+  <link rel="icon" type="imagem/png" href="/img/icon.png">
+  <link rel="stylesheet" href="../CSS/info_pessoais.css" />
+  <script src="JS/transicao.js" defer></script>
+  <script src="JS/info_pessoais.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Corpo da página -->
+  
+  <header class="logo-wrapper">  
+    
+    <!-- Área da logo com alinhamento e espaçamento -->
+    
+    <a href="/index.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+    
+    
+    <hr class="divider" />
+    <!-- Linha divisória horizontal -->
+    
+  </header>
+  
+  <section class="container">
+    <!-- Container principal que engloba todo o conteúdo -->
+    <div class="wrapper">
+      <!-- Wrapper que agrupa o conteúdo principal da página -->
+      
+      <nav class="steps">
+        <!-- Barra de passos do processo -->
+        
+        <div class="step active">1</div>
+        <!-- Passo 1 ativo -->
+        
+        <div class="progress-line"></div>
+        <!-- Linha de progresso entre os passos -->
+        
+        <div class="step active">2</div>
+        <!-- Passo 2 ativo -->
+      </nav>
+      
+      <form class="form-box" action="home.php" method="post">
+
+        <h2>Informações Pessoais</h2>
+      
+        <div class="role-selection">
+          <label class="radio-wrapper">
+            <input type="radio" name="role" value="cliente" id="cliente-radio" required />
+            <span class="custom-radio"></span>
+            Sou Cliente
+          </label>
+        
+          <label class="radio-wrapper">
+            <input type="radio" name="role" value="prestador" id="prestador-radio" required />
+            <span class="custom-radio"></span>
+            Sou Prestador
+          </label>
+        </div>
+      
+        <input type="text" name="cpf" placeholder="CPF" required />
+      
+        <input
+        type="date"
+        name="nascimento"
+        placeholder="Data de Nascimento"
+        required
+        onfocus="this.style.color='black'"
+        onblur="if(!this.value) this.style.color='#888'"
+        style="color: #888;"
+        />
+      
+        <div id="profissao-group">
+          <select name="profissao" required>
+            <option value="">Selecione a profissão</option>
+            <option value="1">Jardinagem</option>
+            <option value="2">Babá</option>
+            <option value="3">Diáristas</option>
+            <option value="4">Cozinheiros</option>
+            <option value="5">Cuidadora de idosos</option>
+            <option value="6">Serviços Gerais</option>
+            <option value="7">Cuidador de Pets</option>
+            <option value="8">Tutores Educacional</option>
+          </select>
+        </div>
+      
+        <input type="text" name="cep" placeholder="CEP" required />
+        <input type="text" name="rua" placeholder="Rua" required />
+        <input type="text" name="numero" placeholder="Nº da Casa" required />
+        
+        <button type="submit">Criar Conta</button>
+      </form>
+    </div>
+  </section>
+  
+  <footer class="py-4 mt-auto texto">
+    <div class="fs-6">
+      <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
+      <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
+      <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
+      <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-<!-- home_prestador.html -->
+<!-- home_prestador.php -->
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,7 +19,7 @@
   <header>
     <nav class="navbar borda">
       <div class="nav justify-content-start">
-        <a href="home_prestador.html">
+        <a href="home_prestador.php">
           <img class="mexe" src="../img/logo_horizontal.png" alt="logo" width="225" />
         </a>
       </div>
@@ -35,13 +35,13 @@
         </div>
 
         <div class="offcanvas-body">
-          <a class="azul" href="/html/perfil.html">Perfil</a><br>
-          <a class="azul" href="/html/avaliacoes.html">Avaliações</a>
+          <a class="azul" href="/html/perfil.php">Perfil</a><br>
+          <a class="azul" href="/html/avaliacoes.php">Avaliações</a>
           <p>______________________________________________________</p>
-          <a class="azul" href="/html/depoimentos.html">Depoimentos</a><br>
-          <a class="azul" href="/html/sobre.html">Sobre Nós</a>
+          <a class="azul" href="/html/depoimentos.php">Depoimentos</a><br>
+          <a class="azul" href="/html/sobre.php">Sobre Nós</a>
           <p>______________________________________________________</p>
-          <a class="azul" href="/index.html">Sair da Conta</a>
+          <a class="azul" href="/index.php">Sair da Conta</a>
         </div>
       </div>
 
@@ -106,7 +106,7 @@
         <div class="fs-6">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
             <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p ><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
+            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
             <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
         </div>
     </footer>

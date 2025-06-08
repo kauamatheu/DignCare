@@ -20,23 +20,23 @@
             
             <!--Logo do site com link, para clicar e ir para a tela Inicial-->
             <div class="nav ">
-                <a href="/index.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+                <a href="/index.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
             </div>
 
             <!--Div para separar os links da página e centralizar-->
             <div class="nav justify-content-center">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link texto mexe" href="como_trabalhamos.html">Como trabalhamos</a>
+                        <a class="nav-link texto mexe" href="como_trabalhamos.php">Como trabalhamos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto mexe" href="depoimentos.html">Depoimentos</a>
+                        <a class="nav-link texto mexe" href="depoimentos.php">Depoimentos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto mexe" href="exemplos.html">Exemplos</a>
+                        <a class="nav-link texto mexe" href="exemplos.php">Exemplos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto mexe" href="sobre.html">Sobre nós</a>
+                        <a class="nav-link texto mexe" href="sobre.php">Sobre nós</a>
                     </li>
                 </ul>
             </div>
@@ -61,7 +61,7 @@
     <footer class="texto">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
             <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p ><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
+            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
             <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
     </footer>
     <!-- Fim do rodapé da página -->
