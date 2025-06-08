@@ -129,15 +129,9 @@
     <footer class="py-4 mt-auto texto">
         <div class="fs-6">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
-<<<<<<< HEAD:html/chat.html
-            <p><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
-            <p><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
-=======
             <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
             <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
             <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
->>>>>>> 7af6436b1681fee4d1db6c2eea10cf049800e072:html/chat.php
         </div>
     </footer>
 
