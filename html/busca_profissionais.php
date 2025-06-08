@@ -19,7 +19,7 @@
 
             <!--Logo do site com link, para clicar e ir para a tela Inicial-->
             <div class=" justify-content-start">
-                <a href="/html/home.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+                <a href="/html/home.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
             </div>
 
             <!-- Menu suspenso no canto direito com opções do usuário -->
@@ -31,13 +31,13 @@
               <div type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg textcolor"></i></div>
             </div>
             <div class="offcanvas-body">
-              <a class="azul" href="/html/perfil.html">Perfil</a><br>
-              <a class="azul" href="/html/avaliacoes.html">Avaliações</a>
+              <a class="azul" href="/html/perfil.php">Perfil</a><br>
+              <a class="azul" href="/html/avaliacoes.php">Avaliações</a>
               <p>______________________________________________________</p>
-              <a class="azul" href="/html/depoimentos.html">Depoimentos</a><br>
-              <a class="azul" href="/html/sobre.html">Sobre Nós</a>
+              <a class="azul" href="/html/depoimentos.php">Depoimentos</a><br>
+              <a class="azul" href="/html/sobre.php">Sobre Nós</a>
               <p>______________________________________________________</p>
-              <a class="azul" href="/index.html">Sair da Conta</a>
+              <a class="azul" href="/index.php">Sair da Conta</a>
             </div>
             </div>
         </nav>
@@ -76,7 +76,7 @@
 
         <!--Jardinagem-->
         <div id="1" class="conteudo">
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -98,7 +98,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -118,7 +118,7 @@
                 </div>
             </a>
             
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -143,7 +143,7 @@
         <!--Babá-->
         <div id="2" class="conteudo">
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -163,7 +163,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
@@ -184,7 +184,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -209,7 +209,7 @@
 
         <!--Diaristas-->
         <div id="3" class="conteudo">
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -229,7 +229,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -249,7 +249,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -275,7 +275,7 @@
 
         <!--Cozinheiros-->
         <div id="4" class="conteudo">
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -295,7 +295,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -315,7 +315,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -339,7 +339,7 @@
         <!--Cuidadora de idosos-->
 
         <div id="5" class="conteudo">
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -358,7 +358,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -377,7 +377,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -399,7 +399,7 @@
 
         <!--Serviços Gerais-->
         <div id="6" class="conteudo">
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -419,7 +419,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -439,7 +439,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -464,7 +464,7 @@
         <!--Cuidador de Pets-->
         <div id="7" class="conteudo">
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -483,7 +483,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -502,7 +502,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
 
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
@@ -525,7 +525,7 @@
 
         <!--Tutores Educacional-->
         <div id="8" class="conteudo">
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -544,7 +544,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -563,7 +563,7 @@
                 </div>
             </a>
 
-            <a href="/html/chat.html">
+            <a href="/html/chat.php">
                 <div class="card mb-3 mexecard" style="height: 268px; width: 1200px;">
                     <div class="row g-0">
                         <div class="col-md-4">
@@ -593,7 +593,7 @@
         <div class="fs-6">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
             <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p ><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
+            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
             <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
         </div>
     </footer>

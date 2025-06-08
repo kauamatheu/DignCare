@@ -23,7 +23,7 @@
     <header class="top-header">
         <!-- Cabeçalho com classe para estilo -->
 
-        <a href="/html/home.html">
+        <a href="/html/home.php">
             <!-- Link que leva para a página inicial -->
 
             <img src="../img/logo_horizontal.png" alt="Logo DignCare" class="logo">
@@ -80,10 +80,10 @@
                 <textarea name="descricaotxt" id="descricao" placeholder="Faça uma breve descrição."></textarea><br><br>
                 <!-- Área para descrição detalhada do serviço -->
 
-                <a href="home.html" class="btn">Criar Solicitação</a>
+                <a href="home.php" class="btn">Criar Solicitação</a>
                 <!-- Botão/link para criar a solicitação, leva para home -->
 
-                <a href="home.html" class="btn">Voltar</a>
+                <a href="home.php" class="btn">Voltar</a>
                 <!-- Botão/link para voltar para a home -->
             </form>
         </section>
@@ -93,7 +93,7 @@
         <div class="fs-6">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
             <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p ><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
+            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
             <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
         </div>
     </footer>

@@ -22,14 +22,14 @@
 
             <!--Logo do site com link, para clicar e ir para a tela Inicial-->
             <div class="justify-content-start">
-                <a href="/html/home.html">
+                <a href="/html/home.php">
                     <img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225">
                 </a>
             </div>
 
             <!-- Botão central para fechar contrato -->
             <div class="justify-content-center">
-                <a href="/html/contratos.html">
+                <a href="/html/contratos.php">
                     <button type="button" class="btn btn-primary mx-1">Fechar Contrato</button>
                 </a>
             </div>
@@ -102,7 +102,7 @@
         <div class="fs-6">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
             <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p ><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
+            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
             <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
         </div>
     </footer>

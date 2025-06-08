@@ -13,7 +13,7 @@
 
   <!-- Logo e divisor -->
   <header>
-  <a href="/index.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+  <a href="/index.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
   <link rel="stylesheet" href="../CSS/cadastro.css" />
   <hr class="divisor">
 </header>
@@ -34,7 +34,7 @@
     <!-- Formulário de cadastro -->
     <section>
 
-      <form action="info_pessoais.html" method="post" class="form-box">
+      <form action="info_pessoais.php" method="post" class="form-box">
         <h2>Encontre o profissional ideal<br>pra sua casa com poucos cliques!</h2>
         
         <input type="text" name="nome" placeholder="Digite seu nome" required />
@@ -44,7 +44,7 @@
         
         <button type="submit">Próximo</button>
         
-        <p>Já possui uma conta? <a href="login.html">Entrar</a></p>
+        <p>Já possui uma conta? <a href="login.php">Entrar</a></p>
       </form>  
     </section>
   </main>

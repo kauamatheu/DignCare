@@ -18,7 +18,7 @@
     <header>
         <nav class="navbar borda">
             <div class="nav justify-content-start">
-                <a href="/html/home.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+                <a href="/html/home.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
             </div>
 
 
@@ -33,13 +33,13 @@
                             class="bi bi-x-lg textcolor"></i></div>
                 </div>
                 <div class="offcanvas-body">
-                    <a class="azul" href="/html/perfil.html">Perfil</a><br>
-                    <a class="azul" href="/html/avaliacoes.html">Avaliações</a>
+                    <a class="azul" href="/html/perfil.php">Perfil</a><br>
+                    <a class="azul" href="/html/avaliacoes.php">Avaliações</a>
                     <p>______________________________________________________</p>
-                    <a class="azul" href="/html/depoimentos.html">Depoimentos</a><br>
-                    <a class="azul" href="/html/sobre.html">Sobre Nós</a>
+                    <a class="azul" href="/html/depoimentos.php">Depoimentos</a><br>
+                    <a class="azul" href="/html/sobre.php">Sobre Nós</a>
                     <p>______________________________________________________</p>
-                    <a class="azul" href="/index.html">Sair da Conta</a>
+                    <a class="azul" href="/index.php">Sair da Conta</a>
                 </div>
             </div>
 
@@ -64,7 +64,7 @@
                         <p class="card-text">Cuidar de algumas plantas do meu jardim.</p>
                         <p><i class="bi bi-person-circle"></i> Joana d'Arc</p>
                         <p>⭐⭐⭐⭐</p>
-                        <a href="/html/chat.html" class="btn btn-primary">Confira</a>
+                        <a href="/html/chat.php" class="btn btn-primary">Confira</a>
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@
                         </p>
                         <p><i class="bi bi-person-circle"></i> Lionel Messi</p>
                         <p>⭐⭐⭐⭐⭐</p>
-                        <a href="/html/chat.html" class="btn btn-primary">Confira</a>
+                        <a href="/html/chat.php" class="btn btn-primary">Confira</a>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                         <p class="card-text">Limpeza Domiciliar, tamanho médio.</p>
                         <p><i class="bi bi-person-circle"></i> Caetano Veloso</p>
                         <p>⭐⭐⭐</p>
-                        <a href="/html/chat.html" class="btn btn-primary">Confira</a>
+                        <a href="/html/chat.php" class="btn btn-primary">Confira</a>
                     </div>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                         <p class="card-text">Alguém para preparar apenas almoço.</p>
                         <p><i class="bi bi-person-circle"></i> Érick Jacquin</p>
                         <p>⭐⭐⭐⭐⭐</p>
-                        <a href="/html/chat.html" class="btn btn-primary">Confira</a>
+                        <a href="/html/chat.php" class="btn btn-primary">Confira</a>
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@
                         <p class="card-text">Meu jardim ta vei podi, precisa de reparos.</p>
                         <p><i class="bi bi-person-circle"></i> Mc Gorila</p>
                         <p>⭐⭐⭐⭐⭐</p>
-                        <a href="/html/chat.html" class="btn btn-primary">Confira</a>
+                        <a href="/html/chat.php" class="btn btn-primary">Confira</a>
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@
                         <p class="card-text">Trocar algumas lampadas de casa.</p>
                         <p><i class="bi bi-person-circle"></i> Thomas Edison</p>
                         <p>⭐⭐</p>
-                        <a href="/html/chat.html" class="btn btn-primary">Confira</a>
+                        <a href="/html/chat.php" class="btn btn-primary">Confira</a>
                     </div>
                 </div>
             </div>
@@ -148,7 +148,7 @@
                     <p class="card-text">Cuidar de um idoso, por algums horas.</p>
                     <p><i class="bi bi-person-circle"></i> Frank Sinatra</p>
                     <p>⭐⭐⭐⭐⭐</p>
-                    <a href="/html/chat.html" class="btn btn-primary">Confira</a>
+                    <a href="/html/chat.php" class="btn btn-primary">Confira</a>
                 </div>
             </div>
         </div>
@@ -162,7 +162,7 @@
                     <p class="card-text">Limpeza e tratamento de água de piscina grande.</p>
                     <p><i class="bi bi-person-circle"></i> Heráclito</p>
                     <p>⭐⭐⭐⭐⭐</p>
-                    <a href="/html/chat.html" class="btn btn-primary">Confira</a>
+                    <a href="/html/chat.php" class="btn btn-primary">Confira</a>
                 </div>
             </div>
         </div>
@@ -176,7 +176,7 @@
                     <p class="card-text">Cuidar de cachorro de baixo porte.</p>
                     <p><i class="bi bi-person-circle"></i> Tintim</p>
                     <p>⭐⭐</p>
-                    <a href="/html/chat.html" class="btn btn-primary">Confira</a>
+                    <a href="/html/chat.php" class="btn btn-primary">Confira</a>
                 </div>
             </div>
         </div>
@@ -190,7 +190,7 @@
                     <p class="card-text">Professora de matemática para materias 7° ano. </p>
                     <p><i class="bi bi-person-circle"></i> Tintim</p>
                     <p>⭐⭐⭐⭐⭐</p>
-                    <a href="/html/chat.html" class="btn btn-primary">Confira</a>
+                    <a href="/html/chat.php" class="btn btn-primary">Confira</a>
                 </div>
             </div>
         </div>
@@ -204,7 +204,7 @@
                     <p class="card-text">Invadir terras brasileiras e explorar sua flora.</p>
                     <p><i class="bi bi-person-circle"></i> Pedro Alvares</p>
                     <p>⭐</p>
-                    <a href="/html/chat.html" class="btn btn-primary">Confira</a>
+                    <a href="/html/chat.php" class="btn btn-primary">Confira</a>
                 </div>
             </div>
         </div>
@@ -218,7 +218,7 @@
                     <p class="card-text">Cuidar de gato durante viagem particular.</p>
                     <p><i class="bi bi-person-circle"></i> Magali</p>
                     <p>⭐⭐⭐⭐⭐</p>
-                    <a href="/html/chat.html" class="btn btn-primary">Confira</a>
+                    <a href="/html/chat.php" class="btn btn-primary">Confira</a>
                 </div>
             </div>
         </div>
@@ -232,7 +232,7 @@
         <div class="fs-6">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
             <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p ><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
+            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
             <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
         </div>
     </footer>

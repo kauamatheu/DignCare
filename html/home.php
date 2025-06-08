@@ -19,7 +19,7 @@
   <header>
     <nav class="navbar borda">
       <div class="nav justify-content-start">
-        <a href="/html/home.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+        <a href="/html/home.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
       </div>
   
       <div class="menu-icon" type="sidbar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-list fs-3 iconscss"></i></div>
@@ -30,13 +30,13 @@
           <div type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg textcolor"></i></div>
         </div>
         <div class="offcanvas-body">
-          <a class="azul" href="/html/perfil.html">Perfil</a><br>
-          <a class="azul" href="/html/avaliacoes.html">Avaliações</a>
+          <a class="azul" href="/html/perfil.php">Perfil</a><br>
+          <a class="azul" href="/html/avaliacoes.php">Avaliações</a>
           <p>______________________________________________________</p>
-          <a class="azul" href="/html/depoimentos.html">Depoimentos</a><br>
-          <a class="azul" href="/html/sobre.html">Sobre Nós</a>
+          <a class="azul" href="/html/depoimentos.php">Depoimentos</a><br>
+          <a class="azul" href="/html/sobre.php">Sobre Nós</a>
           <p>______________________________________________________</p>
-          <a class="azul" href="/index.html">Sair da Conta</a>
+          <a class="azul" href="/index.php">Sair da Conta</a>
         </div>
         </div>
 
@@ -66,7 +66,7 @@
               <h5 class="card-title">Jardinagem</h5>
               <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar do seu jardim.</p>
               <p></p>
-              <a href="/html/busca_profissionais.html" class="btn btn-primary">Confira</a>
+              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@
             <div class="card-body">
               <h5 class="card-title">Babá</h5>
               <p class="card-text">Ache uma pessoa responsável e qualificada, e deixe seu filho em boas mãos.</p>
-              <a href="/html/busca_profissionais.html" class="btn btn-primary">Confira</a>
+              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@
             <div class="card-body">
               <h5 class="card-title">Diáristas</h5>
               <p class="card-text">Encontre o profissionais qualificados para deixar sua casa um brinco.</p>
-              <a href="/html/busca_profissionais.html" class="btn btn-primary">Confira</a>
+              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
       </div>
@@ -102,7 +102,7 @@
             <h5 class="card-title">Cozinha</h5>
             <p class="card-text">Os melhores cozinheiros da região você encontra aqui, próximo de você, com DignCare.</p>
             <p></p>
-            <a href="/html/busca_profissionais.html" class="btn btn-primary">Confira</a>
+            <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@
           <div class="card-body">
             <h5 class="card-title">Cuidador de Idosos</h5>
             <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar de idosos. </p>
-            <a href="/html/busca_profissionais.html" class="btn btn-primary">Confira</a>
+            <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
         </div>
       </div>
     </div>
@@ -132,7 +132,7 @@
         <div class="card-body">
           <h5 class="card-title">Serviços Gerais</h5>
           <p class="card-text">Ache uma pessoa responsável e qualificada, para ajustar serviços gerais.</p>
-          <a href="/html/busca_profissionais.html" class="btn btn-primary">Confira</a>
+          <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
         </div>
       </div>
     </div>
@@ -144,7 +144,7 @@
         <div class="card-body">
           <h5 class="card-title">Cuidador de Pets</h5>
           <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar do seu pet.</p>
-          <a href="/html/busca_profissionais.html" class="btn btn-primary">Confira</a>
+          <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
         </div>
       </div>
     </div>
@@ -154,7 +154,7 @@
           <div class="card-body">
             <h5 class="card-title">Tutora Educacional</h5>
             <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para ensinar ao seu filho. </p>
-            <a href="/html/busca_profissionais.html" class="btn btn-primary">Confira</a>
+            <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
           </div>
         </div>
       </div>
@@ -163,7 +163,7 @@
 
     <div id="1" class="conteudo">
 
-      <a href="/html/cadastro_servicos.html"><button type="button" class="btn btn-primary mx-1">Criar solicitação de serviço</button></a>
+      <a href="/html/cadastro_servicos.php"><button type="button" class="btn btn-primary mx-1">Criar solicitação de serviço</button></a>
 
       <div class="my-5">
 
@@ -177,7 +177,7 @@
               <div class="card-body">
                 <h5 class="card-title">Jardinagem</h5>
                 <p class="card-text">Serviços abertos para Jardinagem.</p>
-                <a href="/html/servicos_abertos.html" class="btn btn-primary">Confira</a>
+                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
               </div>
             </div>
           </div>
@@ -189,7 +189,7 @@
               <div class="card-body">
                 <h5 class="card-title">Babá</h5>
                 <p class="card-text">Serviços abertos para Babás.</p>
-                <a href="/html/servicos_abertos.html" class="btn btn-primary">Confira</a>
+                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
               </div>
           </div>
         </div>
@@ -201,7 +201,7 @@
             <div class="card-body">
               <h5 class="card-title">Diáristas</h5>
               <p class="card-text">Serviços abertos para Diaristas.</p>
-              <a href="/html/servicos_abertos.html" class="btn btn-primary">Confira</a>
+              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -213,7 +213,7 @@
             <div class="card-body">
               <h5 class="card-title">Cozinha</h5>
               <p class="card-text">Serviços abertos para cozinheiros.</p>
-              <a href="/html/servicos_abertos.html" class="btn btn-primary">Confira</a>
+              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -229,7 +229,7 @@
             <div class="card-body">
               <h5 class="card-title">Cuidador de Idosos</h5>
               <p class="card-text">Serviços abertos para Cuidadores de Idosos. </p>
-              <a href="/html/servicos_abertos.html" class="btn btn-primary">Confira</a>
+              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -241,7 +241,7 @@
             <div class="card-body">
               <h5 class="card-title">Serviços Gerais</h5>
               <p class="card-text">Serviços abertos para Manutenções Gerais.</p>
-              <a href="/html/servicos_abertos.html" class="btn btn-primary">Confira</a>
+              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -253,7 +253,7 @@
             <div class="card-body">
               <h5 class="card-title">Cuidador de Pets</h5>
               <p class="card-text">Serviços abertos para Cuidadores de Pets.</p>
-              <a href="/html/servicos_abertos.html" class="btn btn-primary">Confira</a>
+              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -265,7 +265,7 @@
             <div class="card-body">
               <h5 class="card-title">Tutora Educacional</h5>
               <p class="card-text">Serviços abertos para Tutores Educacionais. </p>
-              <a href="/html/servicos_abertos.html" class="btn btn-primary">Confira</a>
+              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -280,7 +280,7 @@
         <div class="fs-6">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
             <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p ><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
+            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
             <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
         </div>
     </footer>

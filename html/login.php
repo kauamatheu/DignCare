@@ -15,7 +15,7 @@
 
     <!-- Logo clicável centralizada -->
     <header class="logo-container">
-      <a href="/index.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+      <a href="/index.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
     </header>
 
     <!-- Linha abaixo da logo -->
@@ -23,7 +23,7 @@
 
     <!-- Formulário de login -->
     <section class="form-wrapper">
-      <form action="home.html" method="post">
+      <form action="home.php" method="post">
         <fieldset>
           <legend>Encontre o profissional ideal pra sua casa com poucos cliques!</legend>
           <br/>
@@ -36,7 +36,7 @@
         <button type="submit">Entrar</button>
         <p>
           Não possui uma conta?
-          <a href="cadastro.html">Criar</a>
+          <a href="cadastro.php">Criar</a>
         </p>
       </form>
     </section>

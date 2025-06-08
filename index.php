@@ -23,7 +23,7 @@
             <!-- Logo do site -->
 
             <div class="nav">
-                <a href="/index.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+                <a href="/index.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
             </div>
 
             <!-- Links de navegação -->
@@ -31,16 +31,16 @@
             <div class="nav justify-content-center texto">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link mexe" href="html/como_trabalhamos.html">Como trabalhamos</a>
+                        <a class="nav-link mexe" href="html/como_trabalhamos.php">Como trabalhamos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mexe" href="html/depoimentos.html">Depoimentos</a>
+                        <a class="nav-link mexe" href="html/depoimentos.php">Depoimentos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mexe" href="html/exemplos.html">Exemplos</a>
+                        <a class="nav-link mexe" href="html/exemplos.php">Exemplos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mexe" href="html/sobre.html">Sobre nós</a>
+                        <a class="nav-link mexe" href="html/sobre.php">Sobre nós</a>
                     </li>
                 </ul>
             </div>
@@ -48,8 +48,8 @@
             <!-- Botões de login e cadastro -->
 
             <div class="nav justify-content-end mx-4">
-                <a href="html/login.html"><button type="button" class="btn btn-dark mx-1">Entrar</button></a>
-                <a href="html/cadastro.html"><button type="button" class="btn btn-primary mx-1">Criar Conta</button></a>
+                <a href="html/login.php"><button type="button" class="btn btn-dark mx-1">Entrar</button></a>
+                <a href="html/cadastro.php"><button type="button" class="btn btn-primary mx-1">Criar Conta</button></a>
             </div>
         </nav>
     </header>
@@ -77,7 +77,7 @@
 
         <!-- Botão de cadastro -->
         <div class="full-row">
-            <a href="html/cadastro.html"><button type="button" class="btn btn-primary">Comece agora</button></a>
+            <a href="html/cadastro.php"><button type="button" class="btn btn-primary">Comece agora</button></a>
         </div>
 
     </section>
@@ -89,7 +89,7 @@
     <footer class="texto">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
             <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p ><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
+            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
             <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
     </footer>
 

@@ -13,7 +13,7 @@
     <!-- Logo clicável centralizada -->
     <header class="borda">
         <nav class="container centralizar py-2">
-            <a class="centro" href="home.html">
+            <a class="centro" href="home.php">
                 <img class="mexe" src="../img/logo_horizontal.png" alt="logo" width="255">
             </a>
         </nav>
@@ -22,7 +22,7 @@
     <section class="container grid">
         <div class="centralizar">
             <img class="redondo" src="/img/avatar.webp" alt="" width="250">
-            <a href="perfil_configuracoes.html"><button>Editar Perfil</button></a>
+            <a href="perfil_configuracoes.php"><button>Editar Perfil</button></a>
         </div>
         <div>
             <div class="form-group">
@@ -49,7 +49,7 @@
         </div>
 
         <div class="full-row centralizar">
-            <a href="home.html"><button> Voltar </button></a>
+            <a href="home.php"><button> Voltar </button></a>
         </div>
     </section>
 
@@ -57,7 +57,7 @@
         <div class="fs-6">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
             <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p ><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
+            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
             <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
         </div>
     </footer>

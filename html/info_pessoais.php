@@ -18,7 +18,7 @@
     
     <!-- Área da logo com alinhamento e espaçamento -->
     
-    <a href="/index.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+    <a href="/index.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
     
     
     <hr class="divider" />
@@ -44,7 +44,7 @@
         <!-- Passo 2 ativo -->
       </nav>
       
-      <form class="form-box" action="home.html" method="post">
+      <form class="form-box" action="home.php" method="post">
 
         <h2>Informações Pessoais</h2>
       
@@ -101,11 +101,10 @@
     <div class="fs-6">
       <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
       <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-      <p ><a class="mexe" href="/html/sobre.html">Sobre nós</a></p>
+      <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
       <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
     </div>
   </footer>
 
 </body>
 </html>
-
