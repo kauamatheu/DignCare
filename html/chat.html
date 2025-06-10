@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../CSS/chat.css">
     <script src="/socket.io/socket.io.js"></script>
+    <emoji-picker style="position:absolute; display:none;"></emoji-picker>
 
-</head>
 </head>
 
 <body class="fundo">
@@ -74,7 +74,7 @@
                 <div class="send">
 
                     <!-- Botão de emoji -->
-                    <button id="btn" class="btn btn-primary">
+                    <button type="button" id="botao" class="btn btn-primary">
                         <i class="bi bi-emoji-laughing-fill"></i>
                     </button>
 
@@ -126,6 +126,28 @@
         messages.scrollTop = messages.scrollHeight;
       });
     </script>
+    <script type="module">
+    import 'https://cdn.jsdelivr.net/npm/emoji-picker-element@latest/index.js';
+    const picker = document.querySelector('emoji-picker');
+    const btn = document.getElementById('botao');
+    const campo = document.getElementById('input');
+
+    picker.addEventListener('emoji-click', e => {
+      campo.value += e.detail.unicode;
+    });
+
+    btn.addEventListener('click', () => {
+      picker.style.display = picker.style.display === 'none' ? 'block' : 'none';
+      const rect = btn.getBoundingClientRect();
+      picker.style.top = rect.bottom + 'px';
+      picker.style.left = rect.left + 'px';
+    });
+        document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        picker.style.display = 'none';
+      }
+    });
+  </script>
     <footer class="py-4 mt-auto texto">
         <div class="fs-6">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
