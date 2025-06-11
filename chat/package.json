@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "dependencies": {
     "@socket.io/cluster-adapter": "^0.2.2",
     "express": "^4.21.2",
@@ -7,3 +8,4 @@
     "sqlite3": "^5.1.7"
   }
 }
+
