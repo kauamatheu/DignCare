@@ -168,3 +168,14 @@ header {
   margin-top: 10px;
   margin-bottom: 30px;
 }
+
+.erro {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.input-erro {
+    border: 2px solid red;
+}

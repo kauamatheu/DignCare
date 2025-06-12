@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cadastro - DignCare</title>
   <link rel="icon" type="image/png" href="/img/icon.png" />
-  <link rel="stylesheet" href="../CSS/cadastro.css" />
-  <script src="JS/transicao.js" defer></script>
+  <link rel="stylesheet" href="/CSS/cadastro.css" />
+  <script src="/JS/transicao.js" defer></script>
+  <script src="/JS/validacao_cadastro.js" defer></script>
+  <script src="/Js/masc-date.js" defer></script>
 </head>
 
 <body>
 
   <!-- Logo e divisor -->
   <header>
-  <a href="/index.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+  <a href="/index.html"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
   <link rel="stylesheet" href="../CSS/cadastro.css" />
   <hr class="divisor">
 </header>
@@ -24,28 +26,31 @@
 
     <!-- Formulário de cadastro -->
     <section>
-
-      <form action="info_pessoais.php" method="post" class="form-box">
-        <h2>Encontre o profissional ideal<br>pra sua casa com poucos cliques!</h2>
-        <!--
-          <input type="text" name="nome" id="" placeholder="Digite seu nome" required />
-          <input type="text" name="cpf" >
-          <input type="email" name="email" placeholder="Digite seu email" required />
-          <input type="password" name="senha" placeholder="Digite sua senha" required />
-          <input type="password" name="confirmaSenha" placeholder="Confirme sua senha" required />
-        -->
+      
+      <form id="formulario" action="info_pessoais.html" method="post" class="form-box">
+        <h2>Encontre o profissional ideal<br>pra sua casa com poucos cliques!</h2>       
         
-
         <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+        <span class="erro" id="erro-nome"></span>
+        
         <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf">
+        <span class="erro" id="erro-cpf"></span>
+        
         <input type="email" name="email" id="email" placeholder="Digite seu email">
-        <input type="date" name="nascimento" id="nascimento" placeholder="Data de Nascimento" required onfocus="this.style.color='black'" onblur="if(!this.value) this.style.color='#888'" style="color: #888;" />
+        <span class="erro" id="erro-email"></span>
+        
+        <input type="text" name="nascimento" id="nascimento" placeholder="Digite sua data de nascimento" maxlength="10">
+        <span class="erro" id="erro-nascimento"></span>
+        
         <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+        <span class="erro" id="erro-senha"></span>
+        
         <input type="password" name="confirma_senha" id="confirma_senha" placeholder="Confirme sua senha">
+        <span class="erro" id="erro-confirma-senha"></span>
         
         <button type="submit">Próximo</button>
         
-        <p>Já possui uma conta? <a href="login.php">Entrar</a></p>
+        <p>Já possui uma conta? <a href="login.html">Entrar</a></p>
       </form>  
     </section>
   </main>
