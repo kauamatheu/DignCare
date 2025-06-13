@@ -11,6 +11,17 @@
 
 }
 
+.erro {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 2px;
+    display: flex;
+}
+
+.input-erro {
+    border: 1px solid red !important;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -103,8 +114,7 @@
 
 input[type="text"],
 input[type="email"],
-input[type="password"],
-input[type="date"] {
+input[type="password"]{
   width: 100%;
   padding: 12px;
   margin-bottom: 12px;
@@ -169,13 +179,3 @@ header {
   margin-bottom: 30px;
 }
 
-.erro {
-    color: red;
-    font-size: 0.9em;
-    margin-bottom: 2px;
-    display: block;
-}
-
-.input-erro {
-    border: 2px solid red;
-}

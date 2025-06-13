@@ -7,6 +7,22 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
         document.querySelectorAll("input").forEach(i => i.classList.remove("input-erro"));
     }
 
+    //Função para validar datas
+    function dataValida(dataStr) {
+        const partes = dataStr.split('/');
+        const dia = parseInt(partes[0], 10);
+        const mes = parseInt(partes[1], 10) - 1; 
+        const ano = parseInt(partes[2], 10);
+
+        const data = new Date(ano, mes, dia);
+
+        return (
+            data.getFullYear() === ano &&
+            data.getMonth() === mes &&
+            data.getDate() === dia
+        );
+    }
+
     limparErros(); // limpa antes de validar
 
     const nome = document.getElementById("nome");
@@ -18,7 +34,9 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
 
     const cpfValido = /^\d{3}\.\d{3}\.\d{3}\-\d{2}$|^\d{11}$/;
     const regexData = /^\d{2}\/\d{2}\/\d{4}$/;
-    if (!regexData.test(data)) {
+    if (!regexData.test(nascimento.value)) {
+        nascimento.classList.add("input-erro");
+        temErro = true;
         // Erro: formato inválido
     }
 
@@ -40,16 +58,20 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
         temErro = true;
     }
     
-    if (!regexData.test(nascimento)) {
+    if (!regexData.test(nascimento.value)) {
         document.getElementById("erro-nascimento").textContent = "Formato da data inválido.";
-    } else if (!dataValida(nascimento)) {
+        nascimento.classList.add("input-erro");
+        temErro = true;
+    } else if (!dataValida(nascimento.value)) {
         document.getElementById("erro-nascimento").textContent = "Data inexistente.";
+        nascimento.classList.add("input-erro");
+        temErro = true;
     } else {
         // Tudo certo, pode prosseguir
     }
 
     if (senha.value.length < 6) {
-        document.getElementById("erro-senha").textContent = "Senha deve ter pelo menos 6 caracteres.";
+        document.getElementById("erro-senha").textContent = "A senha deve ter pelo menos 6 caracteres.";
         senha.classList.add("input-erro");
         temErro = true;
     }
