@@ -58,29 +58,37 @@ body.loaded {
     color: #2D8FFF;
     text-align: center;
 }
-footer{
-  margin-top: 15%;
-  padding: 10%;
-  background-color: rgb(26, 24, 24) ;
-  text-align: center;
-  
-}
-
-footer>div>p{
-   padding-inline: 5%;
-   display: inline-flex;
-   font-size: 15px !important;
-}
-
-footer > a, a:link, a:visited, a:active{
-   text-decoration: none;    
-   color: white;
-}
 .iconscss{
   font-size: 30px;
   color:white;
   margin-right: 20px;
 }
 .azul:hover{
+  color: #2D8FFF !important;
+}
+footer{
+   margin-top: 180px;
+   padding: 1%;
+   background-color: rgb(26, 24, 24) ;
+   text-align: center;
+}
+
+footer>p{
+    padding-inline: 5%;
+    display: inline-flex;
+    font-size: 15px !important;
+}
+
+footer > a, a:link, a:visited, a:active{
+    text-decoration: none;    
+    color: white;
+}
+.texto {
+    color: white !important;
+    font-size: 20px !important;
+}
+.mexe:hover {
+  transform: scale(1.05); 
+  z-index: 5;
   color: #2D8FFF !important;
 }

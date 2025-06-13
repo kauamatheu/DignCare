@@ -75,3 +75,7 @@ footer > a, a:link, a:visited, a:active{
     text-decoration: none;    
     color: white;
 }
+.texto {
+     color: white !important;
+     font-size: 20px !important;
+ }

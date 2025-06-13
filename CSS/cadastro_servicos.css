@@ -134,3 +134,29 @@ button:hover {
 .btn:hover {
     background-color: #3a52c1; /* Fundo azul mais escuro ao passar o mouse */
 }
+footer{
+    margin-top: 180px;
+    padding: 1%;
+    background-color: rgb(26, 24, 24) ;
+    text-align: center;
+ }
+ 
+ footer>p{
+     padding-inline: 5%;
+     display: inline-flex;
+     font-size: 15px !important;
+ }
+ 
+ footer > a, a:link, a:visited, a:active{
+     text-decoration: none;    
+     color: white;
+ }
+ .texto {
+     color: white !important;
+     font-size: 20px !important;
+ }
+ .mexe:hover {
+   transform: scale(1.05); 
+   z-index: 5;
+   color: #2D8FFF !important;
+ }

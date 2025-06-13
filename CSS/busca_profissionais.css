@@ -52,18 +52,6 @@ h2{
     color: white;
     font-size: 20px;
 }
-
-footer{
-   margin-top: 15%;
-}
-
-footer > a, a:link, a:visited, a:hover, a:active{
-    text-decoration: none;
-    color: lightgray !important;
-}
-.textcolor{
-  color: white !important;
-}
 .iconscss{
   font-size: 30px;
   color:white;
@@ -71,4 +59,21 @@ footer > a, a:link, a:visited, a:hover, a:active{
 }
 .azul:hover{
   color: #2D8FFF !important;
+}
+footer{
+  margin-top: 180px;
+  padding: 1%;
+  background-color: rgb(26, 24, 24) ;
+  text-align: center;
+}
+
+footer>p{
+   padding-inline: 5%;
+   display: inline-flex;
+   font-size: 15px !important;
+}
+
+footer > a, a:link, a:visited, a:active{
+   text-decoration: none;    
+   color: white;
 }

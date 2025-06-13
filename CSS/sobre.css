@@ -56,3 +56,12 @@ footer > a, a:link, a:visited, a:active{
     text-decoration: none;    
     color: white;
 }
+.texto {
+  color: white !important;
+  font-size: 20px !important;
+ }
+ .mexe:hover {
+ transform: scale(1.05); 
+ z-index: 5;
+ color: #2D8FFF !important;
+ }

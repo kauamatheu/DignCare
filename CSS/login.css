@@ -157,3 +157,31 @@ fieldset {
   flex-grow: 1; /* Ocupa o máximo possível */
   height: calc(100vh - 140px); /* Altura da tela menos altura da logo e linha */
 }
+footer{
+  margin-top: 15%;
+  padding: 10%;
+  background-color: rgb(26, 24, 24) ;
+  text-align: center;
+  
+}
+
+footer>div>p{
+   padding-inline: 5%;
+   display: inline-flex;
+   font-size: 15px !important;
+}
+
+/*Define que todos os links dentro do rodapé não terão decorações (sublinhado) e a cor será cinza claro*/
+footer > a, a:link, a:visited, a:active{
+   text-decoration: none;    
+   color: white;
+}
+.texto {
+ color: white !important;
+ font-size: 20px !important;
+}
+.mexe:hover {
+transform: scale(1.05); 
+z-index: 5;
+color: #2D8FFF !important;
+}
