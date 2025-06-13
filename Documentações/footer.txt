@@ -1,0 +1,28 @@
+Código fonte do footer no HTML:
+
+    <footer class="texto">
+            <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
+            <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
+            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
+            <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
+    </footer>
+
+Código fonte do footer no CSS:
+
+footer{
+   margin-top: 180px;
+   padding: 1%;
+   background-color: rgb(26, 24, 24) ;
+   text-align: center;
+}
+
+footer>p{
+    padding-inline: 5%;
+    display: inline-flex;
+    font-size: 15px !important;
+}
+
+footer > a, a:link, a:visited, a:active{
+    text-decoration: none;    
+    color: white;
+}
