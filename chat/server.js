@@ -12,11 +12,8 @@ import { createAdapter, setupPrimary } from '@socket.io/cluster-adapter';
 if (cluster.isPrimary) {
   const numCPUs = availableParallelism();
   for (let i = 0; i < numCPUs; i++) {
-    cluster.fork({
-      PORT: 3000 + i
-    });
+    cluster.fork({ PORT: 3000 + i });
   }
-
   setupPrimary();
 } else {
   const db = await open({
@@ -53,14 +50,15 @@ if (cluster.isPrimary) {
       try {
         result = await db.run('INSERT INTO messages (content, client_offset) VALUES (?, ?)', msg, clientOffset);
       } catch (e) {
-        if (e.errno === 19 /* SQLITE_CONSTRAINT */ ) {
+        if (e.errno === 19 /* SQLITE_CONSTRAINT */) {
           callback();
         } else {
-          // nothing to do, just let the client retry
+          // erro inesperado
         }
         return;
       }
-      io.emit('chat message', msg, result.lastID);
+
+      io.emit('chat message', { id: socket.id, texto: msg }, result.lastID);
       callback();
     });
 
@@ -69,17 +67,16 @@ if (cluster.isPrimary) {
         await db.each('SELECT id, content FROM messages WHERE id > ?',
           [socket.handshake.auth.serverOffset || 0],
           (_err, row) => {
-            socket.emit('chat message', row.content, row.id);
+            socket.emit('chat message', { id: 'recovery', texto: row.content }, row.id);
           }
-        )
+        );
       } catch (e) {
-        // something went wrong
+        // erro na recuperação
       }
     }
   });
 
   const port = process.env.PORT;
-
   server.listen(port, () => {
     console.log(`server running at http://localhost:${port}`);
   });

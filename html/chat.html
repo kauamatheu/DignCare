@@ -92,38 +92,55 @@
     </div>
 
   </section>
-  <!-- Fim da seção principal -->
   <script>
-    let counter = 0;
+let counter = 0;
 
-    const socket = io({
-      ackTimeout: 10000,
-      retries: 3,
-      auth: {
-        serverOffset: 0
-      }
-    });
+const socket = io({
+  ackTimeout: 10000,
+  retries: 3,
+  auth: {
+    serverOffset: 0
+  }
+});
 
-    const form = document.getElementById('form');
-    const input = document.getElementById('input');
-    const messages = document.getElementById('messages');
+const form = document.getElementById('form');
+const input = document.getElementById('input');
+const messages = document.getElementById('messages');
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (input.value) {
-        const clientOffset = `${socket.id}-${counter++}`;
-        socket.emit('chat message', input.value, clientOffset);
-        input.value = '';
-      }
-    });
-    socket.on('chat message', (msg, serverOffset) => {
-      const item = document.createElement('div');
-      item.textContent = msg;
-      messages.appendChild(item);
-      window.scrollTo(0, document.body.scrollHeight);
-      socket.auth.serverOffset = serverOffset;
-      messages.scrollTop = messages.scrollHeight;
-    });
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  enviarMensagem();
+});
+
+input.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault(); 
+    enviarMensagem();
+  }
+});
+
+function enviarMensagem() {
+  const mensagem = input.value.trim();
+  if (mensagem !== '') {
+    const clientOffset = `${socket.id}-${counter++}`;
+    socket.emit('chat message', mensagem, clientOffset);
+    input.value = '';
+  }
+}
+socket.on('chat message', (msg, serverOffset) => {
+  const item = document.createElement('div');
+  item.textContent = msg.texto;
+
+  if (msg.id === socket.id) {
+    item.classList.add('mensagem-direita');
+  } else {
+    item.classList.add('mensagem-esquerda');
+  }
+
+  messages.appendChild(item);
+  socket.auth.serverOffset = serverOffset;
+  messages.scrollTop = messages.scrollHeight;
+});
   </script>
   <script type="module">
     import 'https://cdn.jsdelivr.net/npm/emoji-picker-element@latest/index.js';
@@ -138,7 +155,8 @@
     btn.addEventListener('click', () => {
       picker.style.display = picker.style.display === 'none' ? 'block' : 'none';
       const rect = btn.getBoundingClientRect();
-      picker.style.top = rect.bottom + 'px';
+      const pickerAltura = 400;
+      picker.style.top = (rect.top - pickerAltura) + 'px';
       picker.style.left = rect.left + 'px';
     });
     document.addEventListener('keydown', e => {
