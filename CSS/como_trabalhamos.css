@@ -1,29 +1,6 @@
-body {
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
+@import url(footer.css);
+@import url(corpo_padrao.css);
 
-body.loaded {
-  opacity: 1;
-}
-
-.fundo {
-    background-color: rgba(16, 15, 15, 1) !important;
-}
-
-.mexe {
-  transition: transform 0.3s ease; 
-}
-
-.mexe:hover {
-  transform: scale(1.05); 
-  z-index: 5;
-  color: #2D8FFF !important;
-}
-
-.borda{
-    border-bottom: 4px solid black;
-}
 .conteudo {
     display: none;
 }
@@ -59,11 +36,6 @@ h2{
     font-size: 40px;
 }
 
-.texto{
-    color: white;
-    font-size: 20px;
-}
-
 li{
     color: white;
     font-size: 20px;
@@ -72,20 +44,3 @@ li{
 .mesmalinha{
     display: inline;
 }
-footer{
-    margin-top: 180px;
-    padding: 1%;
-    background-color: rgb(26, 24, 24) ;
-    text-align: center;
- }
- 
- footer>p{
-     padding-inline: 5%;
-     display: inline-flex;
-     font-size: 15px !important;
- }
- 
- footer > a, a:link, a:visited, a:active{
-     text-decoration: none;    
-     color: white;
- }
