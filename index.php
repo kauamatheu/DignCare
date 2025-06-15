@@ -49,7 +49,7 @@
 
             <div class="nav justify-content-end mx-4">
                 <a href="html/login.php"><button type="button" class="btn btn-dark mx-1">Entrar</button></a>
-                <a href="html/cadastro.html"><button type="button" class="btn btn-primary mx-1">Criar Conta</button></a>
+                <a href="html/cadastro.php"><button type="button" class="btn btn-primary mx-1">Criar Conta</button></a>
             </div>
         </nav>
     </header>
@@ -77,7 +77,7 @@
 
         <!-- Botão de cadastro -->
         <div class="full-row">
-            <a href="html/cadastro.html"><button type="button" class="btn btn-primary">Comece agora</button></a>
+            <a href="html/cadastro.php"><button type="button" class="btn btn-primary">Comece agora</button></a>
         </div>
 
     </section>
