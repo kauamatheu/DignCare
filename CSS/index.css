@@ -1,36 +1,5 @@
-
-/*Define a que o body não terá opacidade, e a transição suave de 0.5s*/
-body {
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-}
-
-/*Quando a função do JS retornar o true define a opacidade para 1 com transição fade in de 0.5s*/
-body.loaded {
-  opacity: 1;
-}
-
-/*Define a cor de fundo da página*/
-.fundo {
-    background-color: rgba(16, 15, 15, 1) !important;
-}
-
-/*Define uma bora de 4 pixel solida preta na parte debaixo da div*/
-.borda{
-    border-bottom: 4px solid black;
-}
-
-/*Adiciona uma animação de transformação de 0.3s de duração*/
-.mexe {
-  transition: transform 0.3s ease; 
-}
-
-/*Assim que o mouse estiver em cima do objeto, aumenta a escala dele em 5% e altera a cor para azul*/
-.mexe:hover {
-  transform: scale(1.05); 
-  z-index: 5;
-  color: #2D8FFF !important;
-}
+@import url(footer.css);
+@import url(corpo_padrao.css);
 
 /*Cria uma grid de 2 colunas com uma margem interna de 5% de tamanho*/
 .grid {
@@ -51,12 +20,6 @@ body.loaded {
     grid-column: span 2;
 }
 
-/*Altera o tamanho de a cor do texto*/
-.texto {
-    color: white !important;
-    font-size: 20px !important;
-}
-
 /*Altera o tamanho do texto h1*/
 h1 {
     font-size: 55px !important;
@@ -72,24 +35,4 @@ h4{
     box-shadow: 15px 15px;
     color: #2D8FFF;
     border-radius: 20px;
-}
-
-/*Cria uma margem do corpo da página para o rodapé*/
-footer{
-   margin-top: 180px;
-   padding: 1%;
-   background-color: rgb(26, 24, 24) ;
-   text-align: center;
-}
-
-footer>p{
-    padding-inline: 5%;
-    display: inline-flex;
-    font-size: 15px !important;
-}
-
-/*Define que todos os links dentro do rodapé não terão decorações (sublinhado) e a cor será cinza claro*/
-footer > a, a:link, a:visited, a:active{
-    text-decoration: none;    
-    color: white;
 }

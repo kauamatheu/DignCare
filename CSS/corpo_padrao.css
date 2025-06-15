@@ -1,0 +1,20 @@
+/*Define a que o body não terá opacidade, e a transição suave de 0.5s*/
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+/*Quando a função do JS retornar o true define a opacidade para 1 com transição fade in de 0.5s*/
+body.loaded {
+  opacity: 1;
+}
+
+/*Define a cor de fundo da página*/
+.fundo {
+    background-color: rgba(16, 15, 15, 1) !important;
+}
+
+/*Define uma bora de 4 pixel solida preta na parte debaixo da div*/
+.borda{
+    border-bottom: 4px solid black;
+}
