@@ -1,20 +1,26 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    require_once 'conecta_bd.php';
+
     $nome = $_POST['nome'];
-    $tipo_usuario = $_POST['tipo_usuario'];
+    $cpf = $_POST['cpf'];
+    $idade = $_POST['nascimento'];
+    $tipo = $_POST['tipo'];
+    $email = $_POST['email'];
+    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
-    // Conexão com o banco de dados (exemplo com PDO)
+
+    // Conexão com o banco de dados 
     try {
-        $pdo = new PDO("mysql:host=localhost;dbname=seubanco", "usuario", "senha");
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        $sql = "INSERT INTO usuarios (nome, tipo_usuario) VALUES (:nome, :tipo)";
+        $sql = "INSERT INTO usuario (usr_nome, usr_cpf, usr_idade, usr_tipo, usr_email, usr_senha) VALUES (:nome, :cpf, :idade, :tipo, :email, :senha)";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute(['nome' => $nome, 'tipo' => $tipo_usuario]);
+        $stmt->execute(['nome' => $nome,'cpf' => $cpf,'idade' => $idade,'tipo' => $tipo,'email' => $email,'senha' => $senha]);
 
         // Redireciona para a tela inicial (home.php)
-        header("Location: home.php");
-        exit; // MUITO IMPORTANTE! Encerra o script após o redirecionamento
+        header("Location: /html/home.php");
+
+        exit; 
     } catch (PDOException $e) {
         echo "Erro ao cadastrar: " . $e->getMessage();
     }

@@ -1,12 +1,13 @@
 <?php
-$host = "localhost";
-$usuario = "root"; 
-$senha = "";       
-$banco = "db_digncare";
+    $host = "localhost";
+    $dbname = "db_digncare";
+    $usuario = "root";
+    $senha = "123456";
 
-$conn = new mysqli($host, $usuario, $senha, $banco);
-
-if ($conn->connect_error) {
-    die("Erro de conexão: " . $conn->connect_error);
-}
+    try {
+        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $usuario, $senha);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        die("Erro na conexão: " . $e->getMessage());
+    }
 ?>

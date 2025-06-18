@@ -8,21 +8,6 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
     }
 
     //Função para validar datas
-    function dataValida(dataStr) {
-        const partes = dataStr.split('/');
-        const dia = parseInt(partes[0], 10);
-        const mes = parseInt(partes[1], 10) - 1; 
-        const ano = parseInt(partes[2], 10);
-
-        const data = new Date(ano, mes, dia);
-
-        return (
-            data.getFullYear() === ano &&
-            data.getMonth() === mes &&
-            data.getDate() === dia
-        );
-    }
-
     limparErros(); // limpa antes de validar
 
     const nome = document.getElementById("nome");
@@ -31,14 +16,8 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
     const nascimento = document.getElementById("nascimento");
     const senha = document.getElementById("senha");
     const confirmaSenha = document.getElementById("confirma_senha");
-
     const cpfValido = /^\d{3}\.\d{3}\.\d{3}\-\d{2}$|^\d{11}$/;
-    const regexData = /^\d{2}\/\d{2}\/\d{4}$/;
-    if (!regexData.test(nascimento.value)) {
-        nascimento.classList.add("input-erro");
-        temErro = true;
-        // Erro: formato inválido
-    }
+
 
     if (nome.value.trim() === "") {
         document.getElementById("erro-nome").textContent = "O nome é obrigatório.";
@@ -58,16 +37,16 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
         temErro = true;
     }
     
-    if (!regexData.test(nascimento.value)) {
-        document.getElementById("erro-nascimento").textContent = "Formato da data inválido.";
+    if (nascimento.value <= 17) {
+        document.getElementById("erro-nascimento").textContent = "Você deve ter ao menos 18 anos para se cadastrar.";
         nascimento.classList.add("input-erro");
         temErro = true;
-    } else if (!dataValida(nascimento.value)) {
-        document.getElementById("erro-nascimento").textContent = "Data inexistente.";
+    }
+
+    if (nascimento.value >= 99) {
+        document.getElementById("erro-nascimento").textContent = "Você está velho demais para trabalhar aqui.";
         nascimento.classList.add("input-erro");
         temErro = true;
-    } else {
-        // Tudo certo, pode prosseguir
     }
 
     if (senha.value.length < 6) {

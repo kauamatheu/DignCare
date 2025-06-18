@@ -42,29 +42,6 @@
 
     </nav>
   </header>
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $tipo_usuario = $_POST['tipo_usuario']; // 0 para prestador, 1 para contratante
-    $nome = $_POST['nome'];
-    $cpf = $_POST['cpf'];
-    $email = $_POST['email'];
-    $nascimento = $_POST['nascimento'];
-    $senha = $_POST['senha'];
-    
-
-  
-    echo "<h2>Dados recebidos:</h2>";
-    echo "Nome: " . htmlspecialchars($nome) . "<br>";
-    echo "Tipo de usuário: " . ($tipo_usuario == "0" ? "Prestador" : "Contratante") . "<br>";
-    echo "CPF: ".$cpf. "<br>";
-    echo "Email: ".$email. "<br>";
-    echo "Data de Nascimento: ".$nascimento. "<br>";
-    echo "Senha: ".$senha. "<br>";
-
-} else {
-    echo "Acesso inválido.";
-}
-?>
 
   <section style="margin: 50px;">
     <div class="textcolor" style="margin-bottom: 30px;">

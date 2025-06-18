@@ -25,7 +25,7 @@
     <!-- Conteúdo principal -->
     <section class="container">
       <!-- Formulário de cadastro -->
-      <form id="formulario" action="home.php" method="post" class="form-box">
+      <form id="formulario" action="/php/cadastra_usr.php" method="post" class="form-box">
         <h2>Encontre o profissional ideal<br>para a sua casa com poucos cliques!</h2>    
 
         <div class="role-selection">
@@ -51,7 +51,7 @@
         <input type="email" name="email" id="email" placeholder="Digite seu email">
 
         <span class="erro" id="erro-nascimento"></span>
-        <input type="text" name="nascimento" id="nascimento" placeholder="Digite sua data de nascimento" maxlength="10">
+        <input type="text" name="nascimento" id="nascimento" placeholder="Digite sua idade">
 
         <span class="erro" id="erro-senha"></span>
         <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
