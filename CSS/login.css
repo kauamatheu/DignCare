@@ -6,6 +6,7 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Centraliza na altura */
   align-items: center;
   min-height: 100vh;
 }
@@ -13,11 +14,9 @@ body {
 /* Cabeçalho */
 header.borda {
   width: 100%;
-  background-color: #111
+  background-color: #111;
   padding: 10px 0;
-}
-.borda{
-    border-bottom: 4px solid black;
+  border-bottom: 4px solid black;
 }
 
 nav.centralizar {
@@ -32,6 +31,17 @@ nav img {
 
 nav img:hover {
   transform: scale(1.05);
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 180px;
+  }
 }
 
 /* Container principal */
@@ -133,8 +143,3 @@ footer a:hover {
   font-size: 20px;
 }
 
-.mexe:hover {
-  transform: scale(1.05);
-  z-index: 5;
-  color: #2D8FFF !important;
-}
