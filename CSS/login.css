@@ -143,9 +143,3 @@ footer a:hover {
   font-size: 20px;
 }
 
-/* Animação no hover */
-.mexe:hover {
-  transform: scale(1.05);
-  z-index: 5;
-  color: #2D8FFF !important;
-}
