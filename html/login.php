@@ -26,12 +26,13 @@
       <h2>Bem-vindo de volta!</h2>
 
       <input type="email" name="email" id="email" placeholder="Digite seu email" required>
-
       <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
 
       <button type="submit">Entrar</button>
 
-      <p>Não possui uma conta? <a href="cadastro.php" class="link mexe">Cadastrar</a></p>
+      <p>Não possui uma conta? 
+        <a href="cadastro.php" class="link mexe">Cadastrar</a>
+      </p>
     </form>
   </section>
 
