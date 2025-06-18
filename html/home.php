@@ -93,72 +93,75 @@
               <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
-      </div>
+        </div>
 
-      <div class="col">
-        <div class="card mexe h-100">
-          <img src="/img/cozinheiro.png" class="card-img-top" alt="cozinehiro">
-          <div class="card-body">
-            <h5 class="card-title">Cozinha</h5>
-            <p class="card-text">Os melhores cozinheiros da região você encontra aqui, próximo de você, com DignCare.</p>
-            <p></p>
-            <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+        <!--Card 4-->
+        <div class="col">
+          <div class="card mexe h-100">
+            <img src="/img/cozinheiro.png" class="card-img-top" alt="cozinehiro">
+            <div class="card-body">
+              <h5 class="card-title">Cozinha</h5>
+              <p class="card-text">Os melhores cozinheiros da região você encontra aqui, próximo de você, com DignCare.</p>
+              <p></p>
+              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    
-    
-    <!--Cards Group 2-->
-    <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;"">
+        <!--Cards Group 2-->
+      <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;"">
       
-      <!--Card 4-->
-      <div class=" col">
-        <div class="card mexe h-100">
-          <img src="/img/cuidadora.png" class="card-img-top" alt="cuidadora">
-          <div class="card-body">
-            <h5 class="card-title">Cuidador de Idosos</h5>
-            <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar de idosos. </p>
-            <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
-        </div>
-      </div>
-    </div>
-
-    <!--Card 5-->
-    <div class="col">
-      <div class="card mexe h-100">
-        <img src="/img/manutencao.png" class="card-img-top" alt="manutenção">
-        <div class="card-body">
-          <h5 class="card-title">Serviços Gerais</h5>
-          <p class="card-text">Ache uma pessoa responsável e qualificada, para ajustar serviços gerais.</p>
-          <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
-        </div>
-      </div>
-    </div>
-    
-    <!--Card 6-->
-    <div class="col">
-      <div class="card mexe h-100">
-        <img src="/img/pets.png" class="card-img-top" alt="limpeza">
-        <div class="card-body">
-          <h5 class="card-title">Cuidador de Pets</h5>
-          <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar do seu pet.</p>
-          <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
-        </div>
-      </div>
-    </div>
-      <div class="col">
-        <div class="card mexe h-100">
-          <img src="/img/tutora.png" class="card-img-top" alt="jardinagem">
-          <div class="card-body">
-            <h5 class="card-title">Tutora Educacional</h5>
-            <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para ensinar ao seu filho. </p>
-            <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+        <!--Card 5-->
+        <div class=" col">
+          <div class="card mexe h-100">
+            <img src="/img/cuidadora.png" class="card-img-top" alt="cuidadora">
+            <div class="card-body">
+              <h5 class="card-title">Cuidador de Idosos</h5>
+              <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar de idosos. </p>
+              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+            </div>
           </div>
         </div>
+      
+        <!--Card 6-->
+        <div class="col">
+          <div class="card mexe h-100">
+            <img src="/img/manutencao.png" class="card-img-top" alt="manutenção">
+            <div class="card-body">
+              <h5 class="card-title">Serviços Gerais</h5>
+              <p class="card-text">Ache uma pessoa responsável e qualificada, para ajustar serviços gerais.</p>
+              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+            </div>
+          </div>
+        </div>
+      
+        <!--Card 7-->
+        <div class="col">
+          <div class="card mexe h-100">
+            <img src="/img/pets.png" class="card-img-top" alt="limpeza">
+            <div class="card-body">
+              <h5 class="card-title">Cuidador de Pets</h5>
+              <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar do seu pet.</p>
+              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 8-->
+        <div class="col">
+          <div class="card mexe h-100">
+            <img src="/img/tutora.png" class="card-img-top" alt="jardinagem">
+            <div class="card-body">
+              <h5 class="card-title">Tutora Educacional</h5>
+              <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para ensinar ao seu filho. </p>
+              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
+
     </div>
 
     <div id="1" class="conteudo">
@@ -191,88 +194,91 @@
                 <p class="card-text">Serviços abertos para Babás.</p>
                 <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
               </div>
-          </div>
-        </div>
-        
-        <!--Card 3 - Diaristas -->
-        <div class="col">
-          <div class="card mexe h-100">
-            <img src="/img/Limpeza.png" class="card-img-top" alt="limpeza">
-            <div class="card-body">
-              <h5 class="card-title">Diáristas</h5>
-              <p class="card-text">Serviços abertos para Diaristas.</p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
-        </div>
         
-        <!--Card 4 - Cozinheiros -->
-        <div class="col">
-          <div class="card mexe h-100">
-            <img src="/img/cozinheiro.png" class="card-img-top" alt="cozinehiro">
-            <div class="card-body">
-              <h5 class="card-title">Cozinha</h5>
-              <p class="card-text">Serviços abertos para cozinheiros.</p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+          <!--Card 3 - Diaristas -->
+          <div class="col">
+            <div class="card mexe h-100">
+              <img src="/img/Limpeza.png" class="card-img-top" alt="limpeza">
+              <div class="card-body">
+                <h5 class="card-title">Diáristas</h5>
+                <p class="card-text">Serviços abertos para Diaristas.</p>
+                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        
+          <!--Card 4 - Cozinheiros -->
+          <div class="col">
+            <div class="card mexe h-100">
+              <img src="/img/cozinheiro.png" class="card-img-top" alt="cozinehiro">
+              <div class="card-body">
+                <h5 class="card-title">Cozinha</h5>
+                <p class="card-text">Serviços abertos para cozinheiros.</p>
+                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              </div>
+            </div>
+          </div>
 
-      <!--Grupo de Cards 2-->
-      <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;"">
-        
-        <!--Card 5 - Cuidadores de idosos -->
-        <div class=" col">
-          <div class="card mexe h-100">
-            <img src="/img/cuidadora.png" class="card-img-top" alt="cuidadora">
-            <div class="card-body">
-              <h5 class="card-title">Cuidador de Idosos</h5>
-              <p class="card-text">Serviços abertos para Cuidadores de Idosos. </p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+        </div>
+
+        <!--Grupo de Cards 2-->
+        <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;"">
+          
+          <!--Card 5 - Cuidadores de idosos -->
+          <div class=" col">
+            <div class="card mexe h-100">
+              <img src="/img/cuidadora.png" class="card-img-top" alt="cuidadora">
+              <div class="card-body">
+                <h5 class="card-title">Cuidador de Idosos</h5>
+                <p class="card-text">Serviços abertos para Cuidadores de Idosos. </p>
+                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <!--Card 6 - Serviços Gerais -->
-        <div class="col">
-          <div class="card mexe h-100">
-            <img src="/img/manutencao.png" class="card-img-top" alt="manutenção">
-            <div class="card-body">
-              <h5 class="card-title">Serviços Gerais</h5>
-              <p class="card-text">Serviços abertos para Manutenções Gerais.</p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+          
+          <!--Card 6 - Serviços Gerais -->
+          <div class="col">
+            <div class="card mexe h-100">
+              <img src="/img/manutencao.png" class="card-img-top" alt="manutenção">
+              <div class="card-body">
+                <h5 class="card-title">Serviços Gerais</h5>
+                <p class="card-text">Serviços abertos para Manutenções Gerais.</p>
+                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <!--Card 7 - Cozinheiros -->
-        <div class="col">
-          <div class="card mexe h-100">
-            <img src="/img/pets.png" class="card-img-top" alt="limpeza">
-            <div class="card-body">
-              <h5 class="card-title">Cuidador de Pets</h5>
-              <p class="card-text">Serviços abertos para Cuidadores de Pets.</p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+          
+          <!--Card 7 - Cozinheiros -->
+          <div class="col">
+            <div class="card mexe h-100">
+              <img src="/img/pets.png" class="card-img-top" alt="limpeza">
+              <div class="card-body">
+                <h5 class="card-title">Cuidador de Pets</h5>
+                <p class="card-text">Serviços abertos para Cuidadores de Pets.</p>
+                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <!--Card 8 - Tutores -->
-        <div class="col">
-          <div class="card mexe h-100">
-            <img src="/img/tutora.png" class="card-img-top" alt="jardinagem">
-            <div class="card-body">
-              <h5 class="card-title">Tutora Educacional</h5>
-              <p class="card-text">Serviços abertos para Tutores Educacionais. </p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+          
+          <!--Card 8 - Tutores -->
+          <div class="col">
+            <div class="card mexe h-100">
+              <img src="/img/tutora.png" class="card-img-top" alt="jardinagem">
+              <div class="card-body">
+                <h5 class="card-title">Tutora Educacional</h5>
+                <p class="card-text">Serviços abertos para Tutores Educacionais. </p>
+                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              </div>
             </div>
           </div>
+          
         </div>
-      </div>
 
       </div>
     </div>
+
   </section>
 
     <footer class="py-4 mt-auto texto">
