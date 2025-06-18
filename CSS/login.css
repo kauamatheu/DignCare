@@ -1,4 +1,10 @@
-/* Fundo da página */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,9 +12,10 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza na altura */
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Cabeçalho */
@@ -120,11 +127,13 @@ footer {
   background-color: rgb(26, 24, 24);
   text-align: center;
   padding: 20px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 footer p {
-  display: inline-block;
-  margin: 0 10px;
   color: white;
   font-size: 15px;
 }
@@ -143,3 +152,20 @@ footer a:hover {
   font-size: 20px;
 }
 
+.mexe:hover {
+  transform: scale(1.05);
+  z-index: 5;
+  color: #2D8FFF !important;
+}
+
+/* Responsividade extra */
+@media (max-width: 600px) {
+  .form-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  footer p {
+    font-size: 13px;
+  }
+}
