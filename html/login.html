@@ -5,48 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - DignCare</title>
   <link rel="icon" type="image/png" href="/img/icon.png" />
-  <link rel="stylesheet" href="../CSS/login.css" />
-  <script src="JS/transicao.js" defer></script>
+  <link rel="stylesheet" href="/CSS/login.css" />
+  <script src="/JS/transicao.js" defer></script>
 </head>
 
-<body>
-  <!-- Container principal centralizado -->
-  <main class="main-container">
+<body class="fundo">
 
-    <!-- Logo clicável centralizada -->
-    <header class="logo-container">
-      <a href="/index.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
-    </header>
+  <!-- Cabeçalho -->
+  <header class="borda">
+    <nav class="centralizar py-2">
+      <a class="centro" href="/index.php">
+        <img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="255">
+      </a>
+    </nav>
+  </header>
 
-    <!-- Linha abaixo da logo -->
-    <div class="linha-divisora"></div>
+  <!-- Conteúdo principal -->
+  <section class="container">
+    <form action="home.php" method="post" class="form-box">
+      <h2>Bem-vindo de volta!</h2>
 
-    <!-- Formulário de login -->
-    <section class="form-wrapper">
-      <form action="home.php" method="post">
-        <fieldset>
-          <legend>Encontre o profissional ideal pra sua casa com poucos cliques!</legend>
-          <br/>
-          
-          <input type="text" id="email" name="emailtxt" placeholder="Digite seu Email" required />
-          <br/><br/>
-          <input type="password" id="senha" name="senhapwd" placeholder="Digite sua Senha" required />
-        </fieldset>
-        <br />
-        <button type="submit">Entrar</button>
-        <p>
-          Não possui uma conta?
-          <a href="cadastro.php">Criar</a>
-        </p>
-      </form>
-    </section>
+      <input type="email" name="email" id="email" placeholder="Digite seu email" required>
 
-  </main>
+      <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+
+      <button type="submit">Entrar</button>
+
+      <p>Não possui uma conta? <a href="cadastro.php" class="link mexe">Cadastrar</a></p>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
   <footer class="texto">
     <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
-    <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-    <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
-    <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
-</footer>
+    <p><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
+    <p><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
+    <p><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
+  </footer>
+
 </body>
 </html>
