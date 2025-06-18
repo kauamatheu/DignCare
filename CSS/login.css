@@ -1,187 +1,140 @@
-/* Corpo da página */
+/* Fundo da página */
 body {
-  margin: 0; /* Tira a margem padrão */
-  padding: 0; /* Tira o padding padrão */
-  background-color: #111; /* Fundo quase preto */
-  font-family: Arial, sans-serif; /* Fonte Arial */
-  display: flex; /* Usa flexbox */
-  flex-direction: column; /* Organiza em coluna */
-  align-items: center; /* Centraliza horizontalmente */
-  min-height: 100vh; /* Ocupa a altura total da tela */
-  transition: opacity 0.5s ease-in; /* Transição suave na opacidade */
-}
-
-/* Quando o body tem a classe 'loaded' */
-body.loaded {
-  opacity: 1; /* Torna totalmente visível */
-}
-
-/* Container da logo */
-.logo-container {
-  width: 100%; /* Ocupa toda largura */
-  display: flex; /* Flexbox */
-  justify-content: center; /* Centraliza conteúdo horizontalmente */
-  margin-top: 0; /* Sem margem em cima */
-  padding-top: 20px; /* Espaço interno em cima */
-  flex-direction: column; /* Organiza em coluna */
-  align-items: center; /* Centraliza itens horizontalmente */
-}
-
-/* Logo ajustada */
-.logo-img {
-  width: 200px; /* Largura fixa */
-  margin-bottom: 10px; /* Espaço embaixo */
-}
-
-/* Linha divisória escura */
-.linha-divisora {
-  width: 100vw; /* Ocupa toda largura da janela */
-  height: 4px; /* Altura da linha */
-  background-color: #222; /* Cor bem escura */
-  margin: 0; /* Sem margem */
-  padding: 0; /* Sem padding */
-}
-
-/* Formulário */
-form {
-  background-color: white; /* Fundo branco */
-  padding: 40px; /* Espaço interno generoso */
-  border-radius: 12px; /* Cantos arredondados */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra leve */
-  text-align: center; /* Texto centralizado */
-  width: 350px; /* Largura fixa */
-  margin-top: 30px; /* Espaço acima do form */
-}
-
-/* Título legend dentro do form */
-legend {
-  font-weight: bold; /* Negrito */
-  font-size: 16px; /* Tamanho médio */
-  margin-bottom: 20px; /* Espaço abaixo */
-}
-
-/* Inputs texto e senha */
-input[type="text"],
-input[type="password"] {
-  display: block; /* Ocupa linha inteira */
-  margin: 0 auto; /* Centraliza horizontalmente */
-  width: 95%; /* Quase toda largura do form */
-  padding: 10px; /* Espaço interno */
-  border-radius: 8px; /* Bordas arredondadas */
-  border: 1px solid #ccc; /* Borda cinza clara */
-  font-size: 14px; /* Fonte legível */
-  box-sizing: border-box; /* Considera padding dentro da largura */
-}
-
-/* Botão principal */
-button {
-  width: 100%; /* Ocupa toda largura */
-  padding: 10px; /* Espaço interno */
-  background-color: #007bff; /* Azul padrão */
-  color: white; /* Texto branco */
-  border: none; /* Sem borda */
-  border-radius: 8px; /* Bordas arredondadas */
-  font-size: 16px; /* Fonte maior */
-  cursor: pointer; /* Cursor de mãozinha */
-  margin-top: 15px; /* Espaço acima */
-}
-
-/* Botão quando o mouse passa em cima */
-button:hover {
-  background-color: #0056b3; /* Azul mais escuro */
-}
-
-/* Parágrafos */
-p {
-  margin-top: 15px; /* Espaço em cima */
-  font-size: 14px; /* Tamanho da fonte */
-}
-
-/* Links dentro de parágrafos */
-p a {
-  color: #007bff; /* Azul */
-  text-decoration: none; /* Sem sublinhado */
-  font-weight: bold; /* Negrito */
-}
-
-/* Link ao passar mouse */
-p a:hover {
-  text-decoration: underline; /* Sublinhado */
-}
-
-/* Fieldset sem bordas e sem espaçamento */
-fieldset {
-  border: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  background-color: #111;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* Container para tipo de usuário */
-.user-type {
-  display: flex; /* Flexbox */
-  justify-content: center; /* Centraliza horizontalmente */
-  gap: 20px; /* Espaço entre os radios */
-  margin-bottom: 20px; /* Espaço embaixo */
+/* Cabeçalho */
+header.borda {
+  width: 100%;
+  background-color: #111
+  padding: 10px 0;
+}
+.borda{
+    border-bottom: 4px solid black;
 }
 
-/* Label dos radios */
-.user-type label {
-  font-size: 14px; /* Fonte pequena */
-  cursor: pointer; /* Cursor de mãozinha */
-  display: flex; /* Flexbox pra alinhar */
-  align-items: center; /* Alinha vertical */
-  gap: 5px; /* Espaço entre radio e texto */
+nav.centralizar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Radio buttons */
-.user-type input[type="radio"] {
-  accent-color: #007bff; /* Cor azul quando selecionado */
-  width: 16px; /* Largura do radio */
-  height: 16px; /* Altura do radio */
+nav img {
+  transition: transform 0.3s ease;
+}
+
+nav img:hover {
+  transform: scale(1.05);
 }
 
 /* Container principal */
-.main-container {
-  display: flex; /* Flexbox */
-  flex-direction: column; /* Coluna */
-  justify-content: center; /* Centraliza verticalmente */
-  align-items: center; /* Centraliza horizontalmente */
-  min-height: 100vh; /* Ocupa a tela toda */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-/* Wrapper do form para centralizar */
-.form-wrapper {
-  display: flex; /* Flexbox */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  flex-grow: 1; /* Ocupa o máximo possível */
-  height: calc(100vh - 140px); /* Altura da tela menos altura da logo e linha */
-}
-footer{
-  margin-top: 15%;
-  padding: 10%;
-  background-color: rgb(26, 24, 24) ;
+/* Formulário */
+.form-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   text-align: center;
-  
+  width: 350px;
 }
 
-footer>div>p{
-   padding-inline: 5%;
-   display: inline-flex;
-   font-size: 15px !important;
+.form-box h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
 }
 
-/*Define que todos os links dentro do rodapé não terão decorações (sublinhado) e a cor será cinza claro*/
-footer > a, a:link, a:visited, a:active{
-   text-decoration: none;    
-   color: white;
+/* Inputs */
+input[type="email"],
+input[type="password"] {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
 }
+
+/* Botão */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Texto abaixo */
+p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  width: 100%;
+  background-color: rgb(26, 24, 24);
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer p {
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
+  font-size: 15px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #2D8FFF;
+}
+
 .texto {
- color: white !important;
- font-size: 20px !important;
+  color: white;
+  font-size: 20px;
 }
+
 .mexe:hover {
-transform: scale(1.05); 
-z-index: 5;
-color: #2D8FFF !important;
+  transform: scale(1.05);
+  z-index: 5;
+  color: #2D8FFF !important;
 }
