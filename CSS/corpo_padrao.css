@@ -1,3 +1,14 @@
+@import url(footer.css);
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 /*Define a que o body não terá opacidade, e a transição suave de 0.5s*/
 body {
   opacity: 0;
@@ -17,4 +28,11 @@ body.loaded {
 /*Define uma bora de 4 pixel solida preta na parte debaixo da div*/
 .borda{
     border-bottom: 4px solid black;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
