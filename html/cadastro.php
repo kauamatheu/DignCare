@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -44,6 +46,11 @@
         <span class="erro" id="erro-nome"></span>
         <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
 
+        <?php
+          if (isset($_GET['erro']) && $_GET['erro'] === 'cpf') {
+              echo "<p style='color:red;'>Este CPF já está cadastrado.</p>";
+          }
+        ?>
         <span class="erro" id="erro-cpf"></span>
         <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf" maxlength="11">
 

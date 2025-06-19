@@ -13,6 +13,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Conexão com o banco de dados 
     try {
+        // Verifica se CPF já existe
+        $stmt = $pdo->prepare("SELECT COUNT(*) FROM usuario WHERE usr_cpf = :cpf");
+        $stmt->execute(['cpf' => $cpf]);
+        $cpfExiste = $stmt->fetchColumn();
+
+        if ($cpfExiste) {
+            // Redireciona com mensagem de erro via query string
+            header("Location: /html/cadastro.php?erro=cpf");
+            exit;
+        }
+
+        // CPF é novo → continua o cadastro
         $sql = "INSERT INTO usuario (usr_nome, usr_cpf, usr_idade, usr_tipo, usr_email, usr_senha) VALUES (:nome, :cpf, :idade, :tipo, :email, :senha)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(['nome' => $nome,'cpf' => $cpf,'idade' => $idade,'tipo' => $tipo,'email' => $email,'senha' => $senha]);
@@ -22,7 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         exit; 
     } catch (PDOException $e) {
-        echo "Erro ao cadastrar: " . $e->getMessage();
+        error_log($e->getMessage()); // Log para você
+        echo "Erro ao processar o cadastro. Tente novamente mais tarde.";
     }
 } else {
     echo "Acesso inválido.";
