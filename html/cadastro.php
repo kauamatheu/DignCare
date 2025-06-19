@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -10,7 +8,7 @@
     <link rel="stylesheet" href="/CSS/cadastro.css" />
     <script src="/JS/transicao.js" defer></script>
     <script src="/JS/validacao_cadastro.js" defer></script>
-    <script src="/Js/masc-date.js" defer></script>
+    <script src="/JS/limpa_url.js" defer></script>
   </head>
 
   <body class="fundo">
@@ -25,7 +23,7 @@
     </header>
 
     <!-- Conteúdo principal -->
-    <section class="container">
+    <section class="container main-content ">
       <!-- Formulário de cadastro -->
       <form id="formulario" action="/php/cadastra_usr.php" method="post" class="form-box">
         <h2>Encontre o profissional ideal<br>para a sua casa com poucos cliques!</h2>    
@@ -33,12 +31,12 @@
         <div class="role-selection">
           <span class="erro" id="erro-tipo"></span>
           <label>
-            <input type="radio" name="tipo_usuario" value="0" required>
+            <input type="radio" name="tipo" value="0" required>
             Prestador
           </label>
 
           <label>
-            <input type="radio" name="tipo_usuario" value="1">
+            <input type="radio" name="tipo" value="1">
             Contratante
           </label>
         </div>

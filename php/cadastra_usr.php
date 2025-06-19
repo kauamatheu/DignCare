@@ -4,10 +4,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     require_once 'conecta_bd.php';
 
     $nome = $_POST['nome'];
+
     $cpf = $_POST['cpf'];
+
     $idade = $_POST['nascimento'];
-    $tipo = $_POST['tipo'];
+
+    if($_POST['tipo'] == 0){
+        $tipo = "Prestador";
+    }else{
+        $tipo = "Contratante";
+    }
+
     $email = $_POST['email'];
+
     $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
 
@@ -30,8 +39,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute(['nome' => $nome,'cpf' => $cpf,'idade' => $idade,'tipo' => $tipo,'email' => $email,'senha' => $senha]);
 
         // Redireciona para a tela inicial (home.php)
-        header("Location: /html/home.php");
-
+        if($_POST['tipo'] == 0){
+            header("Location: /html/home_prestador.php");
+        }else{
+            header("Location: /html/home.php");
+        }
         exit; 
     } catch (PDOException $e) {
         error_log($e->getMessage()); // Log para você
