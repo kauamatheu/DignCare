@@ -21,13 +21,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $_SESSION['usr_id'] = $usuario['usr_id'];
             $_SESSION['usr_nome'] = $usuario['usr_nome'];
+            $_SESSION['usr_tipo'] = $usuario['usr_tipo'];
             
-            header("Location: /html/home.php");
-            exit;
+            if($_SESSION['usr_tipo'] == "Contratante") {
+                header("Location: /html/home.php");
+                exit;
+            } else {
+                header("Location: /html/home_prestador.php");
+                exit;
+            }
+
         } else {
             header("Location: /html/login.php?erro=email");
             exit;
-        }
+        }   
 
     } catch (PDOException $e) {
         error_log($e->getMessage());

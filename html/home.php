@@ -7,12 +7,9 @@
   <title>DignCare</title>
   <link rel="icon" type="imagem/png" href="/img/icon.png">
   <link rel="stylesheet" href="/CSS/home.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <script src="/JS/transicao.js" defer></script>
-  <script src="/JS/altera_conteudo.js" defer></script>
-
 </head>
 
 <body class="fundo">
@@ -39,7 +36,6 @@
           <a class="azul" href="/index.php">Sair da Conta</a>
         </div>
         </div>
-
     </nav>
   </header>
 
@@ -47,13 +43,7 @@
     <div class="textcolor" style="margin-bottom: 30px;">
       <h3>Home</h3>
       <p>DignCare, Sua solução</p>
-      <select id="seletor" class="form-select form-select-lg mb-3" aria-label="Large select example" onchange="mudarConteudo()">
-            <option value="0">Cliente</option>
-            <option value="1">Prestador</option>
-        </select>
     </div>
-
-    <div id="0" class="conteudo ativo">
 
       <!--Cards-->
       <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;">
@@ -162,133 +152,16 @@
 
       </div>
 
-    </div>
-
-    <div id="1" class="conteudo">
-
-      <a href="/html/cadastro_servicos.php"><button type="button" class="btn btn-primary mx-1">Criar solicitação de serviço</button></a>
-
-      <div class="my-5">
-
-        <!--Grupo de Cards 1-->
-        <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;">
-          
-          <!--Card 1 - Jardineiros -->
-          <div class="col">
-            <div class="card mexe h-100">
-              <img src="/img/Jardinagem.png" class="card-img-top" alt="jardinagem">
-              <div class="card-body">
-                <h5 class="card-title">Jardinagem</h5>
-                <p class="card-text">Serviços abertos para Jardinagem.</p>
-                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
-              </div>
-            </div>
-          </div>
-          
-          <!--Card 2 - Babás -->
-          <div class="col">
-            <div class="card mexe h-100">
-              <img src="/img/babá.png" class="card-img-top" alt="babá">
-              <div class="card-body">
-                <h5 class="card-title">Babá</h5>
-                <p class="card-text">Serviços abertos para Babás.</p>
-                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
-              </div>
-            </div>
-          </div>
-        
-          <!--Card 3 - Diaristas -->
-          <div class="col">
-            <div class="card mexe h-100">
-              <img src="/img/Limpeza.png" class="card-img-top" alt="limpeza">
-              <div class="card-body">
-                <h5 class="card-title">Diáristas</h5>
-                <p class="card-text">Serviços abertos para Diaristas.</p>
-                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
-              </div>
-            </div>
-          </div>
-        
-          <!--Card 4 - Cozinheiros -->
-          <div class="col">
-            <div class="card mexe h-100">
-              <img src="/img/cozinheiro.png" class="card-img-top" alt="cozinehiro">
-              <div class="card-body">
-                <h5 class="card-title">Cozinha</h5>
-                <p class="card-text">Serviços abertos para cozinheiros.</p>
-                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!--Grupo de Cards 2-->
-        <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;"">
-          
-          <!--Card 5 - Cuidadores de idosos -->
-          <div class=" col">
-            <div class="card mexe h-100">
-              <img src="/img/cuidadora.png" class="card-img-top" alt="cuidadora">
-              <div class="card-body">
-                <h5 class="card-title">Cuidador de Idosos</h5>
-                <p class="card-text">Serviços abertos para Cuidadores de Idosos. </p>
-                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
-              </div>
-            </div>
-          </div>
-          
-          <!--Card 6 - Serviços Gerais -->
-          <div class="col">
-            <div class="card mexe h-100">
-              <img src="/img/manutencao.png" class="card-img-top" alt="manutenção">
-              <div class="card-body">
-                <h5 class="card-title">Serviços Gerais</h5>
-                <p class="card-text">Serviços abertos para Manutenções Gerais.</p>
-                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
-              </div>
-            </div>
-          </div>
-          
-          <!--Card 7 - Cozinheiros -->
-          <div class="col">
-            <div class="card mexe h-100">
-              <img src="/img/pets.png" class="card-img-top" alt="limpeza">
-              <div class="card-body">
-                <h5 class="card-title">Cuidador de Pets</h5>
-                <p class="card-text">Serviços abertos para Cuidadores de Pets.</p>
-                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
-              </div>
-            </div>
-          </div>
-          
-          <!--Card 8 - Tutores -->
-          <div class="col">
-            <div class="card mexe h-100">
-              <img src="/img/tutora.png" class="card-img-top" alt="jardinagem">
-              <div class="card-body">
-                <h5 class="card-title">Tutora Educacional</h5>
-                <p class="card-text">Serviços abertos para Tutores Educacionais. </p>
-                <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-
-      </div>
-    </div>
-
   </section>
 
-    <footer class="py-4 mt-auto texto">
-        <div class="fs-6">
-            <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
-            <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
-            <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
-        </div>
-    </footer>
+  <footer class="py-4 mt-auto texto">
+      <div class="fs-6">
+          <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
+          <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
+          <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
+          <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
+      </div>
+  </footer>
 
 </body>
 </html>
