@@ -52,6 +52,11 @@
         <span class="erro" id="erro-cpf"></span>
         <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf" maxlength="11">
 
+        <?php
+          if (isset($_GET['erro']) && $_GET['erro'] === 'email') {
+              echo "<p style='color:red;'>Este E-mail já está cadastrado.</p>";
+          }
+        ?>
         <span class="erro" id="erro-email"></span>
         <input type="email" name="email" id="email" placeholder="Digite seu email">
 
