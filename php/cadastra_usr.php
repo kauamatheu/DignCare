@@ -44,19 +44,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $pdo->prepare($sql);
         $stmt->execute(['nome' => $nome,'cpf' => $cpf,'idade' => $idade,'tipo' => $tipo,'email' => $email,'senha' => $senha]);
 
-        //Redireciona para a tela inicial (home.php)
-        if($_POST['tipo'] == 0){
-            header("Location: /html/home_prestador.php");
-            exit;
-        }else{
-            header("Location: /html/home.php");
-            exit; 
+        $stmt = $pdo->prepare("SELECT * FROM usuario WHERE usr_email = :email");
+        $stmt->execute(['email' => $email]);
+        $usuario = $stmt->fetch();
+
+        if (!isset($_SESSION)) {
+            session_start();
         }
+
+        $_SESSION['usr_id'] = $usuario['usr_id'];
+        $_SESSION['usr_nome'] = $usuario['usr_nome'];
+        $_SESSION['usr_tipo'] = $usuario['usr_tipo'];
+
+        if ($_SESSION['usr_tipo'] == "Contratante") {
+            header("Location: /html/home.php");
+        } else {
+            header("Location: /html/home_prestador.php");
+        }
+        exit;
 
     } catch (PDOException $e) {
         error_log($e->getMessage()); // Log para você
         echo "Erro ao processar o cadastro. Tente novamente mais tarde.";
     }
+    
 } else {
     echo "Acesso inválido.";
 }
