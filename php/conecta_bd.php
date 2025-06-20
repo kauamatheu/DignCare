@@ -1,13 +1,13 @@
 <?php
-    $host = "localhost";
-    $dbname = "db_digncare";
-    $usuario = "root";
-    $senha = "123456";
+    $dsn = 'mysql:host=localhost;dbname=db_digncare;charset=utf8';
+    $usuario = 'root';
+    $senha = '123456';
 
     try {
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $usuario, $senha);
+        $pdo = new PDO($dsn, $usuario, $senha);
+        // Ativa erros como exceções
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
-        die("Erro na conexão: " . $e->getMessage());
+        echo "Erro na conexão: " . $e->getMessage();
     }
 ?>
