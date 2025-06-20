@@ -1,6 +1,11 @@
 <?php
 
-  include('../php/protecao_sessao.php')
+  include('../php/protecao_sessao.php');
+  
+  if ($_SESSION["usr_tipo"] == "Contratante") {
+      header("Location: home.php");
+      exit;
+  }
 
 ?>
 
@@ -43,13 +48,14 @@
           <a class="azul" href="/html/depoimentos.php">Depoimentos</a><br>
           <a class="azul" href="/html/sobre.php">Sobre Nós</a>
           <p>______________________________________________________</p>
-          <a class="azul" href="/index.php">Sair da Conta</a>
+          <a class="azul" href="/php/logout.php">Sair da Conta</a>
         </div>
         </div>
 
     </nav>
   </header>
 
+  <a class="azul" href="/php/logout.php">Sair da Conta</a>
   <section style="margin: 50px;">
     <div class="textcolor">
       <h3>Home</h3>
