@@ -1,3 +1,10 @@
+<?php
+
+  include('../php/protecao_sessao.php')
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

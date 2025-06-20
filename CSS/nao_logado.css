@@ -14,24 +14,18 @@
     text-align: center;
 }
 
-/*Cria uma div que ocupa 2 colunas dentro da grid*/
 .full-row {
     grid-column: span 2;
+    display: inline-flex;
+    justify-content: center;
 }
 
-/*Altera o tamanho do texto h1*/
-h1 {
-    font-size: 55px !important;
-}
-
-/*Altera o tamanho do texto h4*/
-h4{
-    text-align: start !important;
-}
-
-/*Define uma sombra do tipo caixa com borda arredondada e da cor azul*/
-.sombra {
-    box-shadow: 15px 15px;
-    color: #2D8FFF;
-    border-radius: 20px;
+div>p>a{
+    border: #2D8FFF solid 1px;
+    background-color: #2D8FFF;
+    border-radius: 15px;
+    padding: 5px;
+    padding-right: 20px; 
+    padding-left: 20px;
+    margin: 52px;
 }
