@@ -86,6 +86,7 @@ CREATE TABLE `servico` (
   `avaliacao_id` int DEFAULT NULL,
   `servico_titulo` varchar(45) NOT NULL,
   `servico_descricao` varchar(250) DEFAULT NULL,
+  `servico_valor` decimal(10,2) NOT NULL,
   PRIMARY KEY (`servico_id`),
   KEY `user_id_contratante_idx` (`user_id_contratante`),
   KEY `user_id_contratado_idx` (`user_id_contratado`),
@@ -93,7 +94,7 @@ CREATE TABLE `servico` (
   KEY `tipoServico_id_idx` (`tipoServico_id`),
   KEY `avaliacao_id_idx` (`avaliacao_id`),
   CONSTRAINT `fk_avaliacao_id` FOREIGN KEY (`avaliacao_id`) REFERENCES `avaliacao` (`avaliacao_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,6 +103,7 @@ CREATE TABLE `servico` (
 
 LOCK TABLES `servico` WRITE;
 /*!40000 ALTER TABLE `servico` DISABLE KEYS */;
+INSERT INTO `servico` VALUES (1,22,NULL,NULL,3,'2025-06-22',NULL,NULL,'Faxina em apartamento valparaíso','Limpeza no meu apartamento <3',200.00),(2,22,NULL,NULL,3,'2025-06-22',NULL,NULL,'Faxina na minha casa em Jacaraipe','Preciso de uma limpeza geral na minha casa',250.00);
 /*!40000 ALTER TABLE `servico` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -178,4 +180,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-22  0:05:03
+-- Dump completed on 2025-06-22 19:20:19
