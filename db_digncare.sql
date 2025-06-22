@@ -76,25 +76,23 @@ DROP TABLE IF EXISTS `servico`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `servico` (
-  `servico_id` int NOT NULL,
+  `servico_id` int NOT NULL AUTO_INCREMENT,
   `user_id_contratante` int NOT NULL,
-  `user_id_contratado` int NOT NULL,
-  `local_id` int NOT NULL,
+  `user_id_contratado` int DEFAULT NULL,
+  `local_id` int DEFAULT NULL,
   `tipoServico_id` int NOT NULL,
-  `servico_data_criado` date NOT NULL,
-  `servico_data_realizado` date NOT NULL,
+  `servico_data_criado` date DEFAULT NULL,
+  `servico_data_realizado` date DEFAULT NULL,
   `avaliacao_id` int DEFAULT NULL,
+  `servico_titulo` varchar(45) NOT NULL,
+  `servico_descricao` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`servico_id`),
   KEY `user_id_contratante_idx` (`user_id_contratante`),
   KEY `user_id_contratado_idx` (`user_id_contratado`),
   KEY `local_id_idx` (`local_id`),
   KEY `tipoServico_id_idx` (`tipoServico_id`),
   KEY `avaliacao_id_idx` (`avaliacao_id`),
-  CONSTRAINT `fk_avaliacao_id` FOREIGN KEY (`avaliacao_id`) REFERENCES `avaliacao` (`avaliacao_id`),
-  CONSTRAINT `fk_local_id` FOREIGN KEY (`local_id`) REFERENCES `localizacao` (`local_id`),
-  CONSTRAINT `fk_tipoServico_id` FOREIGN KEY (`tipoServico_id`) REFERENCES `tiposervico` (`tipoServico_id`),
-  CONSTRAINT `fk_user_id_contratado` FOREIGN KEY (`user_id_contratado`) REFERENCES `usuario` (`usr_id`),
-  CONSTRAINT `fk_user_id_contratante` FOREIGN KEY (`user_id_contratante`) REFERENCES `usuario` (`usr_id`)
+  CONSTRAINT `fk_avaliacao_id` FOREIGN KEY (`avaliacao_id`) REFERENCES `avaliacao` (`avaliacao_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -130,6 +128,7 @@ CREATE TABLE `tiposervico` (
 
 LOCK TABLES `tiposervico` WRITE;
 /*!40000 ALTER TABLE `tiposervico` DISABLE KEYS */;
+INSERT INTO `tiposervico` VALUES (1,'Jardinagem','Manutenção, cuidado e embelezamento de jardins e áreas verdes.'),(2,'Babá','Acompanhamento e cuidado de crianças em ambiente domiciliar.'),(3,'Profissional de Limpeza','Realização de tarefas domésticas como limpeza, organização e cuidados gerais do lar.'),(4,'Profissional de Cozinha','Preparação de refeições, organização e higienização da cozinha.'),(5,'Cuidador de Pessoa Idosa','Auxílio e atenção a idosos em suas atividades diárias.'),(6,'Serviço Geral','Atividades diversas de apoio em residências.'),(7,'Cuidador de Pet','Cuidado e atenção com animais de estimação, incluindo passeios e alimentação.'),(8,'Tutor Educacional','Acompanhamento escolar e reforço educacional personalizado.');
 /*!40000 ALTER TABLE `tiposervico` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -179,4 +178,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-21 21:06:03
+-- Dump completed on 2025-06-22  0:05:03
