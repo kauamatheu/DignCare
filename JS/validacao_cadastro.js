@@ -7,7 +7,6 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
         document.querySelectorAll("input").forEach(i => i.classList.remove("input-erro"));
     }
 
-    //Função para validar datas
     limparErros(); // limpa antes de validar
 
     const nome = document.getElementById("nome");

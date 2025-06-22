@@ -9,7 +9,7 @@
     */
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="/CSS/cadastro_servicos.css"/>
     <script src="/JS/transicao.js" defer></script>
     <script src="/JS/limpa_url.js" defer></script>
+    <script src="/JS/validacao_servico.js" defer></script>
+    <script src="/JS/mascara_valor.js" defer></script>
 </head>
 <body class="fundo">
 
@@ -30,7 +32,7 @@
     </header>
 
     <section class="main-content">
-        <form action="../php/cadastra_service.php" method="post" class="form-box">
+        <form action="../php/cadastra_service.php" method="post" class="form-box" id="formulario">
             <h2>Abre sua solicitação de serviço aqui!</h2>
         
             <?php
@@ -44,7 +46,7 @@
             
             <span class="erro" id="erro-categoria"></span>
             <select name="categoria" id="categoria" class="custom-select">
-                <option value="">Selecione a categoria do seu serviço</option>
+                <option value="0">Selecione a categoria do seu serviço</option>
                 <option value="1">Jardinagem</option>
                 <option value="2">Babá</option>
                 <option value="3">Diáristas</option>
@@ -56,7 +58,7 @@
             </select>
 
             <span class="erro" id="erro-valor"></span>
-            <input type="text" name="valor" id="valor" placeholder="Digite o valor do serviço">
+            <input type="text" name="valor" id="valor" placeholder="Digite o valor do serviço" inputmode="numeric">
 
             <textarea name="descricao" id="descricao" placeholder="Faça uma breve descrição do serviço desejado."></textarea>
 
