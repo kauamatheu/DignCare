@@ -29,11 +29,6 @@ body.loaded {
   transform: scale(1.05); 
   z-index: 5;
 }
-
-div > a, a:link, a:visited, a:hover, a:active{
-    color: #2D8FFF !important;
-}
-
 .conteudo {
     display: none;
 }

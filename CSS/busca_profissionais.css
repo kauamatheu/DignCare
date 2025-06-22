@@ -77,3 +77,6 @@ footer > a, a:link, a:visited, a:active{
    text-decoration: none;    
    color: white;
 }
+  .textcolor{
+      color: white !important;
+  }
