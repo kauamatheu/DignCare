@@ -55,6 +55,7 @@
     <div class="textcolor" style="margin-bottom: 30px;">
       <h3>Home</h3>
       <p>DignCare, Sua solução</p>
+      <a href="/html/cadastro_servicos.php"><button type="button" class="btn btn-primary mx-1">Criar solicitação de serviço</button></a>
     </div>
 
       <!--Cards-->
