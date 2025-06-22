@@ -49,12 +49,12 @@
                 <option value="0">Selecione a categoria do seu serviço</option>
                 <option value="1">Jardinagem</option>
                 <option value="2">Babá</option>
-                <option value="3">Diáristas</option>
-                <option value="4">Cozinheiros</option>
-                <option value="5">Cuidadora de idosos</option>
-                <option value="6">Serviços Gerais</option>
-                <option value="7">Cuidador de Pets</option>
-                <option value="8">Tutores Educacional</option>
+                <option value="3">Profissional de Limpeza</option>
+                <option value="4">Profissional de Cozinha</option>
+                <option value="5">Cuidadora de Pessoa Idosa</option>
+                <option value="6">Serviço Geral</option>
+                <option value="7">Cuidador de Pet</option>
+                <option value="8">Tutor Educacional</option>
             </select>
 
             <span class="erro" id="erro-valor"></span>
