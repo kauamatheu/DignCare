@@ -9,6 +9,13 @@ html, body {
   flex-direction: column;
 }
 
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*Define a que o body não terá opacidade, e a transição suave de 0.5s*/
 body {
   opacity: 0;
@@ -30,9 +37,3 @@ body.loaded {
     border-bottom: 4px solid black;
 }
 
-.main-content {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
