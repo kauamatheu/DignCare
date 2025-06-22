@@ -36,7 +36,7 @@
         <div class="offcanvas offcanvas-end fundo" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title textcolor" id="offcanvasRightLabel">Daniel Rodrigues</h5>
-          <div type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg textcolor"></i></div>
+          <div type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></div>
         </div>
         <div class="offcanvas-body">
           <a class="azul" href="/html/perfil.php">Perfil</a><br>
@@ -50,8 +50,6 @@
         </div>
     </nav>
   </header>
-
-  <a class="azul" href="/php/logout.php">Sair da Conta</a>
 
   <section style="margin: 50px;">
     <div class="textcolor" style="margin-bottom: 30px;">

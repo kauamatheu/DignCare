@@ -25,20 +25,24 @@
                 <a href="/html/avaliacoes.php"><button type="button" class="btn btn-primary mx-1">Avaliar</button></a>
             </div>
 
-            <div class="  dropdown justify-content-end">
-                <button class="btn btn-black dropdown " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-list fs-3 iconscss"> <i class="bi bi-person-circle i fs-3"></i></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end fundo textcolor">
-                    <li><a class="dropdown-item textcolor" href="#">Perfil</a></li>
-                    <li><a class="dropdown-item textcolor" href="#">avaliações</a></li>
-                    <li><a class="dropdown-item textcolor" href="#">Configurações</a></li>
-                    <li><a class="dropdown-item textcolor" href="#">FAQ/Dúvidas Frequêntes</a></li>
-                    <li><a class="dropdown-item textcolor" href="#">Suporte</a></li>
-                    <li><a class="dropdown-item textcolor" href="#">Depoimentos</a></li>
-                    <li><a class="dropdown-item textcolor" href="#">Sobre Nós</a></li>
-                    <li><a class="dropdown-item textcolor" href="#">Sair da Conta</a></li>
-                </ul>
+            <div class="menu-icon" type="sidbar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"><i class="bi bi-list fs-3 iconscss"></i></div>
+
+            <div class="offcanvas offcanvas-end fundo" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title textcolor" id="offcanvasRightLabel">Daniel Rodrigues</h5>
+                    <div type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></div>
+                </div>
+                <div class="offcanvas-body">
+                    <a class="azul" href="/html/perfil.html">Perfil</a><br>
+                    <a class="azul" href="/html/avaliacoes.html">Avaliações</a>
+                    <p>______________________________________________________</p>
+                    <a class="azul" href="/html/depoimentos.html">Depoimentos</a><br>
+                    <a class="azul" href="/html/sobre.html">Sobre Nós</a>
+                    <p>______________________________________________________</p>
+                    <a class="azul" href="/index.html">Sair da Conta</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -106,15 +110,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
-        
+
     <footer class="py-4 mt-auto texto">
         <div class="fs-6">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
-            <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
-            <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
+            <p><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
+            <p><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
+            <p><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
         </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous">
+    </script>
 
 </body>
 
