@@ -1,3 +1,13 @@
+<?php
+    /*
+    include('../php/protecao_sessao.php');
+    
+    if ($_SESSION["usr_tipo"] == "Prestador") {
+        header("Location: home_prestador.php");
+        exit;
+    }
+    */
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +17,7 @@
     <link rel="icon" type="image/png" href="/img/icon.png" />
     <link rel="stylesheet" href="/CSS/cadastro_servicos.css"/>
     <script src="/JS/transicao.js" defer></script>
+    <script src="/JS/limpa_url.js" defer></script>
 </head>
 <body class="fundo">
 
@@ -19,11 +30,17 @@
     </header>
 
     <section class="main-content">
-        <form action="cadastra_service" method="post" class="form-box">
+        <form action="../php/cadastra_service.php" method="post" class="form-box">
             <h2>Abre sua solicitação de serviço aqui!</h2>
         
-            <span class="erro" id="erro-servico"></span>
-            <input type="text" name="servico" id="servico" placeholder="Digite o título do Serviço">
+            <?php
+                if (isset($_GET['sucesso']) && $_GET['sucesso'] == '1') {
+                    echo "<p style='color:green;'>Cadastro bem-sucedido!</p>";
+                }
+            ?>
+
+            <span class="erro" id="erro-titulo"></span>
+            <input type="text" name="titulo" id="titulo" placeholder="Digite o título do Serviço">
             
             <span class="erro" id="erro-categoria"></span>
             <select name="categoria" id="categoria" class="custom-select">
