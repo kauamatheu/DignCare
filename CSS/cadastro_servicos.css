@@ -1,162 +1,132 @@
-/* Fundo escuro */
-body {
-    margin: 0; 
-    font-family: Arial, sans-serif; 
-    background-color: #0f0f0f; 
-    color: #ffffff; 
-    display: flex; 
-    flex-direction: column; 
-    min-height: 100vh; 
+@import url(corpo_padrao.css);
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.erro {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 2px;
+    display: flex;
+}
+
+.input-erro {
+    border: 1px solid red !important;
 }
 
 .container {
-    flex: 1; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 30px;
 }
 
-/* Header com logo centralizada */
-.top-header {
-    text-align: center; /* Centraliza o texto dentro do header */
-    padding: 20px 0 10px; /* Espaço em cima e embaixo (20px em cima, 10px embaixo) */
-}
-
-/* Logo com tamanho proporcional */
-.logo {
-    max-height: 60px; 
-    height: auto; 
-    width: auto; 
-    display: block; 
-    margin: 0 auto; 
-}
-
-/* Linha divisória de uma ponta à outra */
-.divider {
-    border: none; /* Remove bordas padrão */
-    border-top: 1px solid #444; /* Adiciona uma linha fina cinza escura no topo */
-    margin: 10px 0; /* Espaço acima e abaixo da linha */
-    width: 100vw; /* Largura total da viewport (tela) */
-}
-
-/* Caixa branca do formulário */
 .form-box {
-    background-color: #ffffff; 
-    color: #000000; 
-    padding: 30px; 
-    border-radius: 10px; 
-    width: 320px; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+  background-color: #fff;
+  color: black;
+  padding: 30px 25px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  text-align: center;
 }
 
-/* Título */
-legend {
-    font-size: 16px; 
-    font-weight: bold; 
-    margin-bottom: 20px; 
-    text-align: center; 
+.form-box h2 {
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
-/* Labels */
-label {
-    font-size: 14px; /* Tamanho da fonte dos labels */
-    font-weight: 500; /* Peso da fonte meio negrito */
-}
-
-/* Inputs, selects e textarea */
 input[type="text"],
-input[type="date"],
-select,
-textarea {
-    width: 100%; 
-    padding: 10px; 
-    margin-top: 5px; 
-    font-size: 16px; 
-    border: 1px solid #ccc; 
-    border-radius: 6px; 
-    box-sizing: border-box; 
+input[type="email"],
+input[type="password"]{
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
 }
 
-/* Textarea maior */
-textarea {
-    resize: vertical; /* Só pode mudar o tamanho verticalmente */
-    height: 75px; /* Altura padrão do textarea */
+.custom-select {
+  appearance: none; 
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-/* Botões */
+textarea{
+  appearance: none; 
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 button {
-    width: 100%; 
-    padding: 10px; 
-    background-color: #3179ff; 
-    color: white; 
-    border: none; 
-    border-radius: 6px; 
-    font-size: 14px; 
-    font-weight: bold; 
-    cursor: pointer; 
-    margin-top: 10px; 
-    transition: background-color 0.3s ease; 
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 12px;
 }
 
-/* Botão "Voltar" com estilo diferente */
-button:last-of-type {
-    background-color: transparent; 
-    color: #3179ff; 
-    border: none; 
-    margin-top: 10px;
-    font-size: 14px;
-}
 
-/* Botão hover */
 button:hover {
-    background-color: #e0e5f1; /* Fundo claro quando passa o mouse */
+  background-color: #0056b3;
 }
 
-/* Botões com classe btn (link estilizado) */
-.btn {
-    display: block; 
-    width: 100%; 
-    background-color: #4e6ef2; 
-    color: white;
-    padding: 10px; 
-    border: none; 
-    border-radius: 8px; 
-    text-align: center; 
-    text-decoration: none; 
-    font-weight: bold; 
-    margin-top: 10px; 
-    transition: background-color 0.3s; 
+
+p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
-.btn:hover {
-    background-color: #3a52c1; /* Fundo azul mais escuro ao passar o mouse */
+
+.link {
+  color: #007bff !important;
+  text-decoration: none;
+
 }
-footer{
-    margin-top: 180px;
-    padding: 1%;
-    background-color: rgb(26, 24, 24) ;
-    text-align: center;
- }
- 
- footer>p{
-     padding-inline: 5%;
-     display: inline-flex;
-     font-size: 15px !important;
- }
- 
- footer > a, a:link, a:visited, a:active{
-     text-decoration: none;    
-     color: white;
- }
- .texto {
-     color: white !important;
-     font-size: 20px !important;
- }
- .mexe:hover {
-   transform: scale(1.05); 
-   z-index: 5;
-   color: #2D8FFF !important;
- }
+
+
+.link:hover {
+  text-decoration: underline;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza horizontalmente */
+  padding-top: 30px; /* mantém espaçamento igual ao container */
+  width: 100%;
+}
+
+
+.role-selection {
+  margin-bottom: 20px;
+}
+
+.role-selection label {
+  margin: 10px ;
+}
