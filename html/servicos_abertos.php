@@ -1,3 +1,14 @@
+<?php
+
+  include('../php/protecao_sessao.php');
+  
+  if ($_SESSION["usr_tipo"] == "Contratante") {
+      header("Location: home.php");
+      exit;
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -15,35 +26,33 @@
 </head>
 
 <body class="fundo">
-    <header>
-        <nav class="navbar borda">
-            <div class="nav justify-content-start">
-                <a href="/html/home.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
-            </div>
+  <header>
+    <nav class="navbar borda">
+      <div class="nav justify-content-start">
+        <a href="/html/home.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+      </div>
+  
+      <div class="menu-icon" type="sidbar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-list fs-3 iconscss"></i></div>
 
-
-            <div class="menu-icon" type="sidbar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight"><i class="bi bi-list fs-3 iconscss"></i></div>
-
-            <div class="offcanvas offcanvas-end fundo" tabindex="-1" id="offcanvasRight"
-                aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title textcolor" id="offcanvasRightLabel">Daniel Rodrigues</h5>
-                    <div type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></div>
-                </div>
-                <div class="offcanvas-body">
-                    <a class="azul" href="/html/perfil.php">Perfil</a><br>
-                    <a class="azul" href="/html/avaliacoes.php">Avaliações</a>
-                    <p>______________________________________________________</p>
-                    <a class="azul" href="/html/depoimentos.php">Depoimentos</a><br>
-                    <a class="azul" href="/html/sobre.php">Sobre Nós</a>
-                    <p>______________________________________________________</p>
-                    <a class="azul" href="/index.php">Sair da Conta</a>
-                </div>
-            </div>
-
-        </nav>
-    </header>
+        <div class="offcanvas offcanvas-end fundo" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <?php
+          echo '<h5 class="offcanvas-title textcolor" id="offcanvasRightLabel">' . $_SESSION["usr_nome"] . '</h5>';
+          ?>
+          <div type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></div>
+        </div>
+        <div class="offcanvas-body">
+          <a class="azul" href="/html/perfil.php">Perfil</a><br>
+          <a class="azul" href="/html/avaliacoes.php">Avaliações</a>
+          <p>______________________________________________________</p>
+          <a class="azul" href="/html/depoimentos.php">Depoimentos</a><br>
+          <a class="azul" href="/html/sobre.php">Sobre Nós</a>
+          <p>______________________________________________________</p>
+          <a class="azul" href="/php/logout.php">Sair da Conta</a>
+        </div>
+        </div>
+    </nav>
+  </header>
 
     <section style="margin: 50px;">
         <div class="textcolor" style="margin-bottom: 30px;">
@@ -84,8 +93,8 @@
                                         <div class="card-body">
                                             <h5 class="card-title">'.htmlspecialchars($servico["servico_titulo"]).'</h5>
                                             <p class="card-text">'.htmlspecialchars($servico["servico_descricao"]).'</p>
-                                            <p><i class="bi bi-person-circle"></i> '.htmlspecialchars($servico["usr_nome"]).'</p>
-                                            <p>⭐⭐⭐⭐</p>
+                                            <h6><i class="bi bi-person-circle"></i> '.htmlspecialchars($servico["usr_nome"]).'</h6>
+                                            <p>R$'.htmlspecialchars($servico["servico_valor"]).'</p>
                                             <a href="/html/chat.php" class="btn btn-primary">Confira</a>
                                         </div>
                                     </div>
