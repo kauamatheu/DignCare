@@ -38,9 +38,10 @@
 
         <div class="offcanvas offcanvas-end fundo" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title textcolor" id="offcanvasRightLabel">Daniel Rodrigues</h5>
+          <?php
+          echo '<h5 class="offcanvas-title textcolor" id="offcanvasRightLabel">' . $_SESSION["usr_nome"] . '</h5>';
+          ?>
           <div type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></div>
-
         </div>
         <div class="offcanvas-body">
           <a class="azul" href="/html/perfil.php">Perfil</a><br>
@@ -52,11 +53,9 @@
           <a class="azul" href="/php/logout.php">Sair da Conta</a>
         </div>
         </div>
-
     </nav>
   </header>
 
-  <a class="azul" href="/php/logout.php">Sair da Conta</a>
   <section style="margin: 50px;">
     <div class="textcolor">
       <h3>Home</h3>
@@ -64,7 +63,8 @@
     </div>
 
     <div class="my-5">
-
+      <h1 class="textcolor">Serviços Abertos</h1>
+      <br>
       <!--Grupo de Cards 1-->
       <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;">
           
