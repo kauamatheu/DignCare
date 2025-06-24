@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DignCare</title>
   <link rel="icon" type="imagem/png" href="/img/icon.png">
-  <link rel="stylesheet" href="/CSS/home.css">
+  <link rel="stylesheet" href="/CSS/home_prestador.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <script src="/JS/transicao.js" defer></script>
@@ -36,7 +36,7 @@
         <div class="offcanvas offcanvas-end fundo" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
           <?php
-          echo '<h5 class="offcanvas-title textcolor" id="offcanvasRightLabel">' . $_SESSION["usr_nome"] . '</h5>';
+          echo '<h5 class="offcanvas-title texto" id="offcanvasRightLabel">' . $_SESSION["usr_nome"] . '</h5>';
           ?>
           <div type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></div>
         </div>
@@ -54,14 +54,15 @@
   </header>
 
   <section style="margin: 50px;">
-    <div class="textcolor" style="margin-bottom: 30px;">
+
+    <div class="texto" style="margin-bottom: 30px;">
       <h3>Home</h3>
       <p>DignCare, Sua solução</p>
       <a href="/html/cadastro_servicos.php"><button type="button" class="btn btn-primary mx-1">Criar solicitação de serviço</button></a>
     </div>
 
       <!--Cards-->
-      <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;">
+      <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento main-content" style="margin-bottom: 80px;">
         
         <!--Card 1-->
         <div class="col">
@@ -114,7 +115,7 @@
       </div>
 
         <!--Cards Group 2-->
-      <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;"">
+      <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento main-content" style="margin-bottom: 80px;"">
       
         <!--Card 5-->
         <div class=" col">
@@ -166,7 +167,6 @@
 
       </div>
       
-
   </section>
 
   <footer class="texto">
