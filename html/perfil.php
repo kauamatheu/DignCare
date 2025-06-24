@@ -34,7 +34,7 @@
             <div class="form-group">
                 <label for="nome">Nome de perfil:</label>
                 <?php
-                    echo '<h3 class="offcanvas-title textcolor" id="offcanvasRightLabel">' . $_SESSION["usr_nome"] . '</h5>';
+                    echo '<h3 class="offcanvas-title textcolor" id="offcanvasRightLabel">' . $_SESSION["usr_nome"] . '</h3>';
                 ?>
                 
             </div>
@@ -54,7 +54,7 @@
         </div>
         <div class="full-row">
             <h2>Resumo</h2>
-            <textarea readonly class="form-control" rows="5"><?php echo $mensagem_do_banco; ?></textarea>
+            <textarea readonly class="form-control" rows="5"><?php echo $usr_descricao; ?></textarea>
         </div>
 
         <div class="full-row centralizar">

@@ -1,3 +1,7 @@
+<?php
+  include('../php/protecao_sessao.php');
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,7 +34,7 @@
                 <label for="nome">Nome de perfil:</label>
                 <input type="text" id="nome" name="nome" placeholder="Insira seu nome de perfil..." maxlength="40">
                 <p id="contador">40 caracteres restantes</p>
-            </div>
+            </div>""
             
             <h3>Avaliações</h3>
             <h3>⭐⭐⭐⭐⭐</h3>
@@ -46,8 +50,12 @@
             </div>
         </div>
         <div class="full-row">
-            <h2>Resumo</h2>
-            <textarea placeholder="Insira um resumo profissional..." class="areapatexto"></textarea>
+            <form method="post">
+                <label for="mensagem">Editar Mensagem:</label>
+                <textarea name="mensagem" class="form-control" rows="5"><?php echo $dados['usr_descricao']; ?></textarea>
+                <br>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
         </div>
 
         <div class="full-row centralizar">
