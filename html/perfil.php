@@ -1,3 +1,9 @@
+<?php
+
+  include('../php/protecao_sessao.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -27,7 +33,10 @@
         <div>
             <div class="form-group">
                 <label for="nome">Nome de perfil:</label>
-                <input type="text" id="nome" name="nome" placeholder="Insira seu nome de perfil..." maxlength="40">
+                <?php
+                    echo '.[usr_nome].';
+                ?>
+                
             </div>
             <br>
             <h3>Avaliações</h3>
