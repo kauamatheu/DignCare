@@ -20,7 +20,6 @@
   <link rel="stylesheet" href="/CSS/home_prestador.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="../CSS/home_prestador.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 
   <script src="/JS/transicao.js" defer></script>
@@ -38,7 +37,7 @@
         <div class="offcanvas offcanvas-end fundo" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
           <?php
-          echo '<h5 class="offcanvas-title textcolor" id="offcanvasRightLabel">' . $_SESSION["usr_nome"] . '</h5>';
+          echo '<h5 class="offcanvas-title texto" id="offcanvasRightLabel">' . $_SESSION["usr_nome"] . '</h5>';
           ?>
           <div type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></div>
         </div>
@@ -56,17 +55,18 @@
   </header>
   
   <section style="margin: 50px;">
-    <div class="textcolor">
+    
+    <div class="texto">
       <h3>Home</h3>
       <p>DignCare, Sua solução</p>
     </div>
 
-    <div class="my-5 main-content">
-      <h1 class="textcolor">Serviços Abertos</h1>
-      <br>
+    <div class="my-5 ">
+    <h1 class="texto">Serviços Abertos</h1>
+    <br>
 
       <!--Grupo de Cards 1-->
-      <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;">
+      <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento main-content" style="margin-bottom: 80px;">
           
         <!--Card 1 - Jardineiros -->
         <div class="col">
@@ -119,7 +119,7 @@
       </div>
 
       <!--Grupo de Cards 2-->
-      <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;"">
+      <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento main-content" style="margin-bottom: 80px;"">
           
         <!--Card 5 - Cuidadores de idosos -->
         <div class=" col">
@@ -174,18 +174,19 @@
 
   </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-    crossorigin="anonymous"></script>
-
-
+  
+  
   <footer class="texto">
     <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
     <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
     <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
     <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
   </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+  crossorigin="anonymous"></script>
 
-</body>
+  </body>
 
 </html>

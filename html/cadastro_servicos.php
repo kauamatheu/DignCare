@@ -1,12 +1,12 @@
 <?php
-    /*
+    
     include('../php/protecao_sessao.php');
     
     if ($_SESSION["usr_tipo"] == "Prestador") {
         header("Location: home_prestador.php");
         exit;
     }
-    */
+    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
