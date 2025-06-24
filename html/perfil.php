@@ -1,3 +1,9 @@
+<?php
+
+  include('../php/protecao_sessao.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -27,7 +33,10 @@
         <div>
             <div class="form-group">
                 <label for="nome">Nome de perfil:</label>
-                <input type="text" id="nome" name="nome" placeholder="Insira seu nome de perfil..." maxlength="40">
+                <?php
+                    echo '<h3 class="offcanvas-title textcolor" id="offcanvasRightLabel">' . $_SESSION["usr_nome"] . '</h5>';
+                ?>
+                
             </div>
             <br>
             <h3>Avaliações</h3>
@@ -45,7 +54,7 @@
         </div>
         <div class="full-row">
             <h2>Resumo</h2>
-            <textarea placeholder="Insira um resumo profissional..." class="areapatexto"></textarea>
+            <textarea readonly class="form-control" rows="5"><?php echo $mensagem_do_banco; ?></textarea>
         </div>
 
         <div class="full-row centralizar">
