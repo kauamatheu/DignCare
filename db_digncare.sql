@@ -151,6 +151,7 @@ CREATE TABLE `usuario` (
   `usr_senha` varchar(100) NOT NULL,
   `tipoServico_id` int DEFAULT NULL,
   `avaliacao_id` int DEFAULT NULL,
+  `usr_descricao` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`usr_id`),
   UNIQUE KEY `usr_cpf_UNIQUE` (`usr_cpf`),
   UNIQUE KEY `usr_email_UNIQUE` (`usr_email`),
@@ -167,7 +168,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (15,'Daniel Rodrigues Fonseca Sousa','00000000001',20,'Prestador','danielrodrigueslg6@gmail.com','$2y$10$ox9eG1ZCoRl3mTZLEdRunO1ZzFWwVp87dqZUM1aGnrX7UBFLGIA4q',NULL,NULL),(16,'Kauã Matheus dos Santos Costa','00000000002',19,'Contratante','kauamatheu407@gmail.com','$2y$10$Pot8JyotR2cMHiY8IniLVeQtCspWETbxY5Phw/zJupO2DFB.qFAX2',NULL,NULL),(17,'teste','00000000003',52,'Contratante','teste@gmail.com','$2y$10$RGZIpeYEkyeYEtMN6PbpW.Gv7RbxBSVg1zIuhormh6LoYxETbYpbK',NULL,NULL),(18,'junior','00000000004',52,'Prestador','teste123@gmail.com','$2y$10$pIskXKlNmqVsIHzNN0i7FebnEVw2mVrQcdaaztYYwXXNH7wYXWzK2',NULL,NULL),(19,'Cabeça de OVO','00000000000',51,'Contratante','ovo@gmail.com','$2y$10$v9zkLbzOZv1h.HfPrulX7O8pLdLBzjAkYPA6UE.6lzTjMnCKRLRHS',NULL,NULL),(20,'a','00000000098',51,'Prestador','a@a.a','$2y$10$WqK/EUBl1ILDE82X/CbiuOtt0GfgH8jxKNv4RJuqlwg5mwFlVPX7a',NULL,NULL),(21,'b','00000000005',44,'Contratante','b@b.b','$2y$10$8Jf2F2vSr2rQxybK/4ttjOcJ2TEYJtYUjcpt27aN2OkhkvJXxBUd.',NULL,NULL),(22,'contratante','12121212121',69,'Contratante','contratante@teste.com','$2y$10$g5fjvSsVkXVBLkMnckGmru4srwn8BLlgro9KEHfEvk1zlEMFvb9o.',NULL,NULL),(23,'prestador','21212121212',69,'Prestador','prestador@teste.com','$2y$10$UacHMUWcdeheBhY8PbUalOTwrj.DKigFkjEhgH7AH9.QXjIV29OGe',NULL,NULL),(24,'teste123','78965432100',34,'Prestador','teste123@teste.com','$2y$10$tPd3hWodw8jLjjAPdQmH9OeJEzhdOTQV8.vjNz7ilgkg7ia9X.ORy',NULL,NULL);
+INSERT INTO `usuario` VALUES (15,'Daniel Rodrigues Fonseca Sousa','00000000001',20,'Prestador','danielrodrigueslg6@gmail.com','$2y$10$ox9eG1ZCoRl3mTZLEdRunO1ZzFWwVp87dqZUM1aGnrX7UBFLGIA4q',NULL,NULL,NULL),(16,'Kauã Matheus dos Santos Costa','00000000002',19,'Contratante','kauamatheu407@gmail.com','$2y$10$Pot8JyotR2cMHiY8IniLVeQtCspWETbxY5Phw/zJupO2DFB.qFAX2',NULL,NULL,NULL),(17,'teste','00000000003',52,'Contratante','teste@gmail.com','$2y$10$RGZIpeYEkyeYEtMN6PbpW.Gv7RbxBSVg1zIuhormh6LoYxETbYpbK',NULL,NULL,NULL),(18,'junior','00000000004',52,'Prestador','teste123@gmail.com','$2y$10$pIskXKlNmqVsIHzNN0i7FebnEVw2mVrQcdaaztYYwXXNH7wYXWzK2',NULL,NULL,NULL),(19,'Cabeça de OVO','00000000000',51,'Contratante','ovo@gmail.com','$2y$10$v9zkLbzOZv1h.HfPrulX7O8pLdLBzjAkYPA6UE.6lzTjMnCKRLRHS',NULL,NULL,NULL),(20,'a','00000000098',51,'Prestador','a@a.a','$2y$10$WqK/EUBl1ILDE82X/CbiuOtt0GfgH8jxKNv4RJuqlwg5mwFlVPX7a',NULL,NULL,NULL),(21,'b','00000000005',44,'Contratante','b@b.b','$2y$10$8Jf2F2vSr2rQxybK/4ttjOcJ2TEYJtYUjcpt27aN2OkhkvJXxBUd.',NULL,NULL,NULL),(22,'contratante','12121212121',69,'Contratante','contratante@teste.com','$2y$10$g5fjvSsVkXVBLkMnckGmru4srwn8BLlgro9KEHfEvk1zlEMFvb9o.',NULL,NULL,NULL),(23,'prestador','21212121212',69,'Prestador','prestador@teste.com','$2y$10$UacHMUWcdeheBhY8PbUalOTwrj.DKigFkjEhgH7AH9.QXjIV29OGe',NULL,NULL,NULL),(24,'teste123','78965432100',34,'Prestador','teste123@teste.com','$2y$10$tPd3hWodw8jLjjAPdQmH9OeJEzhdOTQV8.vjNz7ilgkg7ia9X.ORy',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -180,4 +181,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-22 19:20:19
+-- Dump completed on 2025-06-23 21:24:04

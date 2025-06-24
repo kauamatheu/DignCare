@@ -22,7 +22,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../CSS/home_prestador.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-  
 
   <script src="/JS/transicao.js" defer></script>
 </head>
@@ -52,19 +51,20 @@
           <p>______________________________________________________</p>
           <a class="azul" href="/php/logout.php">Sair da Conta</a>
         </div>
-        </div>
+      </div>
     </nav>
   </header>
-
+  
   <section style="margin: 50px;">
     <div class="textcolor">
       <h3>Home</h3>
       <p>DignCare, Sua solução</p>
     </div>
 
-    <div class="my-5">
+    <div class="my-5 main-content">
       <h1 class="textcolor">Serviços Abertos</h1>
       <br>
+
       <!--Grupo de Cards 1-->
       <div class="row row-cols-1 row-cols-md-4 g-4 espaçamento" style="margin-bottom: 80px;">
           
@@ -75,7 +75,7 @@
             <div class="card-body">
               <h5 class="card-title">Jardinagem</h5>
               <p class="card-text">Serviços abertos para Jardinagem.</p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              <a href="/html/servicos_abertos.php?filtro=1" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@
             <div class="card-body">
               <h5 class="card-title">Babá</h5>
               <p class="card-text">Serviços abertos para Babás.</p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              <a href="/html/servicos_abertos.php?filtro=2" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -97,9 +97,9 @@
           <div class="card mexe h-100">
             <img src="/img/Limpeza.png" class="card-img-top" alt="limpeza">
             <div class="card-body">
-              <h5 class="card-title">Diáristas</h5>
-              <p class="card-text">Serviços abertos para Diaristas.</p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              <h5 class="card-title">Profissional de Limpeza</h5>
+              <p class="card-text">Serviços abertos para Profissionais de Limpeza.</p>
+              <a href="/html/servicos_abertos.php?filtro=3" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -109,9 +109,9 @@
           <div class="card mexe h-100">
             <img src="/img/cozinheiro.png" class="card-img-top" alt="cozinehiro">
             <div class="card-body">
-              <h5 class="card-title">Cozinha</h5>
-              <p class="card-text">Serviços abertos para cozinheiros.</p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              <h5 class="card-title">Profissional de Cozinha</h5>
+              <p class="card-text">Serviços abertos para Profissionais de Cozinha.</p>
+              <a href="/html/servicos_abertos.php?filtro=4" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -126,9 +126,9 @@
           <div class="card mexe h-100">
             <img src="/img/cuidadora.png" class="card-img-top" alt="cuidadora">
             <div class="card-body">
-              <h5 class="card-title">Cuidador de Idosos</h5>
-              <p class="card-text">Serviços abertos para Cuidadores de Idosos. </p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              <h5 class="card-title">Cuidador de Pessoa Idosa</h5>
+              <p class="card-text">Serviços abertos para Cuidadores de Pessoa Idosa. </p>
+              <a href="/html/servicos_abertos.php?filtro=5" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -138,9 +138,9 @@
           <div class="card mexe h-100">
             <img src="/img/manutencao.png" class="card-img-top" alt="manutenção">
             <div class="card-body">
-              <h5 class="card-title">Serviços Gerais</h5>
+              <h5 class="card-title">Serviço Geral</h5>
               <p class="card-text">Serviços abertos para Manutenções Gerais.</p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              <a href="/html/servicos_abertos.php?filtro=6" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -150,9 +150,9 @@
           <div class="card mexe h-100">
             <img src="/img/pets.png" class="card-img-top" alt="limpeza">
             <div class="card-body">
-              <h5 class="card-title">Cuidador de Pets</h5>
-              <p class="card-text">Serviços abertos para Cuidadores de Pets.</p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              <h5 class="card-title">Cuidador de Pet</h5>
+              <p class="card-text">Serviços abertos para Cuidadores de Pet.</p>
+              <a href="/html/servicos_abertos.php?filtro=7" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -162,32 +162,29 @@
           <div class="card mexe h-100">
             <img src="/img/tutora.png" class="card-img-top" alt="jardinagem">
             <div class="card-body">
-              <h5 class="card-title">Tutora Educacional</h5>
+              <h5 class="card-title">Tutor Educacional</h5>
               <p class="card-text">Serviços abertos para Tutores Educacionais. </p>
-              <a href="/html/servicos_abertos.php" class="btn btn-primary">Confira</a>
+              <a href="/html/servicos_abertos.php?filtro=8" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
-        
+
       </div>
-      
     </div>
- 
 
   </section>
-
-  <footer class="py-4 mt-auto texto">
-      <div class="fs-6">
-          <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
-          <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-          <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
-          <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
-      </div>
-  </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"></script>
+
+
+  <footer class="texto">
+    <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
+    <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
+    <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
+    <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
+  </footer>
 
 </body>
 
