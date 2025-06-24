@@ -71,7 +71,7 @@
               <h5 class="card-title">Jardinagem</h5>
               <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar do seu jardim.</p>
               <p></p>
-              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@
             <div class="card-body">
               <h5 class="card-title">Babá</h5>
               <p class="card-text">Ache uma pessoa responsável e qualificada, e deixe seu filho em boas mãos.</p>
-              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@
             <div class="card-body">
               <h5 class="card-title">Diáristas</h5>
               <p class="card-text">Encontre o profissionais qualificados para deixar sua casa um brinco.</p>
-              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -107,8 +107,7 @@
             <div class="card-body">
               <h5 class="card-title">Cozinha</h5>
               <p class="card-text">Os melhores cozinheiros da região você encontra aqui, próximo de você, com DignCare.</p>
-              <p></p>
-              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -124,7 +123,7 @@
             <div class="card-body">
               <h5 class="card-title">Cuidador de Idosos</h5>
               <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar de idosos. </p>
-              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -136,7 +135,7 @@
             <div class="card-body">
               <h5 class="card-title">Serviços Gerais</h5>
               <p class="card-text">Ache uma pessoa responsável e qualificada, para ajustar serviços gerais.</p>
-              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -148,7 +147,7 @@
             <div class="card-body">
               <h5 class="card-title">Cuidador de Pets</h5>
               <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar do seu pet.</p>
-              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -160,7 +159,7 @@
             <div class="card-body">
               <h5 class="card-title">Tutora Educacional</h5>
               <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para ensinar ao seu filho. </p>
-              <a href="/html/busca_profissionais.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -170,17 +169,15 @@
 
   </section>
 
-  <footer class="py-4 mt-auto texto">
-      <div class="fs-6">
-          <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
-          <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-          <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
-          <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
-      </div>
+  <footer class="texto">
+    <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
+    <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
+    <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
+    <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
   </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-    crossorigin="anonymous"></script>
-
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+  crossorigin="anonymous"></script>
 </body>
 </html>
