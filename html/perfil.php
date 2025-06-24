@@ -34,7 +34,7 @@
             <div class="form-group">
                 <label for="nome">Nome de perfil:</label>
                 <?php
-                    echo '.[usr_nome].';
+                    echo '<h3 class="offcanvas-title textcolor" id="offcanvasRightLabel">' . $_SESSION["usr_nome"] . '</h5>';
                 ?>
                 
             </div>
@@ -54,7 +54,7 @@
         </div>
         <div class="full-row">
             <h2>Resumo</h2>
-            <textarea placeholder="Insira um resumo profissional..." class="areapatexto"></textarea>
+            <textarea readonly class="form-control" rows="5"><?php echo $mensagem_do_banco; ?></textarea>
         </div>
 
         <div class="full-row centralizar">
