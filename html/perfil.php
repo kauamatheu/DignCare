@@ -54,9 +54,8 @@
         </div>
         <div class="full-row">
             <h2>Resumo</h2>
-            <textarea readonly class="form-control" rows="5"><?php echo $usr_descricao; ?></textarea>
+            <textarea disabled class="form-control" rows="5"><?= htmlspecialchars($_SESSION["usr_descricao"]) ?></textarea>
         </div>
-
         <div class="full-row centralizar">
             <a href="home.php"><button> Voltar </button></a>
         </div>

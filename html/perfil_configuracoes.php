@@ -34,7 +34,7 @@
                 <label for="nome">Nome de perfil:</label>
                 <input type="text" id="nome" name="nome" placeholder="Insira seu nome de perfil..." maxlength="40">
                 <p id="contador">40 caracteres restantes</p>
-            </div>""
+            </div>
             
             <h3>Avaliações</h3>
             <h3>⭐⭐⭐⭐⭐</h3>
@@ -50,17 +50,15 @@
             </div>
         </div>
         <div class="full-row">
-            <form method="post">
+            <form action="/php/desc_perfil.php" method="post">
                 <label for="mensagem">Editar Mensagem:</label>
-                <textarea name="mensagem" class="form-control" rows="5"><?php echo $dados['usr_descricao']; ?></textarea>
+                <textarea name="descricao" class="form-control" rows="5"><?= htmlspecialchars($_SESSION["usr_descricao"] ?? '') ?></textarea>
                 <br>
-                <button type="submit" class="btn btn-primary">Salvar</button>
+                <div class="full-row centralizar">
+                    <button type="submit" class="sair">Salvar</button>
+                    <a  href="/html/perfil.php"><button class="voltar"> Voltar </button></a>
+                </div>
             </form>
-        </div>
-
-        <div class="full-row centralizar">
-            <a  href="perfil.php"><button class="sair">Salvar</button></a>
-            <a  href="/html/perfil.php"><button class="voltar"> Voltar </button></a>
         </div>
 
     </section>
