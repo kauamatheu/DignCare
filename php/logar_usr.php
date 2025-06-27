@@ -19,10 +19,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 session_start();
             }
 
+            // Criação da session
             $_SESSION['usr_id'] = $usuario['usr_id'];
             $_SESSION['usr_nome'] = $usuario['usr_nome'];
+            $_SESSION['usr_cpf'] = $usuario['usr_cpf'];
+            $_SESSION['usr_idade'] = $usuario['usr_idade'];
             $_SESSION['usr_tipo'] = $usuario['usr_tipo'];
+            $_SESSION['usr_email'] = $usuario['usr_email'];
             
+            // Separação de qual home o usuario vai acessar com base no seu tipo
             if($_SESSION['usr_tipo'] == "Contratante") {
                 header("Location: /html/home.php");
                 exit;
