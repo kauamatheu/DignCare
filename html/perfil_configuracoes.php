@@ -32,10 +32,11 @@
         <div>
             <div class="form-group">
                 <label for="nome">Nome de perfil:</label>
-                <input type="text" id="nome" name="nome" placeholder="Insira seu nome de perfil..." maxlength="40">
-                <p id="contador">40 caracteres restantes</p>
+                <?php
+                    echo '<h3 class="offcanvas-title textcolor" id="offcanvasRightLabel">' . $_SESSION["usr_nome"] . '</h3>';
+                ?>
             </div>
-            
+            <br>
             <h3>Avaliações</h3>
             <h3>⭐⭐⭐⭐⭐</h3>
         </div>
