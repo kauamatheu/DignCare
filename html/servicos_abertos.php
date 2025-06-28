@@ -80,19 +80,19 @@
                     
                         foreach ($servicos as $servico) {
                             echo '
-                            <div class="col">
-                                <div class="card h-100">
-                                    <img src="/img/Jardinagem.png" class="card-img-top" alt="Imagem do serviço">
-                                    <div class="card-body">
-                                        <h5 class="card-title">'.htmlspecialchars($servico["servico_titulo"]).'</h5>
-                                        <p class="card-text">'.htmlspecialchars($servico["servico_descricao"]).'</p>
-                                        <h6><i class="bi bi-person-circle"></i> '.htmlspecialchars($servico["usr_nome"]).'</h6>
-                                        <p>R$'.htmlspecialchars($servico["servico_valor"]).'</p>
-                                        <a href="/html/chat.php" class="btn btn-primary">Confira</a>
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="/img/Jardinagem.png" class="card-img-top" alt="Imagem do serviço">
+                                        <div class="card-body">
+                                            <h5 class="card-title">' . htmlspecialchars($servico["servico_titulo"]) . '</h5>
+                                            <p class="card-text">' . htmlspecialchars($servico["servico_descricao"]) . '</p>
+                                            <h6><i class="bi bi-person-circle"></i> ' . htmlspecialchars($servico["usr_nome"]) . '</h6>
+                                            <p>R$' . htmlspecialchars($servico["servico_valor"]) . '</p>
+                                            <a href="/php/aceitar_servico.php?servico_id=' . $servico['servico_id'] . '" class="btn btn-primary">Confira</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            ';
+                                ';
                         }
                     
                         echo '</div>';
