@@ -4,7 +4,7 @@
     include('../php/protecao_sessao.php');
 
     $prestador_id = $_SESSION['usr_id'];
-    $servico_id = isset($_GET['servico_id']) ? intval($_GET['servico_id']) : 0;
+    $servico_id = isset($_GET['servico_id']) ? intval($_GET['servico_id']) : 0; 
 
     if ($servico_id === 0) {
         echo "Serviço inválido.";
@@ -21,6 +21,11 @@
         $stmt->execute(['id' => $servico_id]);
         $servico = $stmt->fetch();
 
+        if (!$servico) {
+            echo "Serviço não encontrado.";
+            exit;
+        }
+        
         if ($servico['user_id_contratado'] !== null) {
             echo "Este serviço já foi aceito por outro prestador.";
             exit;
@@ -31,7 +36,7 @@
         $stmt->execute(['prestador_id' => $prestador_id, 'servico_id' => $servico_id]);
 
 
-        header('Location: /html/contratos.php');
+        header('Location: /html/contratos.php?servico_id='.$servico_id);
         exit;
     }catch(PDOException $e){
         echo "Erro: " . $e->getMessage();

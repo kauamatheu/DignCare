@@ -26,10 +26,6 @@
     $stmt->execute(['id' => $servico_id]);
     $dados = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if (!$dados) {
-        echo "Serviço não encontrado.";
-        exit;
-    }
 ?>
 
 <!DOCTYPE html>
@@ -90,9 +86,9 @@
             <p><b>Contratante: <?= htmlspecialchars($dados['contratante_nome']) ?></b>, CPF/CNPJ: <b><?= htmlspecialchars($dados['contratante_cpf']) ?></b></p>
             <p><b>Prestador: <?= htmlspecialchars($dados['contratado_nome']) ?></b>, CPF/CNPJ: <b><?= htmlspecialchars($dados['contratado_cpf']) ?></b></p>
 
-            <p><b>Objeto:</b> Prestação de serviços de <b><?= htmlspecialchars($dados['servico_descricao']) ?></b>.</p>
+            <p><b>Objeto:</b> Prestação de serviços de <b><?= htmlspecialchars($dados['servico_titulo']) ?></b>.</p>
             <p><b>Prazo:</b> Início em <b><?= date('d/m/Y', strtotime($dados['servico_data_inicio'])) ?></b> e término em <b><?= date('d/m/Y', strtotime($dados['servico_data_fim'])) ?></b></p>
-            <p><b>Valor:</b> R$ <b><?= number_format($dados['servico_valor'], 2, ',', '.') ?></b>, pago <b><?= htmlspecialchars($dados['servico_pagamento']) ?></b>.</p><br>
+            <p><b>Valor:</b> R$ <b><?= number_format($dados['servico_valor'], 2, ',', '.') ?></b>.</p><br>
 
             <p><b>Obrigações do prestador:</b></p>
             <p>Executar os serviços com qualidade e no prazo.</p>
@@ -102,7 +98,6 @@
             <p><b>Obrigações do Contratante:</b></p>
             <p>Fornecer as informações e recursos necessários.</p>
             <p>Realizar os pagamentos conforme acordado.</p>
-            <p><b>Rescisão:</b> Pode ser feita por qualquer parte, com aviso prévio de <b>[número]</b> dias.</p>
             <p><b>Foro: [Cidade/Estado]</b>, para resolver eventuais conflitos.</p>
             <p><b>[Local], [Data]</b>.</p><br>
             <p><b>Assinatura do Contratante: __________________________________________________________ </b></p>
