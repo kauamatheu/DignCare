@@ -21,11 +21,6 @@
         $stmt->execute(['id' => $servico_id]);
         $servico = $stmt->fetch();
 
-        if (!$servico) {
-            echo "Serviço não encontrado.";
-            exit;
-        }
-
         if ($servico['user_id_contratado'] !== null) {
             echo "Este serviço já foi aceito por outro prestador.";
             exit;

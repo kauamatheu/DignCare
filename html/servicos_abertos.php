@@ -22,7 +22,7 @@
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="/JS/transicao.js" defer></script>
-
+    <script src="/JS/mudar_imagem.js" defer></script>
 </head>
 
 <body class="fundo">
@@ -55,57 +55,87 @@
   </header>
 
     <section style="margin: 50px;">
-        <div class="textcolor" style="margin-bottom: 30px;">
-            <h3>Serviços em Aberto!</h3>
-            <p>DignCare, Sua solução</p>
-            <a href="/html/home_prestador.php" class="btn btn-primary">Voltar</a>
-        </div>
-        
-        <?php
-            require_once '../php/conecta_bd.php';
-        
-            $filtro = isset($_GET['filtro']) ? intval($_GET['filtro']) : 0;
-            try {
-                if ($filtro === 0) {
-                    echo '<p class="textcolor">Nenhum serviço encontrado para esse filtro.</p>';
-                } else {
-                    // Consulta os serviços filtrando pelo tipo de serviço
-                    $sql = "SELECT s.*, u.usr_nome FROM servico s JOIN usuario u ON s.user_id_contratante = u.usr_id WHERE s.tipoServico_id = :filtro";
-                    $stmt = $pdo->prepare($sql);
-                    $stmt->execute(['filtro' => $filtro]);
-                    $servicos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                
-                    if (count($servicos) > 0) {
-                        echo '<div class="row row-cols-1 row-cols-md-6 g-4 espaçamento main-content" style="margin-bottom: 80px;">';
-                    
-                        foreach ($servicos as $servico) {
-                            echo '
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <img src="/img/Jardinagem.png" class="card-img-top" alt="Imagem do serviço">
-                                        <div class="card-body">
-                                            <h5 class="card-title">' . htmlspecialchars($servico["servico_titulo"]) . '</h5>
-                                            <p class="card-text">' . htmlspecialchars($servico["servico_descricao"]) . '</p>
-                                            <h6><i class="bi bi-person-circle"></i> ' . htmlspecialchars($servico["usr_nome"]) . '</h6>
-                                            <p>R$' . htmlspecialchars($servico["servico_valor"]) . '</p>
-                                            <a href="/php/aceitar_servico.php?servico_id=' . $servico['servico_id'] . '" class="btn btn-primary">Confira</a>
-                                        </div>
-                                    </div>
+    <div class="textcolor" style="margin-bottom: 30px;">
+        <h3>Serviços em Aberto!</h3>
+        <p>DignCare, Sua solução</p>
+        <a href="/html/home_prestador.php" class="btn btn-primary">Voltar</a>
+    </div>
+
+    <?php
+    require_once '../php/conecta_bd.php';
+
+    $filtro = isset($_GET['filtro']) ? intval($_GET['filtro']) : 0;
+    try {
+        if ($filtro === 0) {
+            echo '<p class="textcolor">Nenhum serviço encontrado para esse filtro.</p>';
+        } else {
+            $sql = "SELECT s.*, u.usr_nome 
+                    FROM servico s 
+                    JOIN usuario u ON s.user_id_contratante = u.usr_id 
+                    WHERE s.tipoServico_id = :filtro AND s.user_id_contratado IS NULL";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(['filtro' => $filtro]);
+            $servicos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            if (count($servicos) > 0) {
+                $imagens = [
+                    1 => '../img/jardinagem.png',
+                    2 => '../img/baba.png',
+                    3 => '../img/Limpeza.png',
+                    4 => '../img/cozinheiro.png',
+                    5 => '../img/cuidadora.png',
+                    6 => '../img/manutencao.png',
+                    7 => '../img/pets.png',
+                    8 => '../img/tutora.png'
+                ];
+
+                echo '<div class="row g-4 mb-5 justify-content-center">'; // primeira row aberta
+                $contador = 0;
+
+                foreach ($servicos as $servico) {
+                    $imagemServico = $imagens[$servico['tipoServico_id']] ?? 'default.jpg';
+
+                    echo '
+                        <div class="col-md-2">
+                            <div class="card h-100" style="height: 100%; max-height: 500px; min-height: 500px; display: flex; flex-direction: column;">
+                                <img id="imagemCategoria" src="' . $imagemServico . '" alt="Imagem da Categoria" class="card-img-top" style="height: 200px; object-fit: cover;">
+
+                                <div class="card-body d-flex flex-column" style="overflow: hidden;">
+                                    <h5 class="card-title text-truncate" title="' . htmlspecialchars($servico["servico_titulo"]) . '">
+                                        ' . htmlspecialchars($servico["servico_titulo"]) . '
+                                    </h5>
+
+                                    <p class="card-text" style="flex: 1; overflow: hidden; text-overflow: ellipsis;">
+                                        ' . htmlspecialchars($servico["servico_descricao"]) . '
+                                    </p>
+
+                                    <h6><i class="bi bi-person-circle"></i> ' . htmlspecialchars($servico["usr_nome"]) . '</h6>
+                                    <p>R$' . htmlspecialchars($servico["servico_valor"]) . '</p>
+
+                                    <a href="/php/aceitar_servico.php?servico_id=' . $servico["servico_id"] . '" class="btn btn-primary mt-auto">Confira</a>
                                 </div>
-                                ';
-                        }
-                    
-                        echo '</div>';
-                    } else {
-                        echo '<p class="textcolor">Nenhum serviço encontrado para esse filtro.</p>';
+                            </div>
+                        </div>
+                    ';
+
+                    $contador++;
+
+                    // A cada 5 cards, fecha a row atual e inicia uma nova
+                    if ($contador % 5 === 0 && $contador < count($servicos)) {
+                        echo '</div><div class="row g-4 mb-5 justify-content-center">';
                     }
                 }
-            } catch (PDOException $e) {
-                echo "Erro ao buscar serviços: " . $e->getMessage();
-            }
-        ?>
 
-    </section>
+                echo '</div>'; // fecha a última row
+            } else {
+                echo '<p class="textcolor">Nenhum serviço encontrado para esse filtro.</p>';
+            }
+        }
+    } catch (PDOException $e) {
+        echo "Erro ao buscar serviços: " . $e->getMessage();
+    }
+    ?>
+</section>
     
     <footer class="texto">
         <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>

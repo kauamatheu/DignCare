@@ -1,3 +1,37 @@
+<?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    require_once '../php/conecta_bd.php';
+
+    // Suponha que o ID do serviço venha pela URL
+    $servico_id = isset($_GET['servico_id']) ? intval($_GET['servico_id']) : 0;
+
+    $sql = "SELECT 
+                s.servico_titulo,
+                s.servico_valor,
+                s.servico_descricao,
+                s.servico_data_criado,
+                s.servico_data_realizado,
+                u1.usr_nome AS contratante_nome,
+                u1.usr_cpf AS contratante_cpf,
+                u2.usr_nome AS contratado_nome,
+                u2.usr_cpf AS contratado_cpf
+            FROM servico s
+            JOIN usuario u1 ON s.user_id_contratante = u1.usr_id
+            JOIN usuario u2 ON s.user_id_contratado = u2.usr_id
+            WHERE s.servico_id = :id";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(['id' => $servico_id]);
+    $dados = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if (!$dados) {
+        echo "Serviço não encontrado.";
+        exit;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -48,18 +82,19 @@
     </header>
 
     <div class="textcolorPDF margem fundodiv">
+
         <div id="page">
             <h1 class="titulo">Contrato</h1><br>
             <p class="centro"><b>CONTRATO DE PRESTAÇÃO DE SERVIÇOS</b></p><br>
-            <p><b>Contratante: [Nome]</b>, CPF/CNPJ: <b>[número]</b>, Endereço: <b>[endereço]</b>.</p>
-            <p><b>Contratado: [Nome]</b>, CPF/CNPJ: <b>[número]</b>, Endereço: <b>[endereço]</b>.</p><br>
 
-            <p><b>Objeto:</b> Prestação de serviços de <b>[descrever serviço]</b>.</p>
-            <p><b>Prazo:</b> Início em <b>[data]</b> e término em <b>[data]</b>, podendo ser prorrogado por acordo entre
-                as partes.</p>
-            <p><b>Valor:</b> R$ <b>[valor]</b>, pago <b>[forma de pagamento]</b>.</p><br>
+            <p><b>Contratante: <?= htmlspecialchars($dados['contratante_nome']) ?></b>, CPF/CNPJ: <b><?= htmlspecialchars($dados['contratante_cpf']) ?></b></p>
+            <p><b>Prestador: <?= htmlspecialchars($dados['contratado_nome']) ?></b>, CPF/CNPJ: <b><?= htmlspecialchars($dados['contratado_cpf']) ?></b></p>
 
-            <p><b>Obrigações do Contratado:</b></p>
+            <p><b>Objeto:</b> Prestação de serviços de <b><?= htmlspecialchars($dados['servico_descricao']) ?></b>.</p>
+            <p><b>Prazo:</b> Início em <b><?= date('d/m/Y', strtotime($dados['servico_data_inicio'])) ?></b> e término em <b><?= date('d/m/Y', strtotime($dados['servico_data_fim'])) ?></b></p>
+            <p><b>Valor:</b> R$ <b><?= number_format($dados['servico_valor'], 2, ',', '.') ?></b>, pago <b><?= htmlspecialchars($dados['servico_pagamento']) ?></b>.</p><br>
+
+            <p><b>Obrigações do prestador:</b></p>
             <p>Executar os serviços com qualidade e no prazo.</p>
             <p>Manter sigilo sobre informações recebidas.</p>
             <p>Seguir normas técnicas e legais.</p><br>
