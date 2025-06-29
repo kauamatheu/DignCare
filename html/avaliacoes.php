@@ -101,20 +101,20 @@ $servico_id = $dados['servico_id'];
                  <input type="hidden" name="avaliado_id" value="<?= $idAvaliado ?>">
                 <fieldset class="starability-basic">
 
-                    <input type="radio" id="rate5" name="rating" value="5" />
-                    <label for="rate5" title="5 estrelas">5 estrelas</label>
-
-                    <input type="radio" id="rate4" name="rating" value="4" />
-                    <label for="rate4" title="4 estrelas">4 estrelas</label>
-
-                    <input type="radio" id="rate3" name="rating" value="3" />
-                    <label for="rate3" title="3 estrelas">3 estrelas</label>
+                    <input type="radio" id="rate1" name="rating" value="1" />
+                    <label for="rate1" title="1 estrela">1 estrela</label>
 
                     <input type="radio" id="rate2" name="rating" value="2" />
                     <label for="rate2" title="2 estrelas">2 estrelas</label>
 
-                    <input type="radio" id="rate1" name="rating" value="1" />
-                    <label for="rate1" title="1 estrela">1 estrela</label>
+                    <input type="radio" id="rate3" name="rating" value="3" />
+                    <label for="rate3" title="3 estrelas">3 estrelas</label>
+
+                    <input type="radio" id="rate4" name="rating" value="4" />
+                    <label for="rate4" title="4 estrelas">4 estrelas</label>
+
+                    <input type="radio" id="rate5" name="rating" value="5" />
+                    <label for="rate5" title="5 estrelas">5 estrelas</label>
 
                 </fieldset>
                 <div class="centro">

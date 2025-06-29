@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $avaliador = $_SESSION['usr_id'];
     $avaliado = (int) $_POST['avaliado_id'];
     $data = date('Y-m-d H:i:s');
-
+    
     try {
         $sql = "INSERT INTO avaliacao (avaliacao_nota, user_id_avaliando, user_id_avaliado, avaliacao_data)
                 VALUES (:nota, :avaliador, :avaliado, :data)";
