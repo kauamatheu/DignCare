@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nota_nova = (int) $_POST['rating']; // converte para inteiro
     $avaliador = $_SESSION['usr_id'];
     $avaliado = (int) $_POST['avaliado_id'];
-    $data = date('Y-m-d H:i:s');
+    $data = date('Y-m-d');
     
     try {
         $sql = "INSERT INTO avaliacao (avaliacao_nota, user_id_avaliando, user_id_avaliado, avaliacao_data)
