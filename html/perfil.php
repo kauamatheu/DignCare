@@ -1,7 +1,7 @@
 <?php
 
   include('../php/protecao_sessao.php');
-
+  include '../php/media_avaliacoes.php';
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +40,7 @@
             </div>
             <br>
             <h3>Avaliações</h3>
-            <h3>⭐⭐⭐⭐⭐</h3>
+            <h3><?= $estrelas ?></h3>
         </div>
         <div class="full-row">
             <h2>Galeria</h2>

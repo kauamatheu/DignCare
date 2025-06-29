@@ -1,3 +1,6 @@
+<?php
+    include 'busca_serviço.php'
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -60,37 +63,39 @@
 
         <!-- Nome do prestador -->
         <div class="centro" style="margin-bottom: 20px;">
-            <h1>Daniel Rodrigues</h1>
+            <h1><?= htmlspecialchars($nomeAvaliado) ?></h1>
         </div>
 
         <!-- Formulário com estrelas para avaliação -->
         <div class="centroitem">
-            <form>
+            <form action="/php/cadastra_avaliações.php" method="post">
+                 <input type="hidden" name="avaliado_id" value="<?= $idAvaliado ?>">
                 <fieldset class="starability-basic">
 
-                    <input type="radio" id="rate5" name="rating" value="1" />
+                    <input type="radio" id="rate5" name="rating" value="5" />
                     <label for="rate5" title="5 estrelas">5 estrelas</label>
 
-                    <input type="radio" id="rate4" name="rating" value="2" />
+                    <input type="radio" id="rate4" name="rating" value="4" />
                     <label for="rate4" title="4 estrelas">4 estrelas</label>
 
                     <input type="radio" id="rate3" name="rating" value="3" />
                     <label for="rate3" title="3 estrelas">3 estrelas</label>
 
-                    <input type="radio" id="rate2" name="rating" value="4" />
+                    <input type="radio" id="rate2" name="rating" value="2" />
                     <label for="rate2" title="2 estrelas">2 estrelas</label>
 
-                    <input type="radio" id="rate1" name="rating" value="5" />
+                    <input type="radio" id="rate1" name="rating" value="1" />
                     <label for="rate1" title="1 estrela">1 estrela</label>
 
                 </fieldset>
+                <div class="centro">
+                    <button id="btn" class="btn btn-primary">Enviar</button>
+                </div>
             </form>
         </div>
 
         <!-- Botão de envio da avaliação -->
-        <div class="centro">
-            <button id="btn" class="btn btn-primary">Enviar</button>
-        </div>
+
 
     </section>
 
