@@ -6,6 +6,12 @@
         header("Location: home_prestador.php");
         exit;
     }
+
+                
+    if (isset($_GET['servico_id']) && $_GET['servico_id'] != '0') {
+        $servico_id = $_GET['servico_id'];
+    }
+           
     
 ?>
 <!DOCTYPE html>
@@ -32,7 +38,7 @@
     </header>
 
     <section class="main-content">
-        <form action="../php/cadastra_service.php" method="post" class="form-box" id="formulario">
+        <form action="../php/altera_servico_bd.php" method="post" class="form-box" id="formulario">
             <h2>Altere sua solicitação de serviço aqui!</h2>
         
             <?php
@@ -40,7 +46,8 @@
                     echo "<p style='color:green;'>Alteração bem-sucedido!</p>";
                 }
             ?>
-
+            
+            <input type="hidden" name="servico_id" value="<?php echo $servico_id; ?>">
             <label for="data" >Escolha a data do serviço</label>
             <span class="erro" id="erro-data"></span>
             <input type="date" name="data" id="data" >  
@@ -69,7 +76,7 @@
             <textarea name="descricao" id="descricao" placeholder="Faça uma breve descrição do serviço desejado."></textarea>
 
             <button type="submit">Alterar Solicitação </button>
-            <a href="home.php" class="link">Voltar</a>
+            <a href="solicitacoes.php" class="link">Voltar</a>
         </form>        
     </section>
 

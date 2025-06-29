@@ -2,8 +2,8 @@
 
   include('../php/protecao_sessao.php');
   
-  if ($_SESSION["usr_tipo"] == "Prestador") {
-      header("Location: home_prestador.php");
+  if ($_SESSION["usr_tipo"] == "Contratante") {
+      header("Location: home.php");
       exit;
   }
 
@@ -56,7 +56,7 @@
 
     <section style="margin: 50px;">
     <div class="textcolor" style="margin-bottom: 30px;">
-        <h3>Suas solicitações abertas!</h3>
+        <h3>Seus serviços aceitos!</h3>
         <p>DignCare, Sua solução</p>
         <a href="/html/home_prestador.php" class="btn btn-primary">Voltar</a>
     </div>
@@ -66,7 +66,7 @@
 
     $usr_id = $_SESSION['usr_id'];
     try {
-            $sql = "SELECT s.*, u.usr_nome FROM servico s JOIN usuario u ON s.user_id_contratante = u.usr_id WHERE s.user_id_contratante = :id AND s.servico_status = 'Em aberto'";
+            $sql = "SELECT s.*, u.usr_nome FROM servico s JOIN usuario u ON s.user_id_contratante = u.usr_id WHERE s.user_id_contratado =  :id AND s.servico_status = 'Em atendimento';";
             $stmt = $pdo->prepare($sql);
             $stmt->execute(['id'=> $usr_id]);
             $servicos = $stmt->fetchAll(PDO::FETCH_ASSOC);
