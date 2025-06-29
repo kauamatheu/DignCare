@@ -1,35 +1,50 @@
 <?php
-session_start();
-require_once '../php/conecta_bd.php';
+    include('../php/protecao_sessao.php');
 
-$usr_id = $_SESSION['usr_id'] ?? null;
+    require_once '../php/conecta_bd.php';
 
-if (!$usr_id) {
-    echo "Usuário não autenticado.";
-    exit;
-}
+    $usr_id = $_SESSION['usr_id'];
 
-// Buscar o último serviço contratado por esse usuário
-$stmt = $pdo->prepare("
-    SELECT s.servico_id, u.usr_nome, u.usr_id AS id_prestador
-    FROM servico s
-    JOIN usuario u ON u.usr_id = s.user_id_contratado
-    WHERE s.user_id_contratante = :id_contratante
-    ORDER BY s.servico_id DESC
-    LIMIT 1
-");
-$stmt->execute(['id_contratante' => $usr_id]);
-$dados = $stmt->fetch();
+    // Buscar o último serviço contratado por esse usuário
+    if($_SESSION['usr_tipo'] == "Contratante") {
+        $sql = "SELECT s.servico_id, u.usr_nome, u.usr_id AS id_prestador
+        FROM servico s
+        JOIN usuario u ON u.usr_id = s.user_id_contratado
+        WHERE s.user_id_contratante = :id_contratante
+        ORDER BY s.servico_id DESC
+        LIMIT 1";
+        $stmt = $pdo->prepare($sql); 
+        $stmt->execute(['id_contratante' => $usr_id]);
+    }else{
+        $sql = "SELECT s.servico_id, u.usr_nome, u.usr_id AS id_contratante
+        FROM servico s
+        JOIN usuario u ON u.usr_id = s.user_id_contratante
+        WHERE s.user_id_contratado = :id_prestador
+        ORDER BY s.servico_id DESC
+        LIMIT 1";
+        $stmt = $pdo->prepare($sql); 
+        $stmt->execute(['id_prestador' => $usr_id]);
+    }
 
-if (!$dados) {
-    echo "Nenhum serviço encontrado.";
-    exit;
-}
+    $dados = $stmt->fetch();
 
-$nomeAvaliado = $dados['usr_nome'];
-$idAvaliado = $dados['id_prestador'];
-$servico_id = $dados['servico_id'];
+    if (!$dados) {
+        echo "Nenhum serviço encontrado.";
+        exit;
+    }
+
+    if($_SESSION['usr_tipo'] == "Contratante") {
+        $nomeAvaliado = $dados['usr_nome'];
+        $idAvaliado = $dados['id_prestador'];
+    } else {
+        $nomeAvaliado = $dados['usr_nome'];
+        $idAvaliado = $dados['id_contratante'];
+    }
+
+
+    $servico_id = $dados['servico_id'];
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -101,7 +116,7 @@ $servico_id = $dados['servico_id'];
                  <input type="hidden" name="avaliado_id" value="<?= $idAvaliado ?>">
                 <fieldset class="starability-basic">
 
-                    <input type="radio" id="rate1" name="rating" value="1" />
+                    <input type="radio" id="rate1" name="rating" value="1" required />
                     <label for="rate1" title="1 estrela">1 estrela</label>
 
                     <input type="radio" id="rate2" name="rating" value="2" />

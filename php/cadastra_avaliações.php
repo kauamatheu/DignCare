@@ -11,6 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     $nota_nova = (int) $_POST['rating']; // converte para inteiro
+    if ($nota < 1 || $nota > 5) {
+        die("Avaliação inválida.");
+    } 
+    
     $avaliador = $_SESSION['usr_id'];
     $avaliado = (int) $_POST['avaliado_id'];
     $data = date('Y-m-d');

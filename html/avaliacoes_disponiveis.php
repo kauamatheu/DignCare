@@ -37,7 +37,7 @@
         </div>
         <div class="offcanvas-body">
           <a class="azul" href="/html/perfil.php">Perfil</a><br>
-          <a class="azul" href="/html/avaliacoes.php">Avaliações</a>
+          <a class="azul" href="/html/avaliacoes_disponiveis.php">Avaliações</a>
           <p>______________________________________________________</p>
           <a class="azul" href="/html/depoimentos.php">Depoimentos</a><br>
           <a class="azul" href="/html/sobre.php">Sobre Nós</a><br>
@@ -61,7 +61,12 @@
 
     $usr_id = $_SESSION['usr_id'];
     try {
-            $sql = "SELECT s.*, u.usr_nome FROM servico s JOIN usuario u ON s.user_id_contratante = u.usr_id WHERE s.user_id_contratante = :id AND s.servico_status = 'Em atendimento'";
+            if($_SESSION['usr_tipo'] == "Contratante") {
+                $sql = "SELECT s.*, u.usr_nome FROM servico s JOIN usuario u ON s.user_id_contratante = u.usr_id WHERE s.user_id_contratante = :id AND s.servico_status = 'Em atendimento'";
+            }else{
+                $sql = "SELECT s.*, u.usr_nome FROM servico s JOIN usuario u ON s.user_id_contratante = u.usr_id WHERE s.user_id_contratado =  :id AND s.servico_status = 'Em atendimento'";
+            }
+
             $stmt = $pdo->prepare($sql);
             $stmt->execute(['id'=> $usr_id]);
             $servicos = $stmt->fetchAll(PDO::FETCH_ASSOC);
