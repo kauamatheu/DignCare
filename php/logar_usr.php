@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usr_idade'] = $usuario['usr_idade'];
             $_SESSION['usr_tipo'] = $usuario['usr_tipo'];
             $_SESSION['usr_email'] = $usuario['usr_email'];
+            $_SESSION['usr_descricao'] = $usuario['usr_descricao'];
             
             // Separação de qual home o usuario vai acessar com base no seu tipo
             if($_SESSION['usr_tipo'] == "Contratante") {
