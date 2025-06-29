@@ -72,7 +72,7 @@
               <h5 class="card-title">Jardinagem</h5>
               <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar do seu jardim.</p>
               <p></p>
-              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php?opcao=1" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@
             <div class="card-body">
               <h5 class="card-title">Babá</h5>
               <p class="card-text">Ache uma pessoa responsável e qualificada, e deixe seu filho em boas mãos.</p>
-              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php?opcao=2" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@
             <div class="card-body">
               <h5 class="card-title">Diáristas</h5>
               <p class="card-text">Encontre o profissionais qualificados para deixar sua casa um brinco.</p>
-              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php?opcao=3" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@
             <div class="card-body">
               <h5 class="card-title">Cozinha</h5>
               <p class="card-text">Os melhores cozinheiros da região você encontra aqui, próximo de você, com DignCare.</p>
-              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php?opcao=4" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@
             <div class="card-body">
               <h5 class="card-title">Cuidador de Idosos</h5>
               <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar de idosos. </p>
-              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php?opcao=5" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -136,7 +136,7 @@
             <div class="card-body">
               <h5 class="card-title">Serviços Gerais</h5>
               <p class="card-text">Ache uma pessoa responsável e qualificada, para ajustar serviços gerais.</p>
-              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php?opcao=6" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -148,7 +148,7 @@
             <div class="card-body">
               <h5 class="card-title">Cuidador de Pets</h5>
               <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para cuidar do seu pet.</p>
-              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php?opcao=7" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>
@@ -160,7 +160,7 @@
             <div class="card-body">
               <h5 class="card-title">Tutora Educacional</h5>
               <p class="card-text">Aqui você vai encontrar as pessoas mais qualificadas para ensinar ao seu filho. </p>
-              <a href="/html/cadastro_servicos.php" class="btn btn-primary">Confira</a>
+              <a href="/html/cadastro_servicos.php?opcao=8" class="btn btn-primary">Confira</a>
             </div>
           </div>
         </div>

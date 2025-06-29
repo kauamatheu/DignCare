@@ -46,6 +46,7 @@
                     echo "<p style='color:green;'>Alteração bem-sucedido!</p>";
                 }
             ?>
+            
             <input type="hidden" name="servico_id" value="<?php echo $servico_id; ?>">
             <label for="data" >Escolha a data do serviço</label>
             <span class="erro" id="erro-data"></span>
@@ -75,7 +76,7 @@
             <textarea name="descricao" id="descricao" placeholder="Faça uma breve descrição do serviço desejado."></textarea>
 
             <button type="submit">Alterar Solicitação </button>
-            <a href="home.php" class="link">Voltar</a>
+            <a href="solicitacoes.php" class="link">Voltar</a>
         </form>        
     </section>
 
