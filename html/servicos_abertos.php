@@ -80,7 +80,7 @@
             if (count($servicos) > 0) {
                 $imagens = [
                     1 => '../img/jardinagem.png',
-                    2 => '../img/baba.png',
+                    2 => '../img/babá.png',
                     3 => '../img/Limpeza.png',
                     4 => '../img/cozinheiro.png',
                     5 => '../img/cuidadora.png',
