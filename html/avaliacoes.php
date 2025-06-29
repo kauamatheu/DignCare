@@ -3,22 +3,36 @@ session_start();
 require_once '../php/conecta_bd.php';
 
 $usr_id = $_SESSION['usr_id'] ?? null;
+$usr_tipo = $_SESSION['usr_tipo'] ?? null;
 
-if (!$usr_id) {
+if (!$usr_id || !$usr_tipo) {
     echo "Usuário não autenticado.";
     exit;
 }
 
-// Buscar o último serviço contratado por esse usuário
-$stmt = $pdo->prepare("
-    SELECT s.servico_id, u.usr_nome, u.usr_id AS id_prestador
-    FROM servico s
-    JOIN usuario u ON u.usr_id = s.user_id_contratado
-    WHERE s.user_id_contratante = :id_contratante
-    ORDER BY s.servico_id DESC
-    LIMIT 1
-");
-$stmt->execute(['id_contratante' => $usr_id]);
+if ($usr_tipo === 'Contratante') {
+    // Contratante avaliando o prestador
+    $stmt = $pdo->prepare("
+        SELECT s.servico_id, u.usr_nome, u.usr_id AS id_prestador
+        FROM servico s
+        JOIN usuario u ON u.usr_id = s.user_id_contratado
+        WHERE s.user_id_contratante = :id
+        ORDER BY s.servico_id DESC
+        LIMIT 1
+    ");
+} else {
+    // Prestador avaliando o contratante
+    $stmt = $pdo->prepare("
+        SELECT s.servico_id, u.usr_nome, u.usr_id AS id_contratante
+        FROM servico s
+        JOIN usuario u ON u.usr_id = s.user_id_contratante
+        WHERE s.user_id_contratado = :id
+        ORDER BY s.servico_id DESC
+        LIMIT 1
+    ");
+}
+
+$stmt->execute(['id' => $usr_id]);
 $dados = $stmt->fetch();
 
 if (!$dados) {
@@ -26,10 +40,12 @@ if (!$dados) {
     exit;
 }
 
+// Definir dinamicamente o nome e ID da pessoa que será avaliada
 $nomeAvaliado = $dados['usr_nome'];
-$idAvaliado = $dados['id_prestador'];
+$idAvaliado = $usr_tipo === 'Contratante' ? $dados['id_prestador'] : $dados['id_contratante'];
 $servico_id = $dados['servico_id'];
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
