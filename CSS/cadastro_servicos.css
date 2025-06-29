@@ -7,6 +7,10 @@
   font-family: Arial, sans-serif;
 }
 
+.oculto{
+    opacity: 0;
+}
+
 .erro {
     color: red;
     font-size: 0.9em;

@@ -106,7 +106,7 @@
                                     <h6><i class="bi bi-person-circle"></i> ' . htmlspecialchars($servico["usr_nome"]) . '</h6>
                                     <p>R$' . htmlspecialchars($servico["servico_valor"]) . '</p>
 
-                                    <a href="/php/aceitar_servico.php?servico_id=' . $servico["servico_id"] . '" class="btn btn-primary mt-auto">Confira</a>
+                                    <a href="/html/altera_servico.php?servico_id=' . $servico["servico_id"] . '" class="btn btn-primary mt-auto">Alterar</a>
                                 </div>
                             </div>
                         </div>
