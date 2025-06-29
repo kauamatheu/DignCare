@@ -41,6 +41,10 @@
                 }
             ?>
 
+            <label for="data" >Escolha a data do serviço</label>
+            <span class="erro" id="erro-data"></span>
+            <input type="date" name="data" id="data" >  
+
             <span class="erro" id="erro-titulo"></span>
             <input type="text" name="titulo" id="titulo" placeholder="Digite o título do Serviço">
             
@@ -56,6 +60,8 @@
                 <option value="7">Cuidador de Pet</option>
                 <option value="8">Tutor Educacional</option>
             </select>
+
+              
 
             <span class="erro" id="erro-valor"></span>
             <input type="text" name="valor" id="valor" placeholder="Digite o valor do serviço" inputmode="numeric">

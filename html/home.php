@@ -48,7 +48,7 @@
           <p>______________________________________________________</p>
           <a class="azul" href="/php/logout.php">Sair da Conta</a>
         </div>
-        </div>
+      </div>
     </nav>
   </header>
 

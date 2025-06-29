@@ -44,7 +44,12 @@
 
 input[type="text"],
 input[type="email"],
-input[type="password"]{
+input[type="password"],
+input[type="date"]
+{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;

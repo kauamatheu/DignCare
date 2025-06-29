@@ -21,15 +21,16 @@
         $valor = str_replace(['R$', '.', ','], ['', '', '.'], $_POST['valor']);
         $descricao = $_POST['descricao'];
         $dataCriado = date("Y-m-d");
+        $dataRealizado = $_POST['data'];
         $user_id_contratante = $_SESSION['usr_id'];
 
         // Try catch para conexão com o bando de dados
         try {
 
             // Prepara para inserir os dados dentro do banco de dados tomando cuidado com SQL Injection
-            $sql = "INSERT INTO servico (user_id_contratante,tipoServico_id,servico_titulo,servico_descricao,servico_data_criado,servico_valor) VALUES (:user_id_contratante,:tipoServico_id,:titulo,:descricao,:data_criado,:valor)";
+            $sql = "INSERT INTO servico (user_id_contratante,tipoServico_id,servico_titulo,servico_descricao,servico_data_criado, servico_data_realizado,servico_valor) VALUES (:user_id_contratante,:tipoServico_id,:titulo,:descricao,:data_criado,:data_realizado,:valor)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute(['user_id_contratante' => $user_id_contratante,'tipoServico_id' => $categoria,'titulo' => $titulo,'descricao' => $descricao,'data_criado' => $dataCriado,'valor' => $valor]);
+            $stmt->execute(['user_id_contratante' => $user_id_contratante,'tipoServico_id' => $categoria,'titulo' => $titulo,'descricao' => $descricao,'data_criado' => $dataCriado, 'data_realizado' => $dataRealizado,'valor' => $valor]);
 
             header("Location: /html/cadastro_servicos.php?sucesso=1");
             exit;

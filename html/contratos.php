@@ -2,22 +2,27 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
+
     require_once '../php/conecta_bd.php';
 
+    include('../php/protecao_sessao.php');
+    
     // Suponha que o ID do serviço venha pela URL
     $servico_id = isset($_GET['servico_id']) ? intval($_GET['servico_id']) : 0;
 
     $sql = "SELECT 
-                s.servico_titulo,
-                s.servico_valor,
-                s.servico_descricao,
-                s.servico_data_criado,
-                s.servico_data_realizado,
-                u1.usr_nome AS contratante_nome,
-                u1.usr_cpf AS contratante_cpf,
-                u2.usr_nome AS contratado_nome,
-                u2.usr_cpf AS contratado_cpf
+            s.servico_titulo,
+            s.servico_valor,
+            s.servico_descricao,
+            s.servico_data_criado,
+            s.servico_data_realizado,
+            tS.tipoServico_nome AS tipoServico_nome,
+            u1.usr_nome AS contratante_nome,
+            u1.usr_cpf AS contratante_cpf,
+            u2.usr_nome AS contratado_nome,
+            u2.usr_cpf AS contratado_cpf
             FROM servico s
+            JOIN tipoServico tS ON s.tipoServico_id = tS.tipoServico_id
             JOIN usuario u1 ON s.user_id_contratante = u1.usr_id
             JOIN usuario u2 ON s.user_id_contratado = u2.usr_id
             WHERE s.servico_id = :id";
@@ -26,10 +31,6 @@
     $stmt->execute(['id' => $servico_id]);
     $dados = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if (!$dados) {
-        echo "Serviço não encontrado.";
-        exit;
-    }
 ?>
 
 <!DOCTYPE html>
@@ -49,33 +50,29 @@
 </head>
 
 <body class="fundo">
-    <header class=" borda">
-        <nav class="navbar ">
-            <div class=" justify-content-start">
+    <header>
+        <nav class="navbar borda">
+            <div class="nav justify-content-start">
                 <a href="/html/home.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
             </div>
-
-            <div class=" justify-content-center ">
-                <a href="/html/avaliacoes.php"><button type="button" class="btn btn-primary mx-1">Avaliar</button></a>
-            </div>
-
-            <div class="menu-icon" type="sidbar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight"><i class="bi bi-list fs-3 iconscss"></i></div>
-
-            <div class="offcanvas offcanvas-end fundo" tabindex="-1" id="offcanvasRight"
-                aria-labelledby="offcanvasRightLabel">
+            
+            <div class="menu-icon" type="sidbar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-list fs-3 iconscss"></i></div>
+            
+            <div class="offcanvas offcanvas-end fundo" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title textcolor" id="offcanvasRightLabel">Daniel Rodrigues</h5>
+                    <?php
+                        echo '<h5 class="offcanvas-title texto" id="offcanvasRightLabel">' . $_SESSION["usr_nome"] . '</h5>';
+                    ?>
                     <div type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></div>
                 </div>
                 <div class="offcanvas-body">
-                    <a class="azul" href="/html/perfil.html">Perfil</a><br>
-                    <a class="azul" href="/html/avaliacoes.html">Avaliações</a>
+                    <a class="azul" href="/html/perfil.php">Perfil</a><br>
+                    <a class="azul" href="/html/avaliacoes.php">Avaliações</a>
                     <p>______________________________________________________</p>
-                    <a class="azul" href="/html/depoimentos.html">Depoimentos</a><br>
-                    <a class="azul" href="/html/sobre.html">Sobre Nós</a>
+                    <a class="azul" href="/html/depoimentos.php">Depoimentos</a><br>
+                    <a class="azul" href="/html/sobre.php">Sobre Nós</a>
                     <p>______________________________________________________</p>
-                    <a class="azul" href="/index.html">Sair da Conta</a>
+                    <a class="azul" href="/php/logout.php">Sair da Conta</a>
                 </div>
             </div>
         </nav>
@@ -90,9 +87,9 @@
             <p><b>Contratante: <?= htmlspecialchars($dados['contratante_nome']) ?></b>, CPF/CNPJ: <b><?= htmlspecialchars($dados['contratante_cpf']) ?></b></p>
             <p><b>Prestador: <?= htmlspecialchars($dados['contratado_nome']) ?></b>, CPF/CNPJ: <b><?= htmlspecialchars($dados['contratado_cpf']) ?></b></p>
 
-            <p><b>Objeto:</b> Prestação de serviços de <b><?= htmlspecialchars($dados['servico_descricao']) ?></b>.</p>
-            <p><b>Prazo:</b> Início em <b><?= date('d/m/Y', strtotime($dados['servico_data_inicio'])) ?></b> e término em <b><?= date('d/m/Y', strtotime($dados['servico_data_fim'])) ?></b></p>
-            <p><b>Valor:</b> R$ <b><?= number_format($dados['servico_valor'], 2, ',', '.') ?></b>, pago <b><?= htmlspecialchars($dados['servico_pagamento']) ?></b>.</p><br>
+            <p><b>Objeto:</b> Prestação de serviços de <b><?= htmlspecialchars($dados['tipoServico_nome']) ?></b>.</p>
+            <p><b>Prazo:</b><b> <?= date('d/m/Y', strtotime($dados['servico_data_realizado'])) ?></b></p>
+            <p><b>Valor:</b><b> <?= 'R$' . number_format($dados['servico_valor'], 2, ',', '.') ?></b>.</p><br>
 
             <p><b>Obrigações do prestador:</b></p>
             <p>Executar os serviços com qualidade e no prazo.</p>
@@ -102,9 +99,8 @@
             <p><b>Obrigações do Contratante:</b></p>
             <p>Fornecer as informações e recursos necessários.</p>
             <p>Realizar os pagamentos conforme acordado.</p>
-            <p><b>Rescisão:</b> Pode ser feita por qualquer parte, com aviso prévio de <b>[número]</b> dias.</p>
-            <p><b>Foro: [Cidade/Estado]</b>, para resolver eventuais conflitos.</p>
-            <p><b>[Local], [Data]</b>.</p><br>
+            <p><b>Foro: [Cidade/Estado]</b>.</p>
+            <br>
             <p><b>Assinatura do Contratante: __________________________________________________________ </b></p>
             <p><b>Assinatura do Contratado: ___________________________________________________________ </b></p><br>
         </div>
