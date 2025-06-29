@@ -44,7 +44,8 @@
           <a class="azul" href="/html/avaliacoes.php">Avaliações</a>
           <p>______________________________________________________</p>
           <a class="azul" href="/html/depoimentos.php">Depoimentos</a><br>
-          <a class="azul" href="/html/sobre.php">Sobre Nós</a>
+          <a class="azul" href="/html/sobre.php">Sobre Nós</a><br>
+          <a class="azul" href="/html/solicitacoes.php">Suas solicitações</a>
           <p>______________________________________________________</p>
           <a class="azul" href="/php/logout.php">Sair da Conta</a>
         </div>

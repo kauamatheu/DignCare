@@ -32,9 +32,8 @@
         }
 
         // Atualiza o serviço com o ID do prestador
-        $stmt = $pdo->prepare("UPDATE servico SET user_id_contratado = :prestador_id WHERE servico_id = :servico_id");
+        $stmt = $pdo->prepare("UPDATE servico SET user_id_contratado = :prestador_id, servico_status = 'Em atendimento' WHERE servico_id = :servico_id");
         $stmt->execute(['prestador_id' => $prestador_id, 'servico_id' => $servico_id]);
-
 
         header('Location: /html/contratos.php?servico_id='.$servico_id);
         exit;
