@@ -1,7 +1,7 @@
 <?php
-session_start();
-require_once '../php/conecta_bd.php';
+    include('../php/protecao_sessao.php');
 
+<<<<<<< HEAD
 $usr_id = $_SESSION['usr_id'] ?? null;
 $usr_tipo = $_SESSION['usr_tipo'] ?? null;
 
@@ -34,16 +34,57 @@ if ($usr_tipo === 'Contratante') {
 
 $stmt->execute(['id' => $usr_id]);
 $dados = $stmt->fetch();
+=======
+    require_once '../php/conecta_bd.php';
 
-if (!$dados) {
-    echo "Nenhum serviço encontrado.";
-    exit;
-}
+    $usr_id = $_SESSION['usr_id'];
 
+    // Buscar o último serviço contratado por esse usuário
+    if($_SESSION['usr_tipo'] == "Contratante") {
+        $sql = "SELECT s.servico_id, u.usr_nome, u.usr_id AS id_prestador
+        FROM servico s
+        JOIN usuario u ON u.usr_id = s.user_id_contratado
+        WHERE s.user_id_contratante = :id_contratante
+        ORDER BY s.servico_id DESC
+        LIMIT 1";
+        $stmt = $pdo->prepare($sql); 
+        $stmt->execute(['id_contratante' => $usr_id]);
+    }else{
+        $sql = "SELECT s.servico_id, u.usr_nome, u.usr_id AS id_contratante
+        FROM servico s
+        JOIN usuario u ON u.usr_id = s.user_id_contratante
+        WHERE s.user_id_contratado = :id_prestador
+        ORDER BY s.servico_id DESC
+        LIMIT 1";
+        $stmt = $pdo->prepare($sql); 
+        $stmt->execute(['id_prestador' => $usr_id]);
+    }
+>>>>>>> f14a4cc1d2c6b1c3a56080699c693bd5143fcbb1
+
+    $dados = $stmt->fetch();
+
+<<<<<<< HEAD
 // Definir dinamicamente o nome e ID da pessoa que será avaliada
 $nomeAvaliado = $dados['usr_nome'];
 $idAvaliado = $usr_tipo === 'Contratante' ? $dados['id_prestador'] : $dados['id_contratante'];
 $servico_id = $dados['servico_id'];
+=======
+    if (!$dados) {
+        echo "Nenhum serviço encontrado.";
+        exit;
+    }
+
+    if($_SESSION['usr_tipo'] == "Contratante") {
+        $nomeAvaliado = $dados['usr_nome'];
+        $idAvaliado = $dados['id_prestador'];
+    } else {
+        $nomeAvaliado = $dados['usr_nome'];
+        $idAvaliado = $dados['id_contratante'];
+    }
+
+
+    $servico_id = $dados['servico_id'];
+>>>>>>> f14a4cc1d2c6b1c3a56080699c693bd5143fcbb1
 ?>
 
 <!DOCTYPE html>
@@ -117,7 +158,7 @@ $servico_id = $dados['servico_id'];
                  <input type="hidden" name="avaliado_id" value="<?= $idAvaliado ?>">
                 <fieldset class="starability-basic">
 
-                    <input type="radio" id="rate1" name="rating" value="1" />
+                    <input type="radio" id="rate1" name="rating" value="1" required />
                     <label for="rate1" title="1 estrela">1 estrela</label>
 
                     <input type="radio" id="rate2" name="rating" value="2" />

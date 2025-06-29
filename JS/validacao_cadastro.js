@@ -25,7 +25,13 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
     }
 
     if (!cpfValido.test(cpf.value.trim())) {
-        document.getElementById("erro-cpf").textContent = "CPF inválido. Use o formato 000.000.000-00.";
+        document.getElementById("erro-cpf").textContent = "CPF inválido.";
+        cpf.classList.add("input-erro");
+        temErro = true;
+    }
+
+    if (!/^\d+$/.test(cpf.value)) {
+        document.getElementById("erro-cpf").textContent = "CPF inválido. Digite apenas os números";
         cpf.classList.add("input-erro");
         temErro = true;
     }
@@ -44,6 +50,12 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
 
     if (nascimento.value >= 99) {
         document.getElementById("erro-nascimento").textContent = "Você está velho demais para trabalhar aqui.";
+        nascimento.classList.add("input-erro");
+        temErro = true;
+    }
+
+    if (!/^\d+$/.test(nascimento.value)) {
+        document.getElementById("erro-nascimento").textContent = "Idade inválida.";
         nascimento.classList.add("input-erro");
         temErro = true;
     }
