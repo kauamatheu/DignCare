@@ -41,7 +41,7 @@
         </div>
         <div class="offcanvas-body">
           <a class="azul" href="/html/perfil.php">Perfil</a><br>
-          <a class="azul" href="/html/avaliacoes.php">Avaliações</a>
+          <a class="azul" href="/html/avaliacoes_disponiveis.php">Avaliações</a>
           <p>______________________________________________________</p>
           <a class="azul" href="/html/depoimentos.php">Depoimentos</a><br>
           <a class="azul" href="/html/sobre.php">Sobre Nós</a><br>
