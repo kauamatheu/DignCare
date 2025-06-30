@@ -74,7 +74,7 @@
 
         <button type="submit">Próximo</button>
 
-        <p>Já possui uma conta? <a href="login.html" class="link mexe">Entrar</a></p>
+        <p>Já possui uma conta? <a href="login.php" class="link mexe">Entrar</a></p>
       </form>  
     </section>
 

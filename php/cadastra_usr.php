@@ -61,11 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['usr_email'] = $usuario['usr_email'];
 
         //Separação de qual home o usuario vai acessar com base no seu tipo
-        if ($_SESSION['usr_tipo'] == "Contratante") {
-            header("Location: /html/home.php");
-        } else {
-            header("Location: /html/home_prestador.php");
-        }
+        header("Location: /html/cadastra_endereco.php");
+
         exit;
 
     } catch (PDOException $e) {

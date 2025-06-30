@@ -10,11 +10,7 @@
     // Suponha que o ID do serviço venha pela URL
     $servico_id = isset($_GET['servico_id']) ? intval($_GET['servico_id']) : 0;
 
-    $sql = "SELECT 
-            s.servico_titulo,
-            s.servico_valor,
-            s.servico_descricao,
-            s.servico_data_criado,
+    $sql = "SELECT s.servico_titulo, s.servico_valor, s.servico_descricao, s.servico_data_criado,
             s.servico_data_realizado,
             tS.tipoServico_nome AS tipoServico_nome,
             u1.usr_nome AS contratante_nome,
@@ -78,7 +74,7 @@
         </nav>
     </header>
 
-    <div class="textcolorPDF margem fundodiv">
+    <section class="textcolorPDF margem fundodiv">
 
         <div id="page">
             <h1 class="titulo">Contrato</h1><br>
@@ -111,8 +107,10 @@
                 <i class="bi bi-file-earmark-arrow-down"></i> Baixar PDF
             </button>
 
+            <a href="/html/home_prestador.php" class="btn btn-primary">Voltar</a>
+
         </div>
-    </div>
+    </section> 
 
     <script>
         const btn = document.getElementById('btn');

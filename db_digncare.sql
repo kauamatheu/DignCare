@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `db_digncare` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `db_digncare`;
 -- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
 --
 -- Host: localhost    Database: db_digncare
@@ -51,13 +53,12 @@ DROP TABLE IF EXISTS `localizacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `localizacao` (
-  `local_id` int NOT NULL,
-  `local_cep` int NOT NULL,
-  `local_numero` int NOT NULL,
+  `local_id` int NOT NULL AUTO_INCREMENT,
+  `local_cep` int DEFAULT NULL,
+  `local_numero` int DEFAULT NULL,
   `local_referencia` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`local_id`),
-  UNIQUE KEY `local_id_UNIQUE` (`local_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  PRIMARY KEY (`local_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,6 +67,7 @@ CREATE TABLE `localizacao` (
 
 LOCK TABLES `localizacao` WRITE;
 /*!40000 ALTER TABLE `localizacao` DISABLE KEYS */;
+INSERT INTO `localizacao` VALUES (1,74185263,52,'Perto dos rios'),(2,45879562,52,'Perto dos rios'),(3,45784512,15,'Nos matos ai');
 /*!40000 ALTER TABLE `localizacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,12 +152,16 @@ CREATE TABLE `usuario` (
   `usr_senha` varchar(100) NOT NULL,
   `tipoServico_id` int DEFAULT NULL,
   `usr_descricao` varchar(250) DEFAULT NULL,
+  `local_id` int DEFAULT NULL,
   PRIMARY KEY (`usr_id`),
   UNIQUE KEY `usr_cpf_UNIQUE` (`usr_cpf`),
   UNIQUE KEY `usr_email_UNIQUE` (`usr_email`),
+  UNIQUE KEY `local_id_UNIQUE` (`local_id`),
   KEY `tipoServico_id_idx` (`tipoServico_id`),
+  KEY `local_id_idx` (`local_id`),
+  CONSTRAINT `local_id` FOREIGN KEY (`local_id`) REFERENCES `localizacao` (`local_id`),
   CONSTRAINT `tipoServico_id` FOREIGN KEY (`tipoServico_id`) REFERENCES `tiposervico` (`tipoServico_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -164,7 +170,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (15,'Daniel Rodrigues Fonseca Sousa','00000000001',20,'Prestador','danielrodrigueslg6@gmail.com','$2y$10$ox9eG1ZCoRl3mTZLEdRunO1ZzFWwVp87dqZUM1aGnrX7UBFLGIA4q',NULL,NULL),(16,'Kauã Matheus dos Santos Costa','00000000002',19,'Contratante','kauamatheu407@gmail.com','$2y$10$Pot8JyotR2cMHiY8IniLVeQtCspWETbxY5Phw/zJupO2DFB.qFAX2',NULL,NULL),(17,'Thiago Oliveira','00000000003',52,'Contratante','teste@gmail.com','$2y$10$RGZIpeYEkyeYEtMN6PbpW.Gv7RbxBSVg1zIuhormh6LoYxETbYpbK',NULL,NULL),(18,'Daniel Rodrigues Junior','00000000004',52,'Prestador','teste123@gmail.com','$2y$10$pIskXKlNmqVsIHzNN0i7FebnEVw2mVrQcdaaztYYwXXNH7wYXWzK2',NULL,NULL),(19,'Matheus Rodrigues','00000000000',51,'Contratante','ovo@gmail.com','$2y$10$v9zkLbzOZv1h.HfPrulX7O8pLdLBzjAkYPA6UE.6lzTjMnCKRLRHS',NULL,NULL),(20,'Alberto Pereira','00000000098',51,'Prestador','a@a.a','$2y$10$WqK/EUBl1ILDE82X/CbiuOtt0GfgH8jxKNv4RJuqlwg5mwFlVPX7a',NULL,NULL),(21,'Bruno Giraldelli','00000000005',44,'Contratante','b@b.b','$2y$10$8Jf2F2vSr2rQxybK/4ttjOcJ2TEYJtYUjcpt27aN2OkhkvJXxBUd.',NULL,NULL),(22,'Carlos Henrique','12121212121',69,'Contratante','contratante@teste.com','$2y$10$g5fjvSsVkXVBLkMnckGmru4srwn8BLlgro9KEHfEvk1zlEMFvb9o.',NULL,'Sou um contratante teste'),(23,'Pablo Arnaldo','21212121212',69,'Prestador','prestador@teste.com','$2y$10$UacHMUWcdeheBhY8PbUalOTwrj.DKigFkjEhgH7AH9.QXjIV29OGe',NULL,'Sou um prestador teste, presto serviços de teste'),(24,'Thiffany Araujo','78965432100',34,'Prestador','teste123@teste.com','$2y$10$tPd3hWodw8jLjjAPdQmH9OeJEzhdOTQV8.vjNz7ilgkg7ia9X.ORy',NULL,NULL),(25,'Ricardo','78945187521',19,'Prestador','kaua@gmail.com','$2y$10$6sl5cFbg471kCTeqYU7KzObSRRyUiskX3fOu7UXC0oSHfY/opqC7e',NULL,NULL),(26,'Contratante','11111111112',20,'Contratante','danielrodrigueslg7@gmail.com','$2y$10$X1aJDftgyxG.AXzCFGO3U.JCO4QahkM1IE9botnQhoTVV7PLQR4QO',NULL,NULL);
+INSERT INTO `usuario` VALUES (15,'Daniel Rodrigues Fonseca Sousa','00000000001',20,'Prestador','danielrodrigueslg6@gmail.com','$2y$10$ox9eG1ZCoRl3mTZLEdRunO1ZzFWwVp87dqZUM1aGnrX7UBFLGIA4q',NULL,NULL,NULL),(16,'Kauã Matheus dos Santos Costa','00000000002',19,'Contratante','kauamatheu407@gmail.com','$2y$10$Pot8JyotR2cMHiY8IniLVeQtCspWETbxY5Phw/zJupO2DFB.qFAX2',NULL,NULL,NULL),(17,'Thiago Oliveira','00000000003',52,'Contratante','teste@gmail.com','$2y$10$RGZIpeYEkyeYEtMN6PbpW.Gv7RbxBSVg1zIuhormh6LoYxETbYpbK',NULL,NULL,NULL),(18,'Daniel Rodrigues Junior','00000000004',52,'Prestador','teste123@gmail.com','$2y$10$pIskXKlNmqVsIHzNN0i7FebnEVw2mVrQcdaaztYYwXXNH7wYXWzK2',NULL,NULL,NULL),(19,'Matheus Rodrigues','00000000000',51,'Contratante','ovo@gmail.com','$2y$10$v9zkLbzOZv1h.HfPrulX7O8pLdLBzjAkYPA6UE.6lzTjMnCKRLRHS',NULL,NULL,NULL),(20,'Alberto Pereira','00000000098',51,'Prestador','a@a.a','$2y$10$WqK/EUBl1ILDE82X/CbiuOtt0GfgH8jxKNv4RJuqlwg5mwFlVPX7a',NULL,NULL,NULL),(21,'Bruno Giraldelli','00000000005',44,'Contratante','b@b.b','$2y$10$8Jf2F2vSr2rQxybK/4ttjOcJ2TEYJtYUjcpt27aN2OkhkvJXxBUd.',NULL,NULL,NULL),(22,'Carlos Henrique','12121212121',69,'Contratante','contratante@teste.com','$2y$10$g5fjvSsVkXVBLkMnckGmru4srwn8BLlgro9KEHfEvk1zlEMFvb9o.',NULL,'Sou um contratante teste',NULL),(23,'Pablo Arnaldo','21212121212',69,'Prestador','prestador@teste.com','$2y$10$UacHMUWcdeheBhY8PbUalOTwrj.DKigFkjEhgH7AH9.QXjIV29OGe',NULL,'Sou um prestador teste, presto serviços de teste',NULL),(24,'Thiffany Araujo','78965432100',34,'Prestador','teste123@teste.com','$2y$10$tPd3hWodw8jLjjAPdQmH9OeJEzhdOTQV8.vjNz7ilgkg7ia9X.ORy',NULL,NULL,NULL),(25,'Ricardo','78945187521',19,'Prestador','kaua@gmail.com','$2y$10$6sl5cFbg471kCTeqYU7KzObSRRyUiskX3fOu7UXC0oSHfY/opqC7e',NULL,NULL,NULL),(26,'Contratante','11111111112',20,'Contratante','danielrodrigueslg7@gmail.com','$2y$10$X1aJDftgyxG.AXzCFGO3U.JCO4QahkM1IE9botnQhoTVV7PLQR4QO',NULL,NULL,NULL),(27,'Camilli Vitoria','15427845693',18,'Contratante','milli@gmail.com','$2y$10$NsEeMNIxOfQN0e/hr42Rjus1ssmkw1lBx.fXOUHUdyk4AotbM2ZoO',NULL,NULL,2),(28,'Kayo Vitor dos Santos Costa','15487520321',18,'Contratante','kayo@gmail.com','$2y$10$mcpIrqxEtW4D5HA0hskajeFv9UpECEKvt.c2YCydPzSfDF/ygTii2',NULL,NULL,NULL),(29,'Pedro Alvares','70808504501',54,'Contratante','pedro@gmail.com','$2y$10$N0podUSSqdUdQOS2T5JRK.1j1nDZoe18nLFV0pDSIlKsOSnjH/.O6',NULL,NULL,1),(30,'Paulo Henrique','78546532124',65,'Contratante','paulo@gmail.com','$2y$10$OYIwdrIqiZCsFI0Vu6DKW.gh402yfSfWEJsjBkd1R8aRYZ4/CjHdm',NULL,NULL,3);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -177,4 +183,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-29 18:39:55
+-- Dump completed on 2025-06-29 21:17:56
