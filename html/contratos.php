@@ -10,8 +10,6 @@
     // Suponha que o ID do serviço venha pela URL
     $servico_id = $_GET['servico_id'];
 
-    echo $servico_id;
-
     $sql = "SELECT 
                 s.servico_titulo, 
                 s.servico_valor, 
@@ -23,21 +21,22 @@
                 u1.usr_cpf AS contratante_cpf,
                 u1.local_id AS localizacao_contratante,
                 u2.usr_nome AS contratado_nome,
-                u2.usr_cpf AS contratado_cpf
+                u2.usr_cpf AS contratado_cpf,
+                l.local_cidade AS contratante_cidade,
+                l.local_estado AS contratante_estado
             FROM servico s
             JOIN tipoServico tS ON s.tipoServico_id = tS.tipoServico_id
             JOIN usuario u1 ON s.user_id_contratante = u1.usr_id
             JOIN usuario u2 ON s.user_id_contratado = u2.usr_id
+            JOIN localizacao l on u1.local_id = l.local_id
             
-            WHERE s.servico_id = :id;";
+            WHERE s.servico_id = :id";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['id' => $servico_id]);
     $dados = $stmt->fetch(PDO::FETCH_ASSOC);
-    
-    var_dump($dados);
 ?>
-<!--
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -83,7 +82,7 @@
         </nav>
     </header>
 
-    <section class="textcolorPDF margem fundodiv">
+    <section class="textcolorPDF margem fundodiv main-content">
 
         <div id="page">
             <h1 class="titulo">Contrato</h1><br>
@@ -149,13 +148,11 @@
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
 
-    <footer class="py-4 mt-auto texto">
-        <div class="fs-6">
+    <footer class="texto">
             <p class="mexe">&copy; Direitos Autorais Reservados Por DignCare.</p>
-            <p><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
-            <p><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
-            <p><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
-        </div>
+            <p ><a class="mexe" href="https://maps.app.goo.gl/9GVxGAeCZJMZK6yYA" target="_blank">📍 Nossa sede</a></p>
+            <p ><a class="mexe" href="/html/sobre.php">Sobre nós</a></p>
+            <p ><a class="mexe" href="mailto:digncare@gmail.com">✉ Entre em contato conosco!</a></p>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
