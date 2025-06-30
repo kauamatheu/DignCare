@@ -12,13 +12,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cep = $_POST['cep'];
     $numero = $_POST['numero'];
     $referencia = $_POST['referencia'];
+    $cidade = $_POST['cidade'];
+    $estado = $_POST['estado'];
 
     try {
 
         // Prepara para inserir os dados na tabela 'localizacao', evitando SQL Injection
-        $sql = "INSERT INTO localizacao (local_cep, local_numero, local_referencia) VALUES (:cep, :numero, :referencia)";
+        $sql = "INSERT INTO localizacao (local_cep, local_numero, local_referencia, local_cidade, local_estado) VALUES (:cep, :numero, :referencia, :cidade, :estado)";
         $stmt = $pdo->prepare($sql);
-        $stmt->execute(['cep' => $cep, 'numero' => $numero, 'referencia' => $referencia]);
+        $stmt->execute(['cep' => $cep, 'numero' => $numero, 'referencia' => $referencia, 'cidade' => $cidade, 'estado' => $estado]);
 
         // Busca o ID da localização recém-inserida
         $stmt = $pdo->prepare("SELECT * FROM localizacao WHERE local_cep = :cep AND local_numero = :numero AND local_referencia = :referencia");

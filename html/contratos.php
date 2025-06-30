@@ -8,27 +8,36 @@
     include('../php/protecao_sessao.php');
     
     // Suponha que o ID do serviço venha pela URL
-    $servico_id = isset($_GET['servico_id']) ? intval($_GET['servico_id']) : 0;
+    $servico_id = $_GET['servico_id'];
 
-    $sql = "SELECT s.servico_titulo, s.servico_valor, s.servico_descricao, s.servico_data_criado,
-            s.servico_data_realizado,
-            tS.tipoServico_nome AS tipoServico_nome,
-            u1.usr_nome AS contratante_nome,
-            u1.usr_cpf AS contratante_cpf,
-            u2.usr_nome AS contratado_nome,
-            u2.usr_cpf AS contratado_cpf
+    echo $servico_id;
+
+    $sql = "SELECT 
+                s.servico_titulo, 
+                s.servico_valor, 
+                s.servico_descricao, 
+                s.servico_data_criado,
+                s.servico_data_realizado,
+                tS.tipoServico_nome AS tipoServico_nome,
+                u1.usr_nome AS contratante_nome,
+                u1.usr_cpf AS contratante_cpf,
+                u1.local_id AS localizacao_contratante,
+                u2.usr_nome AS contratado_nome,
+                u2.usr_cpf AS contratado_cpf
             FROM servico s
             JOIN tipoServico tS ON s.tipoServico_id = tS.tipoServico_id
             JOIN usuario u1 ON s.user_id_contratante = u1.usr_id
             JOIN usuario u2 ON s.user_id_contratado = u2.usr_id
-            WHERE s.servico_id = :id";
+            
+            WHERE s.servico_id = :id;";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['id' => $servico_id]);
     $dados = $stmt->fetch(PDO::FETCH_ASSOC);
-
+    
+    var_dump($dados);
 ?>
-
+<!--
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -95,7 +104,7 @@
             <p><b>Obrigações do Contratante:</b></p>
             <p>Fornecer as informações e recursos necessários.</p>
             <p>Realizar os pagamentos conforme acordado.</p>
-            <p><b>Foro: [Cidade/Estado]</b>.</p>
+            <p><b>Foro: <?= htmlspecialchars($dados['contratante_cidade']) . '/' . htmlspecialchars($dados['contratante_estado'])?></b>.</p>
             <br>
             <p><b>Assinatura do Contratante: __________________________________________________________ </b></p>
             <p><b>Assinatura do Contratado: ___________________________________________________________ </b></p><br>

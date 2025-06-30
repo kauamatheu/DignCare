@@ -57,6 +57,8 @@ CREATE TABLE `localizacao` (
   `local_cep` int DEFAULT NULL,
   `local_numero` int DEFAULT NULL,
   `local_referencia` varchar(50) DEFAULT NULL,
+  `local_cidade` varchar(45) DEFAULT NULL,
+  `local_estado` varchar(2) DEFAULT NULL,
   PRIMARY KEY (`local_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -67,7 +69,7 @@ CREATE TABLE `localizacao` (
 
 LOCK TABLES `localizacao` WRITE;
 /*!40000 ALTER TABLE `localizacao` DISABLE KEYS */;
-INSERT INTO `localizacao` VALUES (1,74185263,52,'Perto dos rios'),(2,45879562,52,'Perto dos rios'),(3,45784512,15,'Nos matos ai');
+INSERT INTO `localizacao` VALUES (1,74185263,52,'Perto dos rios',NULL,NULL),(2,45879562,52,'Perto dos rios',NULL,NULL),(3,45784512,15,'Nos matos ai',NULL,NULL);
 /*!40000 ALTER TABLE `localizacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -183,4 +185,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-29 21:17:56
+-- Dump completed on 2025-06-29 21:23:33

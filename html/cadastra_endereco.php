@@ -31,8 +31,14 @@
         <span class="erro" id="erro-cep"></span>
         <input type="text" name="cep" id="cep" placeholder="Digite seu CEP" maxlength="8">
 
+        <span class="erro" id="erro-cidade"></span>
+        <input type="text" name="cidade" id="cidade" placeholder="Digite sua Cidade">
+
+        <span class="erro" id="erro-estado"></span>
+        <input type="text" name="estado" id="estado" placeholder="Digite a UF do seu Estado" maxlength="2">
+
         <span class="erro" id="erro-numero"></span>
-        <input type="text" name="numero" id="numero" placeholder="Digite o numero da sua residencia" maxlength="11">
+        <input type="text" name="numero" id="numero" placeholder="Digite o numero da sua residencia" maxlength="4">
 
         <span class="erro" id="erro-referencia"></span>
         <input type="text" name="referencia" id="referencia" placeholder="Digite um ponto de referencia">
