@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     $nota_nova = (int) $_POST['rating']; // converte para inteiro
-    if ($nota < 1 || $nota > 5) {
+    if ($nota_nova < 1 || $nota_nova > 5) {
         die("Avaliação inválida.");
     } 
     
@@ -34,7 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
 
     } catch (PDOException $e) {
-        // Aqui idealmente logar erro em arquivo para depuração
         echo "Erro ao registrar avaliação: " . $e->getMessage();
         exit;
     }

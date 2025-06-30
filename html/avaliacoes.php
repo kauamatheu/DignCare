@@ -1,91 +1,54 @@
 <?php
-    include('../php/protecao_sessao.php');
+session_start();
 
-<<<<<<< HEAD
-$usr_id = $_SESSION['usr_id'] ?? null;
-$usr_tipo = $_SESSION['usr_tipo'] ?? null;
+require_once '../php/protecao_sessao.php';
+require_once '../php/conecta_bd.php';
 
-if (!$usr_id || !$usr_tipo) {
-    echo "Usuário não autenticado.";
+if (!isset($_SESSION['usr_id'], $_SESSION['usr_tipo'])) {
+    echo "Sessão inválida.";
     exit;
 }
 
-if ($usr_tipo === 'Contratante') {
-    // Contratante avaliando o prestador
-    $stmt = $pdo->prepare("
-        SELECT s.servico_id, u.usr_nome, u.usr_id AS id_prestador
-        FROM servico s
-        JOIN usuario u ON u.usr_id = s.user_id_contratado
-        WHERE s.user_id_contratante = :id
-        ORDER BY s.servico_id DESC
-        LIMIT 1
-    ");
-} else {
-    // Prestador avaliando o contratante
-    $stmt = $pdo->prepare("
-        SELECT s.servico_id, u.usr_nome, u.usr_id AS id_contratante
-        FROM servico s
-        JOIN usuario u ON u.usr_id = s.user_id_contratante
-        WHERE s.user_id_contratado = :id
-        ORDER BY s.servico_id DESC
-        LIMIT 1
-    ");
-}
+$usr_id = $_SESSION['usr_id'];
+$usr_tipo = $_SESSION['usr_tipo'];
 
-$stmt->execute(['id' => $usr_id]);
-$dados = $stmt->fetch();
-=======
-    require_once '../php/conecta_bd.php';
-
-    $usr_id = $_SESSION['usr_id'];
-
-    // Buscar o último serviço contratado por esse usuário
-    if($_SESSION['usr_tipo'] == "Contratante") {
+try {
+    if ($usr_tipo === "Contratante") {
         $sql = "SELECT s.servico_id, u.usr_nome, u.usr_id AS id_prestador
-        FROM servico s
-        JOIN usuario u ON u.usr_id = s.user_id_contratado
-        WHERE s.user_id_contratante = :id_contratante
-        ORDER BY s.servico_id DESC
-        LIMIT 1";
-        $stmt = $pdo->prepare($sql); 
-        $stmt->execute(['id_contratante' => $usr_id]);
-    }else{
+                FROM servico s
+                JOIN usuario u ON u.usr_id = s.user_id_contratado
+                WHERE s.user_id_contratante = :id
+                ORDER BY s.servico_id DESC
+                LIMIT 1";
+    } else {
         $sql = "SELECT s.servico_id, u.usr_nome, u.usr_id AS id_contratante
-        FROM servico s
-        JOIN usuario u ON u.usr_id = s.user_id_contratante
-        WHERE s.user_id_contratado = :id_prestador
-        ORDER BY s.servico_id DESC
-        LIMIT 1";
-        $stmt = $pdo->prepare($sql); 
-        $stmt->execute(['id_prestador' => $usr_id]);
+                FROM servico s
+                JOIN usuario u ON u.usr_id = s.user_id_contratante
+                WHERE s.user_id_contratado = :id
+                ORDER BY s.servico_id DESC
+                LIMIT 1";
     }
->>>>>>> f14a4cc1d2c6b1c3a56080699c693bd5143fcbb1
 
-    $dados = $stmt->fetch();
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(['id' => $usr_id]);
 
-<<<<<<< HEAD
-// Definir dinamicamente o nome e ID da pessoa que será avaliada
-$nomeAvaliado = $dados['usr_nome'];
-$idAvaliado = $usr_tipo === 'Contratante' ? $dados['id_prestador'] : $dados['id_contratante'];
-$servico_id = $dados['servico_id'];
-=======
+    $dados = $stmt->fetch(PDO::FETCH_ASSOC);
+
     if (!$dados) {
-        echo "Nenhum serviço encontrado.";
+        echo "Nenhum serviço encontrado para o usuário.";
         exit;
     }
 
-    if($_SESSION['usr_tipo'] == "Contratante") {
-        $nomeAvaliado = $dados['usr_nome'];
-        $idAvaliado = $dados['id_prestador'];
-    } else {
-        $nomeAvaliado = $dados['usr_nome'];
-        $idAvaliado = $dados['id_contratante'];
-    }
-
-
+    $nomeAvaliado = $dados['usr_nome'];
+    $idAvaliado = ($usr_tipo === "Contratante") ? $dados['id_prestador'] : $dados['id_contratante'];
     $servico_id = $dados['servico_id'];
->>>>>>> f14a4cc1d2c6b1c3a56080699c693bd5143fcbb1
+
+} catch (PDOException $e) {
+    echo "Erro no banco: " . $e->getMessage();
+    exit;
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -104,34 +67,33 @@ $servico_id = $dados['servico_id'];
 
 <body class="fundo">
     <!-- Início do cabeçalho da página com barra de navegação -->
-    <header class="borda">
-        <nav class="navbar">
+  <header>
+    <nav class="navbar borda">
+      <div class="nav justify-content-start">
+        <a href="/html/home.php"><img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225"></a>
+      </div>
+  
+      <div class="menu-icon" type="sidbar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-list fs-3 iconscss"></i></div>
 
-            <!-- Logo do site com link para a página inicial -->
-            <div class="justify-content-start">
-                <a href="/html/home.php">
-                    <img class="mexe" src="/img/logo_horizontal.png" alt="logo" width="225">
-                </a>
-            </div>
-            <div class="menu-icon" type="sidbar" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-list fs-3 iconscss"></i></div>
-
-            <div class="offcanvas offcanvas-end fundo" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title textcolor" id="offcanvasRightLabel">Daniel Rodrigues</h5>
-              <div type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></div>
-            </div>
-            <div class="offcanvas-body">
-              <a class="azul" href="/html/perfil.php">Perfil</a><br>
-              <a class="azul" href="/html/avaliacoes.php">Avaliações</a>
-              <p>______________________________________________________</p>
-              <a class="azul" href="/html/depoimentos.php">Depoimentos</a><br>
-              <a class="azul" href="/html/sobre.php">Sobre Nós</a>
-              <p>______________________________________________________</p>
-              <a class="azul" href="/index.php">Sair da Conta</a>
-            </div>
-            </div>
-        </nav>
-    </header>
+        <div class="offcanvas offcanvas-end fundo" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <?php
+          echo '<h5 class="offcanvas-title texto" id="offcanvasRightLabel">' . $_SESSION["usr_nome"] . '</h5>';
+          ?>
+          <div type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></div>
+        </div>
+        <div class="offcanvas-body">
+          <a class="azul" href="/html/perfil.php">Perfil</a><br>
+          <a class="azul" href="/html/avaliacoes_disponiveis.php">Avaliações</a>
+          <p>______________________________________________________</p>
+          <a class="azul" href="/html/depoimentos.php">Depoimentos</a><br>
+          <a class="azul" href="/html/sobre.php">Sobre Nós</a>
+          <p>______________________________________________________</p>
+          <a class="azul" href="/php/logout.php">Sair da Conta</a>
+        </div>
+      </div>
+    </nav>
+  </header>
     <!-- Fim do cabeçalho -->
 
     <!-- Início da seção principal de avaliação -->
